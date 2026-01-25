@@ -1,47 +1,82 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
-<html>
-  <head>
-    <meta content="text/html; charset=UTF-8"
-      http-equiv="Content-Type">
-    <title>nieuwe-index</title>
-  </head>
-  <body vlink="#551A8B" text="#000000" link="#0000EE" bgcolor="#c0c0c0"
-    background="sculptures/fonds2g.jpg" alink="#EE0000">
-    <div align="center">
-      <div align="center"><big><big><b><font color="#ffffff">MARTIN
-                SJARDIJN</font></b></big></big><br>
-      </div>
-      <big><big><b> <br>
-          </b></big></big>
-      <table width="100%" cellspacing="2" cellpadding="2" border="0">
-        <tbody>
-          <tr>
-            <td valign="top" align="center"><a moz-do-not-send="true"
-                href="about/about.html"><b>ABOUT</b></a></td>
-            <td valign="top" align="center"><a moz-do-not-send="true"
-                href="paintings/paintings.html"><b>PAINTINGS</b></a></td>
-            <td valign="top" align="center"><a moz-do-not-send="true"
-                href="drawings/drawings.html"><b>DRAWINGS</b></a><b><br>
-              </b></td>
-            <td valign="top" align="center"><a moz-do-not-send="true"
-                href="sculptures/sculptures.html"><b>SCULPTURES</b></a></td>
-            <td valign="top" align="center"><a href="books/books.html"><b>BOOKS</b></a></td>
-            <td valign="top" align="center"><a href="papers/papers.html"><font
-                  color="#ffffff">PAPERS</font></a></td>
-            <td valign="top" align="center"><a moz-do-not-send="true"
-                href="projects/projects.html"><b>PROJECTS</b></a></td>
-            <td valign="top" align="center"><b><a moz-do-not-send="true"
-                  href="links/links.htm">LINKS</a></b><br>
-            </td>
-            <td valign="top"><br>
-            </td>
-          </tr>
-        </tbody>
-      </table>
-      <br>
-      <br>
-      <br>
-    </div>
-  </body>
-</html>
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MARTIN SJARDIJN</title>
+    <style>
+        /* Fullscreen achtergrond instellingen */
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
 
+        body {
+            /* De afbeelding die je opgaf */
+            background-image: url('https://msjardijn.github.io/sculptures/fonds2g.jpg');
+            
+            /* Zorg dat de afbeelding het hele scherm vult */
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+            
+            /* Tekstkleur en font voor de leesbaarheid over de foto heen */
+            font-family: Arial, sans-serif;
+            color: white; /* Of zwart, afhankelijk van de foto */
+        }
+
+        /* Styling voor je navigatiemenu om het leesbaar te houden */
+        .content-container {
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.4); /* Licht transparante zwarte laag */
+            min-height: 100%;
+        }
+
+        a {
+            color: #ffffff;
+            text-decoration: none;
+            padding: 5px 10px;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        td {
+            padding: 10px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+<div class="content-container">
+    <header>
+        <h1>MARTIN SJARDIJN</h1>
+    </header>
+
+    <nav>
+        <table>
+            <tr>
+                <td><a href="about/about.html"><strong>ABOUT</strong></a></td>
+                <td><a href="paintings/paintings.html"><strong>PAINTINGS</strong></a></td>
+                <td><a href="drawings/drawings.html"><strong>DRAWINGS</strong></a></td>
+                <td><a href="sculptures/sculptures.html"><strong>SCULPTURES</strong></a></td>
+                <td><a href="books/books.html"><strong>BOOKS</strong></a></td>
+                <td><a href="papers/papers.html">PAPERS</a></td>
+                <td><a href="projects/projects.html"><strong>PROJECTS</strong></a></td>
+                <td><a href="links/links.html"><strong>LINKS</strong></a></td>
+            </tr>
+        </table>
+    </nav>
+</div>
+
+</body>
+</html>
