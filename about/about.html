@@ -1,11 +1,22 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
-  
-<!-- Mirrored from www.sjardijn.com/about/about.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 20 Jan 2026 08:02:39 GMT -->
 <head>
     <meta content="text/html; charset=UTF-8"
       http-equiv="Content-Type">
     <title>nieuwe-index</title>
+  <style>
+  /* Hier maken we de animatie aan */
+  @keyframes knipperen {
+    0% { opacity: 1; }   /* Volledig zichtbaar */
+    50% { opacity: 0; }  /* Onzichtbaar */
+    100% { opacity: 1; } /* Weer zichtbaar */
+  }
+  .blink {
+    animation: knipperen 1s linear infinite; /* 1 seconde per cyclus, herhaalt oneindig */
+    font-weight: bold;
+    color: red;
+  }
+</style>
   </head>
   <body vlink="#551A8B" text="#000000" link="#0000EE" bgcolor="#c0c0c0"
     alink="#EE0000">
