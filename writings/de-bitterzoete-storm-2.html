@@ -1,0 +1,135 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+  <head>
+
+    <meta http-equiv="content-type" content="text/html; charset=ISO-8859-1">
+    <meta charset="UTF-8">
+    <title>Sappho - De Bitterzoete Storm (Seamless Loop)</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #121212;
+            color: #d4c4a8;
+            font-family: 'Georgia', serif;
+            overflow: hidden;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+        }
+
+        /* De container die de animatie uitvoert */
+        .marquee {
+            position: relative;
+            width: 80%;
+            max-width: 700px;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        .scroll-content {
+            position: absolute;
+            width: 100%;
+            margin: 0;
+            text-align: center;
+            /* De snelheid bepaal je hier (60s). Lager is sneller. */
+            animation: infiniteScroll 60s linear infinite;
+        }
+
+        /* De naadloze lus: we schuiven de hele container exact 50% omhoog */
+        @keyframes infiniteScroll {
+            0% { transform: translateY(0); }
+            100% { transform: translateY(-50%); }
+        }
+
+        h1 {
+            font-variant: small-caps;
+            font-weight: normal;
+            letter-spacing: 6px;
+            margin-top: 100px;
+            margin-bottom: 60px;
+            color: #bfa57d;
+        }
+
+        .stanza {
+            margin-bottom: 100px;
+            line-height: 2;
+            font-size: 1.6rem;
+            font-style: italic;
+        }
+
+        .short-line {
+            display: block;
+            margin-top: 15px;
+            font-style: normal;
+            font-weight: bold;
+            color: #8e7d5d;
+            text-transform: uppercase;
+            font-size: 1.2rem;
+            letter-spacing: 2px;
+        }
+
+        /* Overlay voor een vignet-effect (zachte randen boven en onder) */
+        .vignette {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to bottom, 
+                rgba(18,18,18,1) 0%, 
+                rgba(18,18,18,0) 20%, 
+                rgba(18,18,18,0) 80%, 
+                rgba(18,18,18,1) 100%);
+            z-index: 10;
+            pointer-events: none;
+        }
+    </style>
+  </head>
+  <body>
+    <div class="marquee">
+      <div class="scroll-content">
+        <h1>De Bitterzoete Storm</h1>
+        <div class="stanza"> Liefde, die de ledematen verslapt, bevangt
+          mij,<br>
+          Onweerstaanbaar wezen dat zowel zoet als bitter<br>
+          Mijn hart bestormt, zoals een bergbries de eiken<br>
+          <span class="short-line">Woest laat trillen.</span> </div>
+        <div class="stanza"> Eerst was daar de blik, de ontmoeting die
+          brandde,<br>
+          Scherper dan de zon op de marmeren paden.<br>
+          Ik zag je even, en mijn stem werd een brokstuk,<br>
+          <span class="short-line">Stil en gebroken.</span> </div>
+        <div class="stanza"> Nu rest slechts de leegte waar jij bent
+          vertrokken,<br>
+          Zoals de herfstwind de bladeren wegvaagt.<br>
+          Liefde is een wever van dromen en pijnen,<br>
+          <span class="short-line">Eindeloos wevend.</span> </div>
+        <div class="stanza"> Maanlicht vloeit nu over de lege kussens,<br>
+          De nacht is halverwege, de uren kruipen.<br>
+          Jij bent elders, en ik lig hier in stilte,<br>
+          <span class="short-line">Eenzaam te wachten.</span> </div>
+        <h1>De Bitterzoete Storm</h1>
+        <div class="stanza"> Liefde, die de ledematen verslapt, bevangt
+          mij,<br>
+          Onweerstaanbaar wezen dat zowel zoet als bitter<br>
+          Mijn hart bestormt, zoals een bergbries de eiken<br>
+          <span class="short-line">Woest laat trillen.</span> </div>
+        <div class="stanza"> Eerst was daar de blik, de ontmoeting die
+          brandde,<br>
+          Scherper dan de zon op de marmeren paden.<br>
+          Ik zag je even, en mijn stem werd een brokstuk,<br>
+          <span class="short-line">Stil en gebroken.</span> </div>
+        <div class="stanza"> Nu rest slechts de leegte waar jij bent
+          vertrokken,<br>
+          Zoals de herfstwind de bladeren wegvaagt.<br>
+          Liefde is een wever van dromen en pijnen,<br>
+          <span class="short-line">Eindeloos wevend.</span> </div>
+        <div class="stanza"> Maanlicht vloeit nu over de lege kussens,<br>
+          De nacht is halverwege, de uren kruipen.<br>
+          Jij bent elders, en ik lig hier in stilte,<br>
+          <span class="short-line">Eenzaam te wachten.</span> </div>
+      </div>
+    </div>
+  </body>
+</html>
