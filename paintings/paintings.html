@@ -113,57 +113,67 @@ href="chrome://editor/content/about/about.html"><strong></strong></a></h1>
 </tr>
 </tbody>
 </table>
-<html>
-<style>
-/* De container die alles verbergt wat buiten het beeld valt */
-.slider-container {
-width: 100%;
-overflow: hidden;
-background: transparent; /* Volledig doorzichtig */ 
-padding: 20px 0;
-}
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        .slider-container {
+            width: 100%;
+            overflow: hidden;
+            background: transparent;
+            padding: 50px 0;
+        }
 
-/* De 'trein' van afbeeldingen */
-.slider-track {
-display: flex;
-width: calc(250px * 10); /* Breedte van foto * aantal foto's */
-animation: schuif 60s linear infinite;
-}
+        .slider-track {
+            display: flex;
+            /* Breedte: (foto breedte + margins) * aantal foto's */
+            width: calc((500px + 50px) * 5); 
+            
+            /* Snelheid: 40s is traag, verlaag dit naar bijv. 20s voor sneller */
+            animation: schuif 40s linear infinite;
+        }
 
-/* Styling voor de individuele afbeeldingen */
-.slider-track img {
-width: 300px;
-height: 250px;
-margin: 0 25px;
-object-fit: cover;
-border-radius: 8px;
-}
+        .slider-track img {
+            width: 500px; /* Grote afbeeldingen */
+            height: auto;
+            margin: 0 25px;
+            border-radius: 15px;
+        }
 
-/* De animatie-instellingen */
-@keyframes schuif {
-0% {
-transform: translateX(-100%); /* Begin buiten beeld aan de linkerkant */
-}
-100% {
-transform: translateX(100vw); /* Eindig aan de rechterkant van het scherm */
-}
-}
+        @keyframes schuif {
+            0% {
+                /* STARTPUNT: Veranderd naar 0 zodat de eerste foto direct zichtbaar is */
+                transform: translateX(0);
+            }
+            100% {
+                /* EINDPUNT: Beweegt naar rechts buiten het scherm */
+                transform: translateX(100vw);
+            }
+        }
 
-/* Optioneel: pauzeer als je er met de muis overheen gaat */
-.slider-container:hover .slider-track {
-animation-play-state: paused;
-}
-</style>
+        /* Pauze bij muis over de foto */
+        .slider-container:hover .slider-track {
+            animation-play-state: paused;
+        }
+    </style>
 </head>
 <body>
-<h2 style="text-align: center;">PAINTINGS</h2>
-<div class="slider-container">
-<div class="slider-track"> <img src="foto1.jpg" alt="Foto 1"> <img
-src="foto2.jpg" alt="Foto 2"> <img src="foto3.jpg" alt="Foto
-3"> <img src="foto4.jpg" alt="Foto 4"> <img src="foto5.jpg"
-alt="Foto 5"> </div>
-</div>
+
+    <div class="slider-container">
+        <div class="slider-track">
+            <img src="foto1.jpg" alt="1">
+            <img src="foto2.jpg" alt="2">
+            <img src="foto3.jpg" alt="3">
+            <img src="foto4.jpg" alt="4">
+            <img src="foto5.jpg" alt="5">
+        </div>
+    </div>
+
 </body>
 </html>
+
+</body>
 </html>
+
 
