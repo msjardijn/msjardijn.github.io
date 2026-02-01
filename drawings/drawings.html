@@ -2,14 +2,18 @@
 <html lang="nl">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <title>Martin Sjardijn | Beeldend Kunstenaar &amp; Schrijver</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Martin Sjardijn | Drawings</title>
+    <meta name="description" content="Tekeningen en aquarellen van Martin Sjardijn.">
+    <meta name="author" content="Martin Sjardijn">
+    
     <style>
-        /* Achtergrond instellingen */
+        /* Achtergrond en Basis */
         html, body {
             height: 100%;
             margin: 0;
             padding: 0;
+            overflow-x: hidden;
         }
 
         body {
@@ -24,54 +28,66 @@
 
         .content-container {
             padding: 20px;
-            background-color: rgba(0, 0, 0, 0.4); 
+            background-color: rgba(0, 0, 0, 0.4);
             min-height: 100%;
+            display: flex;
+            flex-direction: column;
         }
 
-        a { color: #ffffff; text-decoration: none; padding: 5px 10px; }
-        a:hover { text-decoration: underline; }
-        table { width: 100%; border-collapse: collapse; margin-top: 20px; }
-        td { padding: 10px; text-align: center; }
+        /* Navigatie */
+        header h1 { margin-left: 20px; }
+        header a { font-size: 0.6em; margin-left: 15px; color: #ccc; }
 
-        /* --- NIEUWE SLIDER CSS --- */
+        nav table { width: 100%; border-collapse: collapse; margin-bottom: 30px; }
+        nav td { padding: 10px; text-align: center; font-weight: bold; }
+        nav a { color: #ffffff; text-decoration: none; }
+        nav a:hover { text-decoration: underline; }
+
+        /* De Nieuwe Slider */
         .slider-container {
             width: 100%;
             overflow: hidden;
             background: transparent;
-            padding: 60px 0; /* Ruimte voor de vergroting bij hover */
+            padding: 60px 0;
             display: flex;
+            margin-top: auto;
+            margin-bottom: auto;
         }
 
         .slider-track {
             display: flex;
             width: max-content;
-            animation: schuif-links 60s linear infinite; /* Loopt nu naar links */
+            /* Loopt langzaam van rechts naar links */
+            animation: loop-links 80s linear infinite;
         }
 
         .slider-track img {
-            height: 300px; /* Lager zoals gevraagd */
+            height: 350px; /* Mooie hoogte voor tekeningen */
             width: auto;
-            margin: 0 15px;
-            border-radius: 10px;
+            margin: 0 20px;
+            border-radius: 5px; /* Iets minder rond voor tekeningen (papier-look) */
+            box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+            transition: transform 0.4s ease, box-shadow 0.4s ease;
             flex-shrink: 0;
-            transition: transform 0.4s ease;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+            background-color: white; /* Geeft tekeningen een witte 'papier' rand indien nodig */
+            padding: 5px;
         }
 
-        /* Foto wordt groter als je hem aanwijst */
+        /* Hover effect */
         .slider-track img:hover {
-            transform: scale(1.1);
+            transform: scale(1.15);
             z-index: 10;
+            box-shadow: 0 12px 25px rgba(0,0,0,0.7);
         }
 
-        /* Stop animatie bij hover */
         .slider-container:hover .slider-track {
             animation-play-state: paused;
         }
 
-        @keyframes schuif-links {
+        /* Naadloze animatie van rechts naar links */
+        @keyframes loop-links {
             0% { transform: translateX(0); }
-            100% { transform: translateX(-50%); } /* Schuift naar links voor oneindige loop */
+            100% { transform: translateX(-50%); }
         }
     </style>
 </head>
@@ -79,57 +95,52 @@
 
 <div class="content-container">
     <header>
-        <h1>&nbsp;&nbsp;&nbsp; MARTIN SJARDIJN 
-            <a href="paintings/paintings.html"><strong>PAINTINGS</strong></a>
-        </h1>
+        <h1>MARTIN SJARDIJN <a href="#">DRAWINGS</a></h1>
     </header>
-<body>
-<div class="content-container">
-<header>
-<h1>&nbsp;&nbsp;&nbsp; MARTIN SJARDIJN <a
-href="drawings.html"><strong>DRAWINGS</strong></a>
-</h1>
-</header>
-<nav>
-<table>
-<tbody>
-<tr>
-<td><a href="../index.html"><strong>HOME</strong></a></td>
-<td><a href="../about/about.html"><strong>ABOUT</strong></a></td>
-<td><a href="../paintings/paintings.html"><strong>PAINTINGS</strong></a></td>
-<td><a href="../sculptures/sculptures.html"><strong>SCULPTURES</strong></a></td>
-<td><a href="../books/books.html"><strong>BOOKS</strong></a></td>
-<td><a href="../writings/writings.html"><strong>WRITINGS</strong></a></td>
-<td><a href="../projects/projects.html"><strong>PROJECTS</strong></a></td>
-<td><a href="../links/links.html"><strong>LINKS</strong></a></td>
-</tr>
-</tbody>
-</table>
-</nav>
- <div class="slider-container">
+
+    <nav>
+        <table>
+            <tbody>
+                <tr>
+                    <td><a href="../index.html">HOME</a></td>
+                    <td><a href="../about/about.html">ABOUT</a></td>
+                    <td><a href="../paintings/paintings.html">PAINTINGS</a></td>
+                    <td><a href="drawings.html" style="text-decoration: underline;">DRAWINGS</a></td>
+                    <td><a href="../sculptures/sculptures.html">SCULPTURES</a></td>
+                    <td><a href="../books/books.html">BOOKS</a></td>
+                    <td><a href="../writings/writings.html">WRITINGS</a></td>
+                    <td><a href="../projects/projects.html">PROJECTS</a></td>
+                </tr>
+            </tbody>
+        </table>
+    </nav>
+
+    <div class="slider-container">
         <div class="slider-track">
-            <img src="foto1.jpg" alt="1">
-            <img src="foto2.jpg" alt="2">
-            <img src="foto3.jpg" alt="3">
-            <img src="foto4.jpg" alt="4">
-            <img src="foto5.jpg" alt="5">
-            <img src="foto6.jpg" alt="6">
-            <img src="foto7.jpg" alt="7">
-            <img src="foto8.jpg" alt="8">
-            <img src="foto9.jpg" alt="9">
-            <img src="foto10.jpg" alt="10">
-            <img src="foto1.jpg" alt="1">
-            <img src="foto2.jpg" alt="2">
-            <img src="foto3.jpg" alt="3">
-            <img src="foto4.jpg" alt="4">
-            <img src="foto5.jpg" alt="5">
-            <img src="foto6.jpg" alt="6">
-            <img src="foto7.jpg" alt="7">
-            <img src="foto8.jpg" alt="8">
-            <img src="foto9.jpg" alt="9">
-            <img src="foto10.jpg" alt="10">
+            <img src="drawing1.jpg" alt="Drawing 1">
+            <img src="drawing2.jpg" alt="Drawing 2">
+            <img src="drawing3.jpg" alt="Drawing 3">
+            <img src="drawing4.jpg" alt="Drawing 4">
+            <img src="drawing5.jpg" alt="Drawing 5">
+            <img src="drawing6.jpg" alt="Drawing 6">
+            <img src="drawing7.jpg" alt="Drawing 7">
+            <img src="drawing8.jpg" alt="Drawing 8">
+            <img src="drawing9.jpg" alt="Drawing 9">
+            <img src="drawing10.jpg" alt="Drawing 10">
+
+            <img src="drawing1.jpg" alt="Drawing 1">
+            <img src="drawing2.jpg" alt="Drawing 2">
+            <img src="drawing3.jpg" alt="Drawing 3">
+            <img src="drawing4.jpg" alt="Drawing 4">
+            <img src="drawing5.jpg" alt="Drawing 5">
+            <img src="drawing6.jpg" alt="Drawing 6">
+            <img src="drawing7.jpg" alt="Drawing 7">
+            <img src="drawing8.jpg" alt="Drawing 8">
+            <img src="drawing9.jpg" alt="Drawing 9">
+            <img src="drawing10.jpg" alt="Drawing 10">
         </div>
+    </div>
 </div>
+
 </body>
 </html>
-
