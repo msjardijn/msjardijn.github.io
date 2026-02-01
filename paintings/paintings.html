@@ -42,7 +42,6 @@ height: 100%;
 margin: 0;
 padding: 0;
 }
-
 body {
 /* De afbeelding die je opgaf */
 background-image: url('https://msjardijn.github.io/sculptures/fonds2g.jpg');
@@ -113,66 +112,52 @@ href="chrome://editor/content/about/about.html"><strong></strong></a></h1>
 </tr>
 </tbody>
 </table>
-        .slider-container {
-            width: 100%;
-            overflow: hidden;
-            background: transparent; /* Geen achtergrondkleur */
-            padding: 50px 0;
-            display: flex;
-        }
+<style>
+    .slider-container {
+        width: 100%;
+        overflow: hidden;
+        background: transparent;
+        padding: 40px 0;
+    }
 
-        .slider-track {
-            display: flex;
-            /* De breedte wordt automatisch berekend door de inhoud */
-            width: max-content; 
-            /* Snelheid: 60s is traag. Verhoog naar 100s voor nóg trager */
-            animation: loop-links 60s linear infinite;
-        }
+    .slider-track {
+        display: flex;
+        /* BEREKENING: (500px breedte + 50px totale margin) * 10 foto's */
+        /* Pas de '10' aan naar het aantal foto's dat je daadwerkelijk gebruikt */
+        width: calc((500px + 50px) * 10); 
+        
+        /* Omdat de weg nu langer is, mag de tijd (60s) hoog blijven voor traagheid */
+        animation: schuif 60s linear infinite;
+    }
 
-        .slider-track img {
-            width: 600px; /* Lekker grote foto's */
-            height: 400px; 
-            margin: 0 20px;
-            object-fit: cover;
-            border-radius: 15px;
-            flex-shrink: 0;
-        }
+    .slider-track img {
+        width: 500px; 
+        height: auto;
+        margin: 0 25px; /* Dit is 25px links + 25px rechts = 50px totaal per foto */
+        border-radius: 12px;
+        flex-shrink: 0; /* Belangrijk: dit voorkomt dat foto's worden platgedrukt */
+    }
 
-        /* De animatie die de foto's naar links trekt */
-        @keyframes loop-links {
-            0% {
-                transform: translateX(0);
-            }
-            100% {
-                /* We schuiven precies de helft van de track (één set foto's) op */
-                transform: translateX(-50%);
-            }
-        }
+    @keyframes schuif {
+        0% { transform: translateX(0); }
+        100% { transform: translateX(100vw); }
+    }
+</style>
 
-        /* Pauzeer als je met de muis op een foto staat */
-        .slider-container:hover .slider-track {
-            animation-play-state: paused;
-        }
-    </style>
-</head>
-<body>
-
-    <div class="slider-container">
-        <div class="slider-track">
-            <img src="foto1.jpg" alt="1">
-            <img src="foto2.jpg" alt="2">
-            <img src="foto3.jpg" alt="3">
-            <img src="foto4.jpg" alt="4">
-            <img src="foto5.jpg" alt="5">
-            
-            <img src="foto1.jpg" alt="1">
-            <img src="foto2.jpg" alt="2">
-            <img src="foto3.jpg" alt="3">
-            <img src="foto4.jpg" alt="4">
-            <img src="foto5.jpg" alt="5">
-        </div>
+<div class="slider-container">
+    <div class="slider-track">
+        <img src="foto1.jpg" alt="1">
+        <img src="foto2.jpg" alt="2">
+        <img src="foto3.jpg" alt="3">
+        <img src="foto4.jpg" alt="4">
+        <img src="foto5.jpg" alt="5">
+        <img src="foto6.jpg" alt="6">
+        <img src="foto7.jpg" alt="7">
+        <img src="foto8.jpg" alt="8">
+        <img src="foto9.jpg" alt="9">
+        <img src="foto10.jpg" alt="10">
     </div>
-
+</div>
 </body>
 </html>
 
