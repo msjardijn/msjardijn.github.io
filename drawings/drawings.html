@@ -13,7 +13,7 @@
             height: 100%;
             margin: 0;
             padding: 0;
-            overflow-x: hidden;
+            overflow: hidden; /* Voorkomt scrollen van de hele pagina */
         }
 
         body {
@@ -27,67 +27,70 @@
         }
 
         .content-container {
-            padding: 20px;
-            background-color: rgba(0, 0, 0, 0.4);
-            min-height: 100%;
             display: flex;
             flex-direction: column;
+            height: 100vh;
+            background-color: rgba(0, 0, 0, 0.5); /* Iets donkerder voor betere focus op kunst */
         }
 
         /* Navigatie */
-        header h1 { margin-left: 20px; }
-        header a { font-size: 0.6em; margin-left: 15px; color: #ccc; }
+        header { padding: 20px 0 10px 40px; }
+        header h1 { margin: 0; font-size: 1.8em; }
+        header span { font-size: 0.5em; color: #ccc; margin-left: 10px; }
 
-        nav table { width: 100%; border-collapse: collapse; margin-bottom: 30px; }
-        nav td { padding: 10px; text-align: center; font-weight: bold; }
-        nav a { color: #ffffff; text-decoration: none; }
-        nav a:hover { text-decoration: underline; }
+        nav { padding: 0 20px; }
+        nav table { width: 100%; border-collapse: collapse; }
+        nav td { padding: 12px 5px; text-align: center; font-weight: bold; font-size: 0.9em; }
+        nav a { color: #ffffff; text-decoration: none; transition: 0.3s; }
+        nav a:hover { color: #ccc; text-decoration: underline; }
 
-        /* De Nieuwe Slider */
+        /* De Slider */
         .slider-container {
+            flex-grow: 1; /* Neemt de rest van de verticale ruimte in */
+            display: flex;
+            align-items: center; /* Centreert de slider verticaal */
             width: 100%;
             overflow: hidden;
             background: transparent;
-            padding: 60px 0;
-            display: flex;
-            margin-top: auto;
-            margin-bottom: auto;
         }
 
         .slider-track {
             display: flex;
             width: max-content;
-            /* Loopt langzaam van rechts naar links */
-            animation: loop-links 80s linear infinite;
+            animation: loop-links 100s linear infinite; /* Iets trager voor tekeningen */
         }
 
         .slider-track img {
-            height: 350px; /* Mooie hoogte voor tekeningen */
-            width: auto;
-            margin: 0 20px;
-            border-radius: 5px; /* Iets minder rond voor tekeningen (papier-look) */
-            box-shadow: 0 5px 15px rgba(0,0,0,0.5);
-            transition: transform 0.4s ease, box-shadow 0.4s ease;
+            height: 450px; /* Hoogte verhoogd voor betere zichtbaarheid */
+            width: auto;   /* Behoudt de originele verhoudingen (niet langwerpig maken) */
+            margin: 0 30px;
+            border-radius: 3px; 
+            box-shadow: 0 10px 30px rgba(0,0,0,0.6);
+            transition: transform 0.5s ease;
             flex-shrink: 0;
-            background-color: white; /* Geeft tekeningen een witte 'papier' rand indien nodig */
-            padding: 5px;
+            /* Geen achtergrondkleur of padding meer, dit voorkomt witte vlakken */
         }
 
         /* Hover effect */
         .slider-track img:hover {
-            transform: scale(1.15);
+            transform: scale(1.1);
             z-index: 10;
-            box-shadow: 0 12px 25px rgba(0,0,0,0.7);
         }
 
         .slider-container:hover .slider-track {
             animation-play-state: paused;
         }
 
-        /* Naadloze animatie van rechts naar links */
+        /* Oneindige loop van RECHTS naar LINKS */
         @keyframes loop-links {
             0% { transform: translateX(0); }
             100% { transform: translateX(-50%); }
+        }
+
+        /* Mobiele optimalisatie */
+        @media (max-width: 768px) {
+            .slider-track img { height: 300px; }
+            nav td { font-size: 0.7em; }
         }
     </style>
 </head>
@@ -95,7 +98,7 @@
 
 <div class="content-container">
     <header>
-        <h1>MARTIN SJARDIJN <a href="#">DRAWINGS</a></h1>
+        <h1>MARTIN SJARDIJN <span>DRAWINGS</span></h1>
     </header>
 
     <nav>
@@ -105,7 +108,7 @@
                     <td><a href="../index.html">HOME</a></td>
                     <td><a href="../about/about.html">ABOUT</a></td>
                     <td><a href="../paintings/paintings.html">PAINTINGS</a></td>
-                    <td><a href="drawings.html" style="text-decoration: underline;">DRAWINGS</a></td>
+                    <td><a href="drawings.html" style="border-bottom: 2px solid white;">DRAWINGS</a></td>
                     <td><a href="../sculptures/sculptures.html">SCULPTURES</a></td>
                     <td><a href="../books/books.html">BOOKS</a></td>
                     <td><a href="../writings/writings.html">WRITINGS</a></td>
@@ -117,27 +120,27 @@
 
     <div class="slider-container">
         <div class="slider-track">
-            <img src="drawing1.jpg" alt="Drawing 1">
-            <img src="drawing2.jpg" alt="Drawing 2">
-            <img src="drawing3.jpg" alt="Drawing 3">
-            <img src="drawing4.jpg" alt="Drawing 4">
-            <img src="drawing5.jpg" alt="Drawing 5">
-            <img src="drawing6.jpg" alt="Drawing 6">
-            <img src="drawing7.jpg" alt="Drawing 7">
-            <img src="drawing8.jpg" alt="Drawing 8">
-            <img src="drawing9.jpg" alt="Drawing 9">
-            <img src="drawing10.jpg" alt="Drawing 10">
+            <img src="drawing1.jpg" alt="Work 1">
+            <img src="drawing2.jpg" alt="Work 2">
+            <img src="drawing3.jpg" alt="Work 3">
+            <img src="drawing4.jpg" alt="Work 4">
+            <img src="drawing5.jpg" alt="Work 5">
+            <img src="drawing6.jpg" alt="Work 6">
+            <img src="drawing7.jpg" alt="Work 7">
+            <img src="drawing8.jpg" alt="Work 8">
+            <img src="drawing9.jpg" alt="Work 9">
+            <img src="drawing10.jpg" alt="Work 10">
 
-            <img src="drawing1.jpg" alt="Drawing 1">
-            <img src="drawing2.jpg" alt="Drawing 2">
-            <img src="drawing3.jpg" alt="Drawing 3">
-            <img src="drawing4.jpg" alt="Drawing 4">
-            <img src="drawing5.jpg" alt="Drawing 5">
-            <img src="drawing6.jpg" alt="Drawing 6">
-            <img src="drawing7.jpg" alt="Drawing 7">
-            <img src="drawing8.jpg" alt="Drawing 8">
-            <img src="drawing9.jpg" alt="Drawing 9">
-            <img src="drawing10.jpg" alt="Drawing 10">
+            <img src="drawing1.jpg" alt="Work 1">
+            <img src="drawing2.jpg" alt="Work 2">
+            <img src="drawing3.jpg" alt="Work 3">
+            <img src="drawing4.jpg" alt="Work 4">
+            <img src="drawing5.jpg" alt="Work 5">
+            <img src="drawing6.jpg" alt="Work 6">
+            <img src="drawing7.jpg" alt="Work 7">
+            <img src="drawing8.jpg" alt="Work 8">
+            <img src="drawing9.jpg" alt="Work 9">
+            <img src="drawing10.jpg" alt="Work 10">
         </div>
     </div>
 </div>
