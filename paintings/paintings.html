@@ -2,57 +2,104 @@
 <html lang="nl">
 <head>
     <meta charset="UTF-8">
-    <title>Oneindige Foto Slider</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Martin Sjardijn | Beeldend Kunstenaar &amp; Schrijver</title>
     <style>
-        body {
+        /* Achtergrond instellingen */
+        html, body {
+            height: 100%;
             margin: 0;
-            overflow-x: hidden; /* Voorkom horizontaal scrollen van de pagina zelf */
-            background-color: transparent;
+            padding: 0;
         }
 
+        body {
+            background-image: url('https://msjardijn.github.io/sculptures/fonds2g.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+            font-family: Arial, sans-serif;
+            color: white;
+        }
+
+        .content-container {
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.4); 
+            min-height: 100%;
+        }
+
+        a { color: #ffffff; text-decoration: none; padding: 5px 10px; }
+        a:hover { text-decoration: underline; }
+        table { width: 100%; border-collapse: collapse; margin-top: 20px; }
+        td { padding: 10px; text-align: center; }
+
+        /* --- NIEUWE SLIDER CSS --- */
         .slider-container {
             width: 100%;
             overflow: hidden;
             background: transparent;
-            padding: 30px 0;
+            padding: 60px 0; /* Ruimte voor de vergroting bij hover */
             display: flex;
         }
 
         .slider-track {
             display: flex;
-            width: max-content; /* Past zich automatisch aan de breedte van alle foto's aan */
-            /* SNELHEID: 80s voor een heel rustig effect. Lager = sneller */
-            animation: schuif-links 80s linear infinite;
+            width: max-content;
+            animation: schuif-links 60s linear infinite; /* Loopt nu naar links */
         }
 
         .slider-track img {
-            height: 300px; /* Iets minder hoog zoals gevraagd */
-            width: auto;   /* Breedte past zich aan om verhoudingen te bewaren */
+            height: 300px; /* Lager zoals gevraagd */
+            width: auto;
             margin: 0 15px;
             border-radius: 10px;
             flex-shrink: 0;
-            /* Subtiele schaduw voor diepte */
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            transition: transform 0.4s ease;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.5);
         }
 
-        /* De animatie: schuift van rechts naar links */
-        @keyframes schuif-links {
-            0% {
-                transform: translateX(0);
-            }
-            100% {
-                /* Verschuif exact de helft (één volledige set van 10 foto's) */
-                transform: translateX(-50%);
-            }
+        /* Foto wordt groter als je hem aanwijst */
+        .slider-track img:hover {
+            transform: scale(1.1);
+            z-index: 10;
         }
 
-        /* Pauzeer bij hover */
+        /* Stop animatie bij hover */
         .slider-container:hover .slider-track {
             animation-play-state: paused;
+        }
+
+        @keyframes schuif-links {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); } /* Schuift naar links voor oneindige loop */
         }
     </style>
 </head>
 <body>
+
+<div class="content-container">
+    <header>
+        <h1>&nbsp;&nbsp;&nbsp; MARTIN SJARDIJN 
+            <a href="paintings/paintings.html"><strong>PAINTINGS</strong></a>
+        </h1>
+    </header>
+
+    <nav>
+        <table>
+            <tbody>
+                <tr>
+                    <td><a href="index.html"><strong>HOME</strong></a></td>
+                    <td><a href="about/about.html"><strong>ABOUT</strong></a></td>
+                    <td><a href="drawings/drawings.html"><strong>DRAWINGS</strong></a></td>
+                    <td><a href="sculptures/sculptures.html"><strong>SCULPTURES</strong></a></td>
+                    <td><a href="books/books.html"><strong>BOOKS</strong></a></td>
+                    <td><a href="writings/writings.html"><strong>WRITINGS</strong></a></td>
+                    <td><a href="projects/projects.html"><strong>PROJECTS</strong></a></td>
+                    <td><a href="links/links.html"><strong>LINKS</strong></a></td>
+                </tr>
+            </tbody>
+        </table>
+    </nav>
 
     <div class="slider-container">
         <div class="slider-track">
@@ -66,7 +113,6 @@
             <img src="foto8.jpg" alt="8">
             <img src="foto9.jpg" alt="9">
             <img src="foto10.jpg" alt="10">
-
             <img src="foto1.jpg" alt="1">
             <img src="foto2.jpg" alt="2">
             <img src="foto3.jpg" alt="3">
@@ -79,6 +125,7 @@
             <img src="foto10.jpg" alt="10">
         </div>
     </div>
+</div>
 
 </body>
 </html>
