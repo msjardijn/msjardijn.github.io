@@ -1,163 +1,85 @@
-<html>
+<!DOCTYPE html>
+<html lang="nl">
 <head>
-<meta http-equiv="content-type" content="text/html;
-charset=ISO-8859-1">
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,
-initial-scale=1.0">
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,
-initial-scale=1.0">
-<title>Martin Sjardijn | Beeldend Kunstenaar &amp; Schrijver</title>
-<meta name="description" content="Offici&euml;le website van Martin
-Sjardijn. Ontdek schilderijen, sculpturen, tekeningen en boeken
-van deze hedendaagse Nederlandse kunstenaar.">
-<meta name="robots" content="index, follow">
-<meta name="author" content="Martin Sjardijn">
-<meta name="keywords" content="Martin Sjardijn, kunstenaar, Den
-Haag, schilderijen, sculpturen, Metamorphose, Pulchri Studio,
-hedendaagse kunst">
-<meta property="og:title" content="Martin Sjardijn - Beeldend
-Kunstenaar">
-<meta property="og:description" content="Portfolio van schilderijen,
-sculpturen en literair werk door Martin Sjardijn.">
-<meta property="og:image"
-content="https://msjardijn.github.io/sculptures/fonds2g.jpg">
-<meta property="og:url" content="https://msjardijn.github.io/">
-<meta property="og:type" content="website">
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Martin Sjardijn | Kunst &amp;
-Projecten">
-<meta name="twitter:description" content="Ontdek het diverse oeuvre
-van Martin Sjardijn, van abstracte schilderijen tot monumentale
-sculpturen.">
-<meta name="twitter:image"
-content="https://msjardijn.github.io/sculptures/fonds2g.jpg">
-<link rel="canonical" href="https://msjardijn.github.io/">
-<title>MARTIN SJARDIJN</title>
-<style>
-/* Fullscreen achtergrond instellingen */
-html, body {
-height: 100%;
-margin: 0;
-padding: 0;
-}
-body {
-/* De afbeelding die je opgaf */
-background-image: url('https://msjardijn.github.io/sculptures/fonds2g.jpg');
+    <meta charset="UTF-8">
+    <title>Oneindige Foto Slider</title>
+    <style>
+        body {
+            margin: 0;
+            overflow-x: hidden; /* Voorkom horizontaal scrollen van de pagina zelf */
+            background-color: transparent;
+        }
 
-/* Zorg dat de afbeelding het hele scherm vult */
-background-size: cover;
-background-position: center;
-background-attachment: fixed;
-background-repeat: no-repeat;
+        .slider-container {
+            width: 100%;
+            overflow: hidden;
+            background: transparent;
+            padding: 30px 0;
+            display: flex;
+        }
 
-/* Tekstkleur en font voor de leesbaarheid over de foto heen */
-font-family: Arial, sans-serif;
-color: white; /* Of zwart, afhankelijk van de foto */
-}
+        .slider-track {
+            display: flex;
+            width: max-content; /* Past zich automatisch aan de breedte van alle foto's aan */
+            /* SNELHEID: 80s voor een heel rustig effect. Lager = sneller */
+            animation: schuif-links 80s linear infinite;
+        }
 
-/* Styling voor je navigatiemenu om het leesbaar te houden */
-.content-container {
-padding: 20px;
-background-color: rgba(0, 0, 0, 0.4); /* Licht transparante zwarte laag */
-min-height: 100%;
-}
+        .slider-track img {
+            height: 300px; /* Iets minder hoog zoals gevraagd */
+            width: auto;   /* Breedte past zich aan om verhoudingen te bewaren */
+            margin: 0 15px;
+            border-radius: 10px;
+            flex-shrink: 0;
+            /* Subtiele schaduw voor diepte */
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
 
-a {
-color: #ffffff;
-text-decoration: none;
-padding: 5px 10px;
-}
+        /* De animatie: schuift van rechts naar links */
+        @keyframes schuif-links {
+            0% {
+                transform: translateX(0);
+            }
+            100% {
+                /* Verschuif exact de helft (één volledige set van 10 foto's) */
+                transform: translateX(-50%);
+            }
+        }
 
-a:hover {
-text-decoration: underline;
-}
-
-table {
-width: 100%;
-border-collapse: collapse;
-}
-
-td {
-padding: 10px;
-text-align: center;
-}
-</style>
+        /* Pauzeer bij hover */
+        .slider-container:hover .slider-track {
+            animation-play-state: paused;
+        }
+    </style>
 </head>
 <body>
-<div class="content-container">
-<header>
-<h1>&nbsp;&nbsp; &nbsp; MARTIN SJARDIJN <a
-href="chrome://editor/content/paintings/paintings.html"><strong>PAINTINGS</strong></a><a
-href="chrome://editor/content/about/about.html"><strong></strong></a></h1>
-</header>
-<nav>
-<div align="center">
-<div align="left"><strong></strong> </div>
-</div>
-<table>
-<tbody>
-<tr>
-<td><a href="../index.html"><strong>HOME</strong></a><br>
-</td>
-<td><a href="../paintings/paintings.html"><strong>ABOUT</strong></a><br>
-</td>
-<td><a href="../drawings/drawings.html"><strong>DRAWINGS</strong></a></td>
-<td><a href="../sculptures/sculptures.html"><strong>SCULPTURES</strong></a></td>
-<td><a href="../books/books.html"><strong>BOOKS</strong></a></td>
-<td><a href="../writings/writings.html"><strong>WRITINGS</strong></a></td>
-<td><a href="../projects/projects.html"><strong>PROJECTS</strong></a></td>
-<td><a href="../links/links.html"><strong>LINKS</strong></a></td>
-</tr>
-</tbody>
-</table>
-<style>
-    .slider-container {
-        width: 100%;
-        overflow: hidden;
-        background: transparent;
-        padding: 40px 0;
-    }
 
-    .slider-track {
-        display: flex;
-        /* BEREKENING: (500px breedte + 50px totale margin) * 10 foto's */
-        /* Pas de '10' aan naar het aantal foto's dat je daadwerkelijk gebruikt */
-        width: calc((500px + 50px) * 10); 
-        
-        /* Omdat de weg nu langer is, mag de tijd (60s) hoog blijven voor traagheid */
-        animation: schuif 60s linear infinite;
-    }
+    <div class="slider-container">
+        <div class="slider-track">
+            <img src="foto1.jpg" alt="1">
+            <img src="foto2.jpg" alt="2">
+            <img src="foto3.jpg" alt="3">
+            <img src="foto4.jpg" alt="4">
+            <img src="foto5.jpg" alt="5">
+            <img src="foto6.jpg" alt="6">
+            <img src="foto7.jpg" alt="7">
+            <img src="foto8.jpg" alt="8">
+            <img src="foto9.jpg" alt="9">
+            <img src="foto10.jpg" alt="10">
 
-    .slider-track img {
-        width: 500px; 
-        height: auto;
-        margin: 0 25px; /* Dit is 25px links + 25px rechts = 50px totaal per foto */
-        border-radius: 12px;
-        flex-shrink: 0; /* Belangrijk: dit voorkomt dat foto's worden platgedrukt */
-    }
-
-    @keyframes schuif {
-        0% { transform: translateX(0); }
-        100% { transform: translateX(100vw); }
-    }
-</style>
-
-<div class="slider-container">
-    <div class="slider-track">
-        <img src="foto1.jpg" alt="1">
-        <img src="foto2.jpg" alt="2">
-        <img src="foto3.jpg" alt="3">
-        <img src="foto4.jpg" alt="4">
-        <img src="foto5.jpg" alt="5">
-        <img src="foto6.jpg" alt="6">
-        <img src="foto7.jpg" alt="7">
-        <img src="foto8.jpg" alt="8">
-        <img src="foto9.jpg" alt="9">
-        <img src="foto10.jpg" alt="10">
+            <img src="foto1.jpg" alt="1">
+            <img src="foto2.jpg" alt="2">
+            <img src="foto3.jpg" alt="3">
+            <img src="foto4.jpg" alt="4">
+            <img src="foto5.jpg" alt="5">
+            <img src="foto6.jpg" alt="6">
+            <img src="foto7.jpg" alt="7">
+            <img src="foto8.jpg" alt="8">
+            <img src="foto9.jpg" alt="9">
+            <img src="foto10.jpg" alt="10">
+        </div>
     </div>
-</div>
+
 </body>
 </html>
 
