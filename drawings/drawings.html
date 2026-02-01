@@ -1,81 +1,88 @@
-<html>
+<!DOCTYPE html>
+<html lang="nl">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Martin Sjardijn | Beeldend Kunstenaar &amp; Schrijver</title>
+    <style>
+        /* Achtergrond instellingen */
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
 
-<meta http-equiv="content-type" content="text/html; charset=UTF-8">
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1.0">
-<title>Martin Sjardijn | Beeldend Kunstenaar &amp; Schrijver</title>
-<style>
-/* Achtergrond instellingen */
-html, body {
-height: 100%;
-margin: 0;
-padding: 0;
-}
+        body {
+            background-image: url('https://msjardijn.github.io/sculptures/fonds2g.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+            font-family: Arial, sans-serif;
+            color: white;
+        }
 
-body {
-background-image: url('https://msjardijn.github.io/sculptures/fonds2g.jpg');
-background-size: cover;
-background-position: center;
-background-attachment: fixed;
-background-repeat: no-repeat;
-font-family: Arial, sans-serif;
-color: white;
-}
+        .content-container {
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.4); 
+            min-height: 100%;
+        }
 
-.content-container {
-padding: 20px;
-background-color: rgba(0, 0, 0, 0.4);
-min-height: 100%;
-}
+        a { color: #ffffff; text-decoration: none; padding: 5px 10px; }
+        a:hover { text-decoration: underline; }
+        table { width: 100%; border-collapse: collapse; margin-top: 20px; }
+        td { padding: 10px; text-align: center; }
 
-a { color: #ffffff; text-decoration: none; padding: 5px 10px; }
-a:hover { text-decoration: underline; }
-table { width: 100%; border-collapse: collapse; margin-top: 20px; }
-td { padding: 10px; text-align: center; }
+        /* --- NIEUWE SLIDER CSS --- */
+        .slider-container {
+            width: 100%;
+            overflow: hidden;
+            background: transparent;
+            padding: 60px 0; /* Ruimte voor de vergroting bij hover */
+            display: flex;
+        }
 
-/* --- NIEUWE SLIDER CSS --- */
-.slider-container {
-width: 100%;
-overflow: hidden;
-background: transparent;
-padding: 60px 0; /* Ruimte voor de vergroting bij hover */
-display: flex;
-}
+        .slider-track {
+            display: flex;
+            width: max-content;
+            animation: schuif-links 60s linear infinite; /* Loopt nu naar links */
+        }
 
-.slider-track {
-display: flex;
-width: max-content;
-animation: schuif-links 60s linear infinite; /* Loopt nu naar links */
-}
+        .slider-track img {
+            height: 300px; /* Lager zoals gevraagd */
+            width: auto;
+            margin: 0 15px;
+            border-radius: 10px;
+            flex-shrink: 0;
+            transition: transform 0.4s ease;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+        }
 
-.slider-track img {
-height: 300px; /* Lager zoals gevraagd */
-width: auto;
-margin: 0 15px;
-border-radius: 10px;
-flex-shrink: 0;
-transition: transform 0.4s ease;
-box-shadow: 0 4px 15px rgba(0,0,0,0.5);
-}
+        /* Foto wordt groter als je hem aanwijst */
+        .slider-track img:hover {
+            transform: scale(1.1);
+            z-index: 10;
+        }
 
-/* Foto wordt groter als je hem aanwijst */
-.slider-track img:hover {
-transform: scale(1.1);
-z-index: 10;
-}
+        /* Stop animatie bij hover */
+        .slider-container:hover .slider-track {
+            animation-play-state: paused;
+        }
 
-/* Stop animatie bij hover */
-.slider-container:hover .slider-track {
-animation-play-state: paused;
-}
-
-@keyframes schuif-links {
-0% { transform: translateX(0); }
-100% { transform: translateX(-50%); } /* Schuift naar links voor oneindige loop */
-}
-</style>
+        @keyframes schuif-links {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); } /* Schuift naar links voor oneindige loop */
+        }
+    </style>
 </head>
+<body>
+
+<div class="content-container">
+    <header>
+        <h1>&nbsp;&nbsp;&nbsp; MARTIN SJARDIJN 
+            <a href="paintings/paintings.html"><strong>PAINTINGS</strong></a>
+        </h1>
+    </header>
 <body>
 <div class="content-container">
 <header>
