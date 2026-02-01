@@ -113,46 +113,43 @@ href="chrome://editor/content/about/about.html"><strong></strong></a></h1>
 </tr>
 </tbody>
 </table>
-<!DOCTYPE html>
-<html lang="nl">
-<head>
-    <meta charset="UTF-8">
-    <style>
         .slider-container {
             width: 100%;
             overflow: hidden;
-            background: transparent;
+            background: transparent; /* Geen achtergrondkleur */
             padding: 50px 0;
+            display: flex;
         }
 
         .slider-track {
             display: flex;
-            /* Breedte: (foto breedte + margins) * aantal foto's */
-            width: calc((500px + 50px) * 5); 
-            
-            /* Snelheid: 40s is traag, verlaag dit naar bijv. 20s voor sneller */
-            animation: schuif 40s linear infinite;
+            /* De breedte wordt automatisch berekend door de inhoud */
+            width: max-content; 
+            /* Snelheid: 60s is traag. Verhoog naar 100s voor nóg trager */
+            animation: loop-links 60s linear infinite;
         }
 
         .slider-track img {
-            width: 500px; /* Grote afbeeldingen */
-            height: auto;
-            margin: 0 25px;
+            width: 600px; /* Lekker grote foto's */
+            height: 400px; 
+            margin: 0 20px;
+            object-fit: cover;
             border-radius: 15px;
+            flex-shrink: 0;
         }
 
-        @keyframes schuif {
+        /* De animatie die de foto's naar links trekt */
+        @keyframes loop-links {
             0% {
-                /* STARTPUNT: Veranderd naar 0 zodat de eerste foto direct zichtbaar is */
                 transform: translateX(0);
             }
             100% {
-                /* EINDPUNT: Beweegt naar rechts buiten het scherm */
-                transform: translateX(100vw);
+                /* We schuiven precies de helft van de track (één set foto's) op */
+                transform: translateX(-50%);
             }
         }
 
-        /* Pauze bij muis over de foto */
+        /* Pauzeer als je met de muis op een foto staat */
         .slider-container:hover .slider-track {
             animation-play-state: paused;
         }
@@ -167,11 +164,14 @@ href="chrome://editor/content/about/about.html"><strong></strong></a></h1>
             <img src="foto3.jpg" alt="3">
             <img src="foto4.jpg" alt="4">
             <img src="foto5.jpg" alt="5">
+            
+            <img src="foto1.jpg" alt="1">
+            <img src="foto2.jpg" alt="2">
+            <img src="foto3.jpg" alt="3">
+            <img src="foto4.jpg" alt="4">
+            <img src="foto5.jpg" alt="5">
         </div>
     </div>
-
-</body>
-</html>
 
 </body>
 </html>
