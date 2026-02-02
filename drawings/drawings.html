@@ -2,18 +2,14 @@
 <html lang="nl">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Martin Sjardijn | Drawings</title>
-    <meta name="description" content="Tekeningen en aquarellen van Martin Sjardijn.">
-    <meta name="author" content="Martin Sjardijn">
-    
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Martin Sjardijn | Beeldend Kunstenaar &amp; Schrijver</title>
     <style>
-        /* Achtergrond en Basis */
+        /* Achtergrond instellingen */
         html, body {
             height: 100%;
             margin: 0;
             padding: 0;
-            overflow: hidden; /* Voorkomt scrollen van de hele pagina */
         }
 
         body {
@@ -27,70 +23,55 @@
         }
 
         .content-container {
-            display: flex;
-            flex-direction: column;
-            height: 100vh;
-            background-color: rgba(0, 0, 0, 0.5); /* Iets donkerder voor betere focus op kunst */
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.4); 
+            min-height: 100%;
         }
 
-        /* Navigatie */
-        header { padding: 20px 0 10px 40px; }
-        header h1 { margin: 0; font-size: 1.8em; }
-        header span { font-size: 0.5em; color: #ccc; margin-left: 10px; }
+        a { color: #ffffff; text-decoration: none; padding: 5px 10px; }
+        a:hover { text-decoration: underline; }
+        table { width: 100%; border-collapse: collapse; margin-top: 20px; }
+        td { padding: 10px; text-align: center; }
 
-        nav { padding: 0 20px; }
-        nav table { width: 100%; border-collapse: collapse; }
-        nav td { padding: 12px 5px; text-align: center; font-weight: bold; font-size: 0.9em; }
-        nav a { color: #ffffff; text-decoration: none; transition: 0.3s; }
-        nav a:hover { color: #ccc; text-decoration: underline; }
-
-        /* De Slider */
+        /* --- NIEUWE SLIDER CSS --- */
         .slider-container {
-            flex-grow: 1; /* Neemt de rest van de verticale ruimte in */
-            display: flex;
-            align-items: center; /* Centreert de slider verticaal */
             width: 100%;
             overflow: hidden;
             background: transparent;
+            padding: 60px 0; /* Ruimte voor de vergroting bij hover */
+            display: flex;
         }
 
         .slider-track {
             display: flex;
             width: max-content;
-            animation: loop-links 100s linear infinite; /* Iets trager voor tekeningen */
+            animation: schuif-links 60s linear infinite; /* Loopt nu naar links */
         }
 
         .slider-track img {
-            height: 450px; /* Hoogte verhoogd voor betere zichtbaarheid */
-            width: auto;   /* Behoudt de originele verhoudingen (niet langwerpig maken) */
-            margin: 0 30px;
-            border-radius: 3px; 
-            box-shadow: 0 10px 30px rgba(0,0,0,0.6);
-            transition: transform 0.5s ease;
+            height: 300px; /* Lager zoals gevraagd */
+            width: auto;
+            margin: 0 15px;
+            border-radius: 10px;
             flex-shrink: 0;
-            /* Geen achtergrondkleur of padding meer, dit voorkomt witte vlakken */
+            transition: transform 0.4s ease;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.5);
         }
 
-        /* Hover effect */
+        /* Foto wordt groter als je hem aanwijst */
         .slider-track img:hover {
             transform: scale(1.1);
             z-index: 10;
         }
 
+        /* Stop animatie bij hover */
         .slider-container:hover .slider-track {
             animation-play-state: paused;
         }
 
-        /* Oneindige loop van RECHTS naar LINKS */
-        @keyframes loop-links {
+        @keyframes schuif-links {
             0% { transform: translateX(0); }
-            100% { transform: translateX(-50%); }
-        }
-
-        /* Mobiele optimalisatie */
-        @media (max-width: 768px) {
-            .slider-track img { height: 300px; }
-            nav td { font-size: 0.7em; }
+            100% { transform: translateX(-50%); } /* Schuift naar links voor oneindige loop */
         }
     </style>
 </head>
@@ -98,21 +79,23 @@
 
 <div class="content-container">
     <header>
-        <h1>MARTIN SJARDIJN <span>DRAWINGS</span></h1>
+        <h1>&nbsp;&nbsp;&nbsp; MARTIN SJARDIJN 
+            <a href="paintings/paintings.html"><strong>PAINTINGS</strong></a>
+        </h1>
     </header>
 
     <nav>
         <table>
             <tbody>
                 <tr>
-                    <td><a href="../index.html">HOME</a></td>
-                    <td><a href="../about/about.html">ABOUT</a></td>
-                    <td><a href="../paintings/paintings.html">PAINTINGS</a></td>
-                    <td><a href="drawings.html" style="border-bottom: 2px solid white;">DRAWINGS</a></td>
-                    <td><a href="../sculptures/sculptures.html">SCULPTURES</a></td>
-                    <td><a href="../books/books.html">BOOKS</a></td>
-                    <td><a href="../writings/writings.html">WRITINGS</a></td>
-                    <td><a href="../projects/projects.html">PROJECTS</a></td>
+                    <td><a href="../index.html"><strong>HOME</strong></a></td>
+                    <td><a href="../about/about.html"><strong>ABOUT</strong></a></td>
+                    <td><a href="../paintings/paintings.html"><strong>PAINTINGS</strong></a></td>
+                    <td><a href="../sculptures/sculptures.html"><strong>SCULPTURES</strong></a></td>
+                    <td><a href="../books/books.html"><strong>BOOKS</strong></a></td>
+                    <td><a href="../writings/writings.html"><strong>WRITINGS</strong></a></td>
+                    <td><a href="../projects/projects.html"><strong>PROJECTS</strong></a></td>
+                    <td><a href="../links/links.html"><strong>LINKS</strong></a></td>
                 </tr>
             </tbody>
         </table>
@@ -120,30 +103,42 @@
 
     <div class="slider-container">
         <div class="slider-track">
-            <img src="drawing1.jpg" alt="Work 1">
-            <img src="drawing2.jpg" alt="Work 2">
-            <img src="drawing3.jpg" alt="Work 3">
-            <img src="drawing4.jpg" alt="Work 4">
-            <img src="drawing5.jpg" alt="Work 5">
-            <img src="drawing6.jpg" alt="Work 6">
-            <img src="drawing7.jpg" alt="Work 7">
-            <img src="drawing8.jpg" alt="Work 8">
-            <img src="drawing9.jpg" alt="Work 9">
-            <img src="drawing10.jpg" alt="Work 10">
-
-            <img src="drawing1.jpg" alt="Work 1">
-            <img src="drawing2.jpg" alt="Work 2">
-            <img src="drawing3.jpg" alt="Work 3">
-            <img src="drawing4.jpg" alt="Work 4">
-            <img src="drawing5.jpg" alt="Work 5">
-            <img src="drawing6.jpg" alt="Work 6">
-            <img src="drawing7.jpg" alt="Work 7">
-            <img src="drawing8.jpg" alt="Work 8">
-            <img src="drawing9.jpg" alt="Work 9">
-            <img src="drawing10.jpg" alt="Work 10">
+            <img src="foto1.jpg" alt="1">
+            <img src="foto2.jpg" alt="2">
+            <img src="foto3.jpg" alt="3">
+            <img src="foto4.jpg" alt="4">
+            <img src="foto5.jpg" alt="5">
+            <img src="foto6.jpg" alt="6">
+            <img src="foto7.jpg" alt="7">
+            <img src="foto8.jpg" alt="8">
+            <img src="foto9.jpg" alt="9">
+            <img src="foto10.jpg" alt="10">
+             <img src="foto11.jpg" alt="11">
+             <img src="foto12.jpg" alt="12">
+             <img src="foto13.jpg" alt="13">
+             <img src="foto14.jpg" alt="14">
+             <img src="foto15.jpg" alt="15">
+            <img src="foto1.jpg" alt="1">
+            <img src="foto2.jpg" alt="2">
+            <img src="foto3.jpg" alt="3">
+            <img src="foto4.jpg" alt="4">
+            <img src="foto5.jpg" alt="5">
+            <img src="foto6.jpg" alt="6">
+            <img src="foto7.jpg" alt="7">
+            <img src="foto8.jpg" alt="8">
+            <img src="foto9.jpg" alt="9">
+            <img src="foto10.jpg" alt="10">
+            <img src="foto11.jpg" alt="11">
+             <img src="foto12.jpg" alt="12">
+             <img src="foto13.jpg" alt="13">
+             <img src="foto14.jpg" alt="14">
+             <img src="foto15.jpg" alt="15">
         </div>
     </div>
 </div>
 
 </body>
 </html>
+
+
+
