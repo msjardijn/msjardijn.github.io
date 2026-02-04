@@ -1,5 +1,9 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
-<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="UTF-8">
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,
 initial-scale=1.0">
@@ -32,82 +36,116 @@ sculpturen.">
 <meta name="twitter:image"
 content="https://msjardijn.github.io/sculptures/fonds2g.jpg">
 <link rel="canonical" href="https://msjardijn.github.io/">
-<title>MARTIN SJARDIJN</title>
-<style>
-/* Fullscreen achtergrond instellingen */
-html, body {
-height: 100%;
-margin: 0;
-padding: 0;
-}
+    <title>Martin Sjardijn</title>
+    <style>
+        body {
+            margin: 0;
+            background: #111 url('https://msjardijn.github.io/sculptures/fonds2g.jpg') no-repeat center center fixed;
+            background-size: cover;
+            height: 100vh;
+            overflow: hidden;
+            font-family: Arial, sans-serif;
+        }
 
-body {
-/* De afbeelding die je opgaf */
-background-image: url('https://msjardijn.github.io/sculptures/fonds2g.jpg');
+        /* De container die de 3D ruimte definieert */
+        .stage {
+            width: 200px;
+            height: 200px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            margin-left: -100px;
+            margin-top: -100px;
+            perspective: 800px;
+            z-index: 999; /* Zorg dat hij overal bovenop staat */
+        }
+/* 2. Het Menu (zonder achtergrondkleur/band) */
+    nav {
+        position: relative;
+        z-index: 0;
+        padding: 0px;
+        text-align: center;
+        background: none; /* Verwijdert de zwarte band */
+ }
 
-/* Zorg dat de afbeelding het hele scherm vult */
-background-size: cover;
-background-position: center;
-background-attachment: fixed;
-background-repeat: no-repeat;
+        /* De kubus zelf */
+        .cube {
+            width: 100%;
+            height: 100%;
+            position: relative;
+            transform-style: preserve-3d;
+            animation: rotate 15s infinite linear;
+        }
 
-/* Tekstkleur en font voor de leesbaarheid over de foto heen */
-font-family: Arial, sans-serif;
-color: white; /* Of zwart, afhankelijk van de foto */
-}
+        /* Elke zijde van de kubus */
+        .face {
+            position: absolute;
+            width: 200px;
+            height: 200px;
+            background: rgba(0, 0, 0, 0.8); /* Zwart met lichte glans */
+            border: 2px solid gold; /* Goudkleur valt beter op dan wit */
+            line-height: 200px;
+            text-align: center;
+            color: gold;
+            font-weight: bold;
+            box-sizing: border-box;
+        }
 
-/* Styling voor je navigatiemenu om het leesbaar te houden */
-.content-container {
-padding: 20px;
-background-color: rgba(0, 0, 0, 0.4); /* Licht transparante zwarte laag */
-min-height: 100%;
-}
+        /* Positionering met de juiste 3D transformaties */
+        .front  { transform: translateZ(100px); }
+        .back   { transform: rotateY(180deg) translateZ(100px); }
+        .right  { transform: rotateY(90deg) translateZ(100px); }
+        .left   { transform: rotateY(-90deg) translateZ(100px); }
+        .top    { transform: rotateX(90deg) translateZ(100px); }
+        .bottom { transform: rotateX(-90deg) translateZ(100px); }
 
-a {
-color: #ffffff;
-text-decoration: none;
-padding: 5px 10px;
-}
+        @keyframes rotate {
+            from { transform: rotateX(0deg) rotateY(0deg); }
+            to   { transform: rotateX(360deg) rotateY(360deg); }
+        }
 
-a:hover {
-text-decoration: underline;
-}
-
-table {
-width: 100%;
-border-collapse: collapse;
-}
-
-td {
-padding: 10px;
-text-align: center;
-}
-</style>
-</head>
-<body>
-<div class="content-container">
+        /* Menu bovenop */
+        nav {
+            position: relative;
+            z-index: 1000;
+            background: rgba(0,0,0,0.6);
+            padding: 20px;
+            text-align: center;
+        }
+        nav a { color: white; margin: 0 15px; text-decoration: none; font-weight: bold; }
+    </style>
+  </head>
+  <body>
+    <div class="content-container">
 <header>
 <h1>&nbsp;&nbsp; &nbsp; MARTIN SJARDIJN</h1>
 </header>
-<nav>
-<table>
-<tbody>
-<tr>
-<td><a href="about/about.html"><strong>ABOUT</strong></a></td>
-<td><a href="paintings/paintings.html"><strong>PAINTINGS</strong></a></td>
-<td><a href="drawings/drawings.html"><strong>DRAWINGS</strong></a></td>
-<td><a href="sculptures/sculptures.html"><strong>SCULPTURES</strong></a></td>
-<td><a href="books/books.html"><strong>BOOKS</strong></a></td>
-<td><a href="writings/writings.html"><strong>WRITINGS</strong></a></td>
-<td><a href="projects/projects.html"><strong>PROJECTS</strong></a></td>
-<td><a href="links/links.html"><strong>LINKS</strong></a></td>
-</tr>
-</tbody>
-</table>
-</nav>
-</div>
-</body>
+    <nav>
+      <table width="100%" cellspacing="2" cellpadding="2" border="0">
+        <tbody>
+          <tr>
+            <td><a href="about/about.html"><strong>ABOUT</strong></a></td>
+            <td><a href="paintings/paintings.html"><strong>PAINTINGS</strong></a></td>
+            <td><a href="drawings/drawings.html"><strong>DRAWINGS</strong></a></td>
+            <td><a href="sculptures/sculptures.html"><strong>SCULPTURES</strong></a></td>
+            <td><a href="books/books.html"><strong>BOOKS</strong></a></td>
+            <td><a href="writings/writings.html"><strong>WRITINGS</strong></a></td>
+            <td><a href="projects/projects.html"><strong>PROJECTS</strong></a></td>
+            <td><a href="links/links.html"><strong>LINKS</strong></a></td>
+          </tr>
+        </tbody>
+      </table>
+    </nav>
+    <div class="stage">
+      <div class="cube">
+        <div class="face front">MS</div>
+        <div class="face back">MS</div>
+        <div class="face right">MS</div>
+        <div class="face left">MS</div>
+        <div class="face top">MS</div>
+        <div class="face bottom">MS</div>
+      </div>
+    </div>
+  </body>
 </html>
-
-
 
