@@ -1,16 +1,15 @@
+<!DOCTYPE html>
 <html lang="nl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <title>Martin Sjardijn | Beeldend Kunstenaar &amp; Schrijver</title>
+    <title>Martin Sjardijn | Beeldend Kunstenaar & Schrijver</title>
     <style>
-        /* Achtergrond instellingen */
         html, body {
             height: 100%;
             margin: 0;
             padding: 0;
         }
-
         body {
             background-image: url('https://msjardijn.github.io/sculptures/fonds2g.jpg');
             background-size: cover;
@@ -20,57 +19,69 @@
             font-family: Arial, sans-serif;
             color: white;
         }
-
         .content-container {
             padding: 20px;
             background-color: rgba(0, 0, 0, 0.4); 
             min-height: 100%;
         }
-
         a { color: #ffffff; text-decoration: none; padding: 5px 10px; }
         a:hover { text-decoration: underline; }
         table { width: 100%; border-collapse: collapse; margin-top: 20px; }
         td { padding: 10px; text-align: center; }
 
-        /* --- NIEUWE SLIDER CSS --- */
+        /* --- GECORRIGEERDE SLIDER CSS --- */
         .slider-container {
             width: 100%;
             overflow: hidden;
             background: transparent;
-            padding: 60px 0; /* Ruimte voor de vergroting bij hover */
+            padding: 60px 0;
             display: flex;
         }
 
         .slider-track {
             display: flex;
-            width: max-content;
-            animation: schuif-links 60s linear infinite; /* Loopt nu naar links */
+            width: max-content; /* Zorgt dat de track zo breed is als de inhoud */
+            animation: schuif-links 60s linear infinite;
         }
 
-        .slider-track img {
-            height: 300px; /* Lager zoals gevraagd */
-            width: auto;
+        /* De container van de foto + tekst */
+        .slide-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
             margin: 0 15px;
-            border-radius: 10px;
-            flex-shrink: 0;
+            flex-shrink: 0; /* Voorkomt dat items smaller worden geknepen */
             transition: transform 0.4s ease;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.5);
         }
 
-        /* Foto wordt groter als je hem aanwijst */
-        .slider-track img:hover {
+        .slide-item img {
+            height: 300px;
+            width: auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+            display: block;
+        }
+
+        .slide-item span {
+            display: block;
+            margin-top: 10px;
+            font-size: 14px;
+            max-width: 300px; /* Zorgt dat tekst niet breder wordt dan de foto */
+            text-align: center;
+        }
+
+        .slide-item:hover {
             transform: scale(1.1);
             z-index: 10;
         }
 
-        /* Stop animatie bij hover */
         .slider-container:hover .slider-track {
             animation-play-state: paused;
         }
 
         @keyframes schuif-links {
             0% { transform: translateX(0); }
-            100% { transform: translateX(-50%); } /* Schuift naar links voor oneindige loop */
+            100% { transform: translateX(-50%); } /* Reset precies op de helft voor looping */
         }
     </style>
 </head>
@@ -78,111 +89,80 @@
 
 <div class="content-container">
     <header>
-        <h1>&nbsp;&nbsp; MARTIN SJARDIJN &nbsp;<strong>PROJECTS</strong></a>
-        </h1>
+        <h1>&nbsp;&nbsp; MARTIN SJARDIJN &nbsp;<strong>PROJECTS</strong></h1>
     </header>
 
     <nav>
         <table>
-            <tbody>
-                <tr>
-                    <td><a href="../index.html"><strong>HOME</strong></a></td>
-                    <td><a href="../about/about.html"><strong>ABOUT</strong></a></td>
-                    <td><a href="../drawings/drawings.html"><strong>DRAWINGS</strong></a></td>
-                    <td><a href="../sculptures/sculptures.html"><strong>SCULPTURES</strong></a></td>
-                    <td><a href="../books/books.html"><strong>BOOKS</strong></a></td>
-                    <td><a href="../writings/writings.html"><strong>WRITINGS</strong></a></td>
-                    <td><a href="../paintings/paintings.html"><strong>PAINTINGS</strong></a></td>
-                    <td><a href="../links/links.html"><strong>LINKS</strong></a></td>
-                </tr>
-            </tbody>
+            <tr>
+                <td><a href="../index.html"><strong>HOME</strong></a></td>
+                <td><a href="../about/about.html"><strong>ABOUT</strong></a></td>
+                <td><a href="../drawings/drawings.html"><strong>DRAWINGS</strong></a></td>
+                <td><a href="../sculptures/sculptures.html"><strong>SCULPTURES</strong></a></td>
+                <td><a href="../books/books.html"><strong>BOOKS</strong></a></td>
+                <td><a href="../writings/writings.html"><strong>WRITINGS</strong></a></td>
+                <td><a href="../paintings/paintings.html"><strong>PAINTINGS</strong></a></td>
+                <td><a href="../links/links.html"><strong>LINKS</strong></a></td>
+            </tr>
         </table>
     </nav>
 
     <div class="slider-container">
         <div class="slider-track">
-            <div style="display: inline-block; text-align: center; margin: 10px; vertical-align: top;">
-                    <a href="info/info.html" style="text-decoration: none; color: inherit;">
-    <img src="foto1.jpg" style="display: block; margin: 0 auto;">
-    <span style="display: block; margin-top: 5px;">AI en het Genie Haagse Kunstkring 2026</span>
-</div>
-           <div style="display: inline-block; text-align: center; margin: 10px; vertical-align: top;">
-    <img src="foto3.jpg" style="display: block; margin: 0 auto;">
-    <span style="display: block; margin-top: 5px;">Morren Memorial = Stadhuis Den Haag = IN VASTE CONTEXT GEGEVEN</span>
-</div>
-                       <div style="display: inline-block; text-align: center; margin: 10px; vertical-align: top;">
-    <img src="foto2.jpg" style="display: block; margin: 0 auto;">
-    <span style="display: block; margin-top: 5px;">Morren Memorial = Stadhuis Den Haag VOOR VERANDERENDE OMGEVING BEWAARD</span>
-</div>
-              <div style="display: inline-block; text-align: center; margin: 10px; vertical-align: top;">
-    <img src="foto4.jpg" style="display: block; margin: 0 auto;">
-    <span style="display: block; margin-top: 5px;">Virtual Reality Project Groninger Museum</span>
-</div>            
-              <div style="display: inline-block; text-align: center; margin: 10px; vertical-align: top;">
-    <img src="foto5.jpg" style="display: block; margin: 0 auto;">
-    <span style="display: block; margin-top: 5px;">Virtual Reality Project Groninger Museum</span>
-</div>            
-              <div style="display: inline-block; text-align: center; margin: 10px; vertical-align: top;">
-    <img src="foto6.jpg" style="display: block; margin: 0 auto;">
-    <span style="display: block; margin-top: 5px;">Virtual Reality Project Groninger Museum</span>
-</div>            
-              <div style="display: inline-block; text-align: center; margin: 10px; vertical-align: top;">
-    <img src="foto7.jpg" style="display: block; margin: 0 auto;">
-    <span style="display: block; margin-top: 5px;">VR instalatie ELEMENT PULCHRI STUDIO in de expositie The Art Of Nietzsche</span>
-</div>            
-              <div style="display: inline-block; text-align: center; margin: 10px; vertical-align: top;">
-    <img src="foto8.jpg" style="display: block; margin: 0 auto;">
-    <span style="display: block; margin-top: 5px;">A LINE IN OUTER SPACE SINCE 1984 1</span>
-</div>            
-              <div style="display: inline-block; text-align: center; margin: 10px; vertical-align: top;">
-    <img src="foto9.jpg" style="display: block; margin: 0 auto;">
-    <span style="display: block; margin-top: 5px;">A LINE IN OUTER SPACE SINCE 1984 2</span>
-</div>            
-              <div style="display: inline-block; text-align: center; margin: 10px; vertical-align: top;">
-    <img src="foto10.jpg" style="display: block; margin: 0 auto;">
-    <span style="display: block; margin-top: 5px;">A LINE IN OUTER SPACE SINCE 1984 3</span>
-</div>            
-         <div style="display: inline-block; text-align: center; margin: 10px; vertical-align: top;">
-    <img src="foto1.jpg" style="display: block; margin: 0 auto;">
-             <a href="info/info.html" style="text-decoration: none; color: inherit;">
-    <span style="display: block; margin-top: 5px;">AI en het Genie Haagse Kunstkring 2026</span>
-</div>
-           <div style="display: inline-block; text-align: center; margin: 10px; vertical-align: top;">
-    <img src="foto3.jpg" style="display: block; margin: 0 auto;">
-    <span style="display: block; margin-top: 5px;">Morren Memorial = Stadhuis Den Haag = IN VASTE CONTEXT GEGEVEN</span>
-</div>
-                       <div style="display: inline-block; text-align: center; margin: 10px; vertical-align: top;">
-    <img src="foto2.jpg" style="display: block; margin: 0 auto;">
-    <span style="display: block; margin-top: 5px;">Morren Memorial = Stadhuis Den Haag VOOR VERANDERENDE OMGEVING BEWAARD</span>
-</div>
-              <div style="display: inline-block; text-align: center; margin: 10px; vertical-align: top;">
-    <img src="foto4.jpg" style="display: block; margin: 0 auto;">
-    <span style="display: block; margin-top: 5px;">Virtual Reality Project Groninger Museum</span>
-</div>            
-              <div style="display: inline-block; text-align: center; margin: 10px; vertical-align: top;">
-    <img src="foto5.jpg" style="display: block; margin: 0 auto;">
-    <span style="display: block; margin-top: 5px;">Virtual Reality Project Groninger Museum</span>
-</div>            
-              <div style="display: inline-block; text-align: center; margin: 10px; vertical-align: top;">
-    <img src="foto6.jpg" style="display: block; margin: 0 auto;">
-    <span style="display: block; margin-top: 5px;">Virtual Reality Project Groninger Museum</span>
-</div>            
-              <div style="display: inline-block; text-align: center; margin: 10px; vertical-align: top;">
-    <img src="foto7.jpg" style="display: block; margin: 0 auto;">
-    <span style="display: block; margin-top: 5px;">VR instalatie ELEMENT PULCHRI STUDIO in de expositie The Art Of Nietzsche</span>
-</div>            
-              <div style="display: inline-block; text-align: center; margin: 10px; vertical-align: top;">
-    <img src="foto8.jpg" style="display: block; margin: 0 auto;">
-    <span style="display: block; margin-top: 5px;">A LINE IN OUTER SPACE SINCE 1984 1</span>
-</div>            
-              <div style="display: inline-block; text-align: center; margin: 10px; vertical-align: top;">
-    <img src="foto9.jpg" style="display: block; margin: 0 auto;">
-    <span style="display: block; margin-top: 5px;">A LINE IN OUTER SPACE SINCE 1984 2</span>
-</div>            
-              <div style="display: inline-block; text-align: center; margin: 10px; vertical-align: top;">
-    <img src="foto10.jpg" style="display: block; margin: 0 auto;">
-    <span style="display: block; margin-top: 5px;">A LINE IN OUTER SPACE SINCE 1984 3</span>
-</div>            
+            <div class="slide-item">
+                <a href="info/info.html">
+                    <img src="foto1.jpg" alt="Project">
+                    <span>AI en het Genie Haagse Kunstkring 2026</span>
+                </a>
+            </div>
+            <div class="slide-item">
+                <img src="foto3.jpg">
+                <span>Morren Memorial = Stadhuis Den Haag = IN VASTE CONTEXT GEGEVEN</span>
+            </div>
+            <div class="slide-item">
+                <img src="foto2.jpg">
+                <span>Morren Memorial = Stadhuis Den Haag VOOR VERANDERENDE OMGEVING BEWAARD</span>
+            </div>
+            <div class="slide-item">
+                <img src="foto4.jpg">
+                <span>Virtual Reality Project Groninger Museum</span>
+            </div>
+            <div class="slide-item">
+                <img src="foto5.jpg">
+                <span>Virtual Reality Project Groninger Museum</span>
+            </div>
+            <div class="slide-item">
+                <img src="foto6.jpg">
+                <span>Virtual Reality Project Groninger Museum</span>
+            </div>
+            <div class="slide-item">
+                <img src="foto7.jpg">
+                <span>VR instalatie ELEMENT PULCHRI STUDIO</span>
+            </div>
+            <div class="slide-item">
+                <img src="foto8.jpg">
+                <span>A LINE IN OUTER SPACE SINCE 1984 1</span>
+            </div>
+            <div class="slide-item">
+                <img src="foto9.jpg">
+                <span>A LINE IN OUTER SPACE SINCE 1984 2</span>
+            </div>
+            <div class="slide-item">
+                <img src="foto10.jpg">
+                <span>A LINE IN OUTER SPACE SINCE 1984 3</span>
+            </div>
+
+            <div class="slide-item"><img src="foto1.jpg"><span>AI en het Genie 2026</span></div>
+            <div class="slide-item"><img src="foto3.jpg"><span>Morren Memorial</span></div>
+            <div class="slide-item"><img src="foto2.jpg"><span>Morren Memorial</span></div>
+            <div class="slide-item"><img src="foto4.jpg"><span>Groninger Museum</span></div>
+            <div class="slide-item"><img src="foto5.jpg"><span>Groninger Museum</span></div>
+            <div class="slide-item"><img src="foto6.jpg"><span>Groninger Museum</span></div>
+            <div class="slide-item"><img src="foto7.jpg"><span>VR instalatie</span></div>
+            <div class="slide-item"><img src="foto8.jpg"><span>A LINE IN OUTER SPACE 1</span></div>
+            <div class="slide-item"><img src="foto9.jpg"><span>A LINE IN OUTER SPACE 2</span></div>
+            <div class="slide-item"><img src="foto10.jpg"><span>A LINE IN OUTER SPACE 3</span></div>
+        </div>
     </div>
 </div>
 
