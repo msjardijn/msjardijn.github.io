@@ -18,42 +18,48 @@
             background-repeat: no-repeat;
             font-family: Arial, sans-serif;
             color: white;
+            overflow-x: hidden;
         }
         .content-container {
             padding: 20px;
             background-color: rgba(0, 0, 0, 0.4); 
             min-height: 100%;
         }
-        a { color: #ffffff; text-decoration: none; padding: 5px 10px; }
-        a:hover { text-decoration: underline; }
-        table { width: 100%; border-collapse: collapse; margin-top: 20px; }
-        td { padding: 10px; text-align: center; }
+        a { color: #ffffff; text-decoration: none; }
+        nav table { width: 100%; border-collapse: collapse; margin-top: 20px; }
+        nav td { padding: 10px; text-align: center; }
+        nav a { padding: 5px 10px; }
+        nav a:hover { text-decoration: underline; }
 
-        /* --- GECORRIGEERDE SLIDER CSS --- */
+        /* --- SLIDER CSS --- */
         .slider-container {
             width: 100%;
             overflow: hidden;
             background: transparent;
             padding: 60px 0;
             display: flex;
+            align-items: center;
         }
-
         .slider-track {
             display: flex;
-            width: max-content; /* Zorgt dat de track zo breed is als de inhoud */
+            width: max-content;
             animation: schuif-links 60s linear infinite;
         }
-
-        /* De container van de foto + tekst */
         .slide-item {
             display: flex;
             flex-direction: column;
             align-items: center;
             margin: 0 15px;
-            flex-shrink: 0; /* Voorkomt dat items smaller worden geknepen */
+            flex-shrink: 0;
             transition: transform 0.4s ease;
         }
-
+        /* Zorg dat de link in de slider zich als een blok gedraagt */
+        .slide-item a {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
         .slide-item img {
             height: 300px;
             width: auto;
@@ -61,27 +67,23 @@
             box-shadow: 0 4px 15px rgba(0,0,0,0.5);
             display: block;
         }
-
         .slide-item span {
             display: block;
-            margin-top: 10px;
+            margin-top: 15px;
             font-size: 14px;
-            max-width: 300px; /* Zorgt dat tekst niet breder wordt dan de foto */
-            text-align: center;
+            max-width: 250px;
+            line-height: 1.4;
         }
-
         .slide-item:hover {
-            transform: scale(1.1);
+            transform: scale(1.05);
             z-index: 10;
         }
-
         .slider-container:hover .slider-track {
             animation-play-state: paused;
         }
-
         @keyframes schuif-links {
             0% { transform: translateX(0); }
-            100% { transform: translateX(-50%); } /* Reset precies op de helft voor looping */
+            100% { transform: translateX(-50%); }
         }
     </style>
 </head>
@@ -91,7 +93,7 @@
     <header>
         <h1>&nbsp;&nbsp; MARTIN SJARDIJN &nbsp;<strong>PROJECTS</strong></h1>
     </header>
-
+    
     <nav>
         <table>
             <tr>
@@ -117,53 +119,63 @@
             </div>
             <div class="slide-item">
                 <a href="info/info.html">
-                <img src="foto3.jpg">
-                <span>Morren Memorial - Atrium Stadhuis Den Haag = IN VASTE CONTEXT GEGEVEN</span>
+                    <img src="foto3.jpg" alt="Project">
+                    <span>Morren Memorial - Atrium Stadhuis Den Haag</span>
+                </a>
             </div>
             <div class="slide-item">
                 <a href="info/info.html">
-                <img src="foto2.jpg">
-                <span>Morren Memorial - Atrium Stadhuis Den Haag VOOR VERANDERENDE OMGEVING BEWAARD</span>
+                    <img src="foto2.jpg" alt="Project">
+                    <span>Morren Memorial - Omgeving</span>
+                </a>
             </div>
             <div class="slide-item">
                 <a href="info/info.html">
-                <img src="foto4.jpg">
-                <span>Virtual Reality Project Groninger Museum</span>
+                    <img src="foto4.jpg" alt="Project">
+                    <span>Virtual Reality Project Groninger Museum</span>
+                </a>
             </div>
             <div class="slide-item">
                 <a href="info/info.html">
-                <img src="foto5.jpg">
-                <span>Virtual Reality Project Groninger Museum</span>
+                    <img src="foto5.jpg" alt="Project">
+                    <span>Virtual Reality Project Groninger Museum</span>
+                </a>
             </div>
             <div class="slide-item">
                 <a href="info/info.html">
-                <img src="foto6.jpg">
-                <span>Virtual Reality Project Groninger Museum</span>
+                    <img src="foto6.jpg" alt="Project">
+                    <span>Virtual Reality Project Groninger Museum</span>
+                </a>
             </div>
             <div class="slide-item">
                 <a href="info/info.html">
-                <img src="foto7.jpg">
-                <span>VR instalatie ELEMENTS PULCHRI STUDIO</span>
+                    <img src="foto7.jpg" alt="Project">
+                    <span>VR installatie ELEMENTS PULCHRI STUDIO</span>
+                </a>
             </div>
             <div class="slide-item">
                 <a href="info/info.html">
-                <img src="foto8.jpg">
-                <span>A LINE IN OUTER SPACE SINCE 1984 1</span>
+                    <img src="foto8.jpg" alt="Project">
+                    <span>A LINE IN OUTER SPACE 1</span>
+                </a>
             </div>
             <div class="slide-item">
                 <a href="info/info.html">
-                <img src="foto9.jpg">
-                <span>A LINE IN OUTER SPACE SINCE 1984 2</span>
+                    <img src="foto9.jpg" alt="Project">
+                    <span>A LINE IN OUTER SPACE 2</span>
+                </a>
             </div>
             <div class="slide-item">
                 <a href="info/info.html">
-                <img src="foto10.jpg">
-                <span>A LINE IN OUTER SPACE SINCE 1984 3</span>
+                    <img src="foto10.jpg" alt="Project">
+                    <span>A LINE IN OUTER SPACE 3</span>
+                </a>
             </div>
             <div class="slide-item">
                 <a href="info/info.html">
-                <img src="foto11.jpg">
-                <span>A LINE IN OUTER SPACE SINCE 1984 3</span>
+                    <img src="foto11.jpg" alt="Project">
+                    <span>Wir Bauwen Einen Stadt met Anne Borsboom</span>
+                </a>
             </div>
 
             <div class="slide-item"><img src="foto1.jpg"><span>AI en het Genie 2026</span></div>
@@ -172,11 +184,11 @@
             <div class="slide-item"><img src="foto4.jpg"><span>Groninger Museum</span></div>
             <div class="slide-item"><img src="foto5.jpg"><span>Groninger Museum</span></div>
             <div class="slide-item"><img src="foto6.jpg"><span>Groninger Museum</span></div>
-            <div class="slide-item"><img src="foto7.jpg"><span>VR instalatie</span></div>
+            <div class="slide-item"><img src="foto7.jpg"><span>VR installatie</span></div>
             <div class="slide-item"><img src="foto8.jpg"><span>A LINE IN OUTER SPACE 1</span></div>
             <div class="slide-item"><img src="foto9.jpg"><span>A LINE IN OUTER SPACE 2</span></div>
             <div class="slide-item"><img src="foto10.jpg"><span>A LINE IN OUTER SPACE 3</span></div>
-            <div class="slide-item"><img src="foto11.jpg"><span>Wir Bauwen Einen Stadt met Anne Borsboom</span></div>
+            <div class="slide-item"><img src="foto11.jpg"><span>Wir Bauwen Einen Stadt</span></div>
         </div>
     </div>
 </div>
