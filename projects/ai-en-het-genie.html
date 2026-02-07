@@ -8,8 +8,10 @@
         :root {
             --bg-color: #000000;
             --text-color: #ffffff;
-            --accent-color: #00FF41; /* De AI-groene kleur als subtiele highlight */
-            --font-main: 'Courier New', Courier, monospace;
+            --body-text: #e0e0e0; /* Iets lichter voor beter contrast */
+            --accent-color: #00FF41; 
+            --font-header: 'Courier New', Courier, monospace;
+            --font-body: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; /* Beter leesbaar voor tekstblokken */
         }
 
         * { box-sizing: border-box; }
@@ -17,9 +19,9 @@
         body {
             background-color: var(--bg-color);
             color: var(--text-color);
-            font-family: var(--font-main);
+            font-family: var(--font-body); /* Basis font is nu sans-serif */
             margin: 0;
-            line-height: 1.6;
+            line-height: 1.7; /* Iets meer ademruimte tussen regels */
         }
 
         /* Hero Section */
@@ -35,13 +37,15 @@
         }
 
         h1 {
-            font-size: 3.5rem;
+            font-family: var(--font-header);
+            font-size: clamp(2rem, 8vw, 3.5rem); /* Schalende tekstgrootte */
             letter-spacing: 10px;
             text-transform: uppercase;
             margin: 0;
         }
 
         .subtitle {
+            font-family: var(--font-header);
             font-size: 1.2rem;
             color: var(--accent-color);
             margin-top: 20px;
@@ -51,11 +55,12 @@
         /* Section Styling */
         section {
             padding: 100px 10%;
-            max-width: 1200px;
+            max-width: 1100px; /* Iets smaller voor betere leesbaarheid (kortere regelbreedte) */
             margin: 0 auto;
         }
 
         h2 {
+            font-family: var(--font-header);
             font-size: 2rem;
             border-left: 4px solid var(--accent-color);
             padding-left: 20px;
@@ -64,83 +69,105 @@
         }
 
         p {
-            font-size: 1.1rem;
-            color: #ccc;
-            margin-bottom: 20px;
+            font-size: 1.15rem; /* Iets groter */
+            color: var(--body-text);
+            margin-bottom: 25px;
+            letter-spacing: 0.01em;
         }
 
         /* Participant Grid */
         .grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 40px;
+            gap: 30px;
             margin-top: 50px;
         }
 
         .card {
-            background: #0a0a0a;
-            padding: 30px;
+            background: #0d0d0d; /* Iets lichter zwart voor diepte */
+            padding: 40px;
             border: 1px solid #222;
-            transition: border-color 0.3s;
+            transition: all 0.3s ease;
         }
 
         .card:hover {
             border-color: var(--accent-color);
+            background: #111;
         }
 
         .card h3 {
+            font-family: var(--font-header);
             color: var(--accent-color);
             margin-top: 0;
+            font-size: 1.5rem;
+            text-transform: uppercase;
         }
 
-        /* Live Installation Preview (The Scroll) */
+        .card p {
+            font-size: 1.05rem;
+            line-height: 1.6;
+        }
+
+        /* Live Installation Preview */
         .scroll-preview {
             background: #050505;
-            height: 300px;
+            height: 350px;
             overflow: hidden;
             position: relative;
             border: 1px solid #333;
-            margin: 40px 0;
+            margin: 50px 0;
         }
 
         .scroll-text {
             position: absolute;
             width: 100%;
+            padding: 0 20px;
             text-align: center;
-            animation: webScroll 60s linear infinite;
+            animation: webScroll 50s linear infinite;
         }
 
         @keyframes webScroll {
             from { transform: translateY(100%); }
-            to { transform: translateY(-100%); }
+            to { transform: translateY(-120%); }
         }
 
         .scroll-text p {
-            font-size: 0.9rem;
+            font-family: var(--font-header);
+            font-size: 1rem;
             color: var(--accent-color);
             text-transform: uppercase;
+            margin-bottom: 60px;
         }
 
         /* Footer */
         footer {
-            padding: 50px;
+            padding: 60px 20px;
             text-align: center;
-            font-size: 0.8rem;
-            color: #555;
+            font-size: 0.9rem;
+            color: #888; /* Iets lichter grijs */
+            font-family: var(--font-header);
             border-top: 1px solid #222;
         }
 
         blockquote {
+            font-family: var(--font-header);
+            font-size: 1.4rem;
             font-style: italic;
-            border-left: 2px solid #555;
-            padding-left: 20px;
-            margin: 40px 0;
-            color: #eee;
+            border-left: 3px solid var(--accent-color);
+            padding: 20px 40px;
+            margin: 50px 0;
+            color: #ffffff;
+            background: #080808;
+        }
+
+        strong {
+            color: var(--accent-color);
         }
 
         @media (max-width: 768px) {
-            h1 { font-size: 2rem; }
-            section { padding: 50px 5%; }
+            h1 { font-size: 2.2rem; letter-spacing: 5px; }
+            section { padding: 60px 7%; }
+            .card { padding: 25px; }
         }
     </style>
 </head>
@@ -148,7 +175,7 @@
 
 <header>
     <h1>AI en het Genie</h1>
-    <p class="subtitle">Een artistiek onderzoek naar de 'Logos', autonomie en menselijke kwetsbaarheid.</p>
+    <p class="subtitle">Een artistiek onderzoek naar de 'Logos' en menselijke kwetsbaarheid.</p>
 </header>
 
 <section id="concept">
