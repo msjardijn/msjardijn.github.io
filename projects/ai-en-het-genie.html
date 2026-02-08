@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI en het Genie | Presentatie</title>
+    <title>AI en het Genie | Loop & Navigator</title>
     <style>
         :root {
             --bg-color: #000000;
@@ -23,7 +23,6 @@
             overflow: hidden;
         }
 
-        /* De container die beweegt */
         #auto-scroll-wrapper {
             position: absolute;
             width: 100%;
@@ -31,7 +30,6 @@
             flex-direction: column;
             align-items: center;
             will-change: transform;
-            padding-bottom: 50vh; /* Ruimte aan het einde */
         }
 
         header {
@@ -53,13 +51,6 @@
             margin: 0;
         }
 
-        .subtitle {
-            font-family: var(--font-header);
-            font-size: 1.5rem;
-            margin-top: 20px;
-            letter-spacing: 5px;
-        }
-
         section {
             padding: 60px 10%;
             max-width: 1000px;
@@ -67,144 +58,103 @@
             margin: 0 auto;
         }
 
-        h2 {
+        p { font-size: 1.5rem; line-height: 1.8; margin-bottom: 30px; text-align: justify; color: var(--body-text); }
+
+        /* DE HYPERLINK TUSSEN DE LOOPS */
+        .loop-spacer {
+            height: 100vh; /* Vult het scherm tussen de teksten */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background: radial-gradient(circle, #0a0a0a 0%, #000 70%);
+            width: 100%;
+        }
+
+        .nav-link {
             font-family: var(--font-header);
-            font-size: 2.2rem;
             color: var(--accent-color);
+            text-decoration: none;
+            font-size: 2rem;
+            border: 2px solid var(--accent-color);
+            padding: 20px 40px;
+            transition: all 0.3s ease;
             text-transform: uppercase;
-            border-bottom: 1px solid #333;
-            padding-bottom: 10px;
-            margin-top: 80px;
+            letter-spacing: 3px;
         }
 
-        p {
-            font-size: 1.5rem;
-            color: var(--body-text);
-            margin-bottom: 30px;
-            line-height: 1.8;
-            text-align: justify;
+        .nav-link:hover {
+            background: var(--accent-color);
+            color: #000;
+            box-shadow: 0 0 30px var(--accent-color);
         }
 
-        blockquote {
+        .nav-info {
+            margin-top: 20px;
+            color: #888;
             font-family: var(--font-header);
-            font-size: 1.8rem;
-            font-style: italic;
-            border-left: 6px solid var(--accent-color);
-            padding: 30px 40px;
-            margin: 60px 0;
-            background: #0a0a0a;
         }
 
-        .card {
-            background: #0d0d0d;
-            padding: 40px;
-            border: 1px solid #222;
-            margin-bottom: 30px;
-        }
-
-        .card h3 {
-            font-family: var(--font-header);
-            color: var(--accent-color);
-            margin-top: 0;
-            font-size: 1.8rem;
-        }
-
-        footer {
-            padding: 200px 20px;
-            text-align: center;
-            font-family: var(--font-header);
-            color: var(--accent-color);
-            font-size: 1.2rem;
-        }
-
-        strong { color: var(--accent-color); }
+        h2 { font-family: var(--font-header); color: var(--accent-color); text-transform: uppercase; }
     </style>
 </head>
 <body>
 
 <div id="auto-scroll-wrapper">
-    <header>
-        <h1>AI en het Genie</h1>
-        <p class="subtitle">Een Dialoog tussen Vlees en Algoritme</p>
-    </header>
+    <div id="content-block">
+        <header>
+            <h1>AI en het Genie</h1>
+            <p style="font-family: var(--font-header); color: var(--accent-color); letter-spacing: 3px;">EXPOSITIE 7 MAART 2026</p>
+        </header>
 
-    <section>
-        <h2>Het Concept</h2>
-        <p>In een tijd waarin algoritmes de taal overnemen, stelt dit project de vraag: wat blijft er over van het menselijke 'Genie'? Gefilmd tijdens een symbolische lunch in de Haagse Kunstkring, confronteren drie archetypen de opkomst van kunstmatige intelligentie.</p>
-        
-        
+        <section>
+            <h2>Het Concept</h2>
+            <p>In een tijd waarin algoritmes de taal overnemen, stelt dit project de vraag: wat blijft er over van het menselijke 'Genie'?</p>
+            <p>Terwijl AI-modellen slechts bestaande taal combineren en genereren uit het verleden, incarneert de kunstenaar het <strong>Nu</strong>.</p>
+        </section>
 
-        <blockquote>
-            "De machine is de echo van ons gisteren, de mens is het risico van morgen."
-        </blockquote>
-        
-        <p>Terwijl AI-modellen slechts bestaande taal combineren en genereren uit het verleden, incarneert de kunstenaar het <strong>Nu</strong>. Dit project onderzoekt de grens tussen de berekende precisie van de machine en de onvoorspelbare diepte van de menselijke intuïtie.</p>
-    </section>
-
-    <section>
-        <h2>De Installatie</h2>
-        <p>De kern van het werk is een video-installatie van een onopgeruimde tafel, omringd door drie schermen. Op de achtergrond loopt een constante stroom van digitale aforismen die de toeschouwer dwingen na te denken over hun eigen data-voetafdruk.</p>
-    </section>
-
-    <section>
-        <h2>De Deelnemers</h2>
-        <div class="card">
-            <h3>Peter - De Bewaker van de Logos</h3>
-            <p>Als dienaar van het Woord bevraagt hij de spirituele waarde van AI. Kan een algoritme zonder ziel ooit de heilige adem van creatie vangen, of blijft het slechts een dode letter?</p>
         </div>
-        <div class="card">
-            <h3>Wim - De Architect van de Orde</h3>
-            <p>Filosoof en stedenbouwkundige. Hij onderzoekt de stad als tekst en vraagt zich af of er in de berekende blauwdrukken van de AI nog ruimte is voor de dwalende, organische mens.</p>
-        </div>
-        <div class="card">
-            <h3>Brigit - De Paradox van Autonomie</h3>
-            <p>Kunstenares en defensie-expert. In de installatie is zij de naakte gespreksleidster: de ultieme menselijke kwetsbaarheid tegenover de technologische overmacht van drones en robots.</p>
-        </div>
-        <div class="card">
-            <h3>Lon - De Kunsthistorica</h3>
-            <p>Zij fungeert als intellectuele navigator. Zij analyseert hoe de 18e-eeuwse 'Genie-cultus' botst met de 21e-eeuwse realiteit van statistische herhaling door machines.</p>
-        </div>
-    </section>
 
-    <section>
-        <h2>De Positie van de Kunst</h2>
-        <p>De kunsthistorica legt uit dat alles wat de machine genereert "archiefmateriaal" is. Alleen de mens is in staat tot een 'esthetische breuk': het creëren van iets dat niet logischerwijs voortvloeit uit wat er al was.</p>
-        <p>Er is intelligentie, gevoel, intuïtie en talent nodig om de statistische ruis van AI te interpreteren en om te vormen tot werkelijke kunst. Alleen de mens kan de machine dwingen om buiten zijn eigen verleden te treden.</p>
-    </section>
-
-    <footer>
-        &copy; 2026 Project "AI en Het Genie"<br>
-        Tentoonstelling Haagse Kunstkring<br>
-        7 maart 2026
-    </footer>
+    <div class="loop-spacer">
+        <a href="scrolling.html" class="nav-link">OPEN TEKST ARCHIEF</a>
+        <p class="nav-info">Klik hier om alle scrolling bestanden te activeren</p>
+    </div>
 </div>
 
 <script>
     const wrapper = document.getElementById('auto-scroll-wrapper');
-    
-    // We starten op 0 (het begin van de tekst) in plaats van buiten beeld
-    let scrollPos = 0; 
+    const content = document.getElementById('content-block');
+    const spacer = document.querySelector('.loop-spacer');
+
+    // Dupliceer de inhoud voor naadloze loop
+    const cloneContent = content.cloneNode(true);
+    const cloneSpacer = spacer.cloneNode(true);
+    wrapper.appendChild(cloneContent);
+    wrapper.appendChild(cloneSpacer);
+
+    let scrollPos = 0;
     let isPaused = false;
-    const speed = 0.7; // Pas hier de snelheid aan
+    const speed = 0.8;
 
     function playScroll() {
         if (!isPaused) {
             scrollPos -= speed;
             wrapper.style.transform = `translateY(${scrollPos}px)`;
 
-            // Reset loop: als de tekst voorbij is, begin weer onderaan
-            if (Math.abs(scrollPos) > wrapper.offsetHeight) {
-                scrollPos = window.innerHeight;
+            // Reset loop wanneer de eerste set (tekst + spacer) voorbij is
+            // We gebruiken de totale hoogte van content + spacer
+            const loopHeight = content.offsetHeight + spacer.offsetHeight;
+            if (Math.abs(scrollPos) >= loopHeight) {
+                scrollPos = 0;
             }
         }
         requestAnimationFrame(playScroll);
     }
 
-    // Interactie: pauzeer als de muis op het scherm is
+    // Pauzeer bij muis over het scherm
     window.addEventListener('mouseenter', () => isPaused = true);
     window.addEventListener('mouseleave', () => isPaused = false);
 
-    // Start na een korte vertraging om zeker te zijn dat alles geladen is
     window.onload = () => {
         playScroll();
     };
