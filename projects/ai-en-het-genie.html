@@ -3,38 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI en het Genie | Presentatie Editie</title>
+    <title>AI en het Genie | Presentatie</title>
     <style>
         :root {
             --bg-color: #000000;
-            --text-color: #ffffff;
-            --body-text: #e0e0e0;
             --accent-color: #00FF41; 
+            --body-text: #e0e0e0;
             --font-header: 'Courier New', Courier, monospace;
             --font-body: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
         }
-
-        * { box-sizing: border-box; }
 
         body, html {
             height: 100%;
             margin: 0;
             padding: 0;
             background-color: var(--bg-color);
-            color: var(--text-color);
+            color: #ffffff;
             font-family: var(--font-body);
-            overflow: hidden; /* Verbergt de normale scrollbar */
+            overflow: hidden;
         }
 
-        /* De container die gaat bewegen */
+        /* De container die beweegt */
         #auto-scroll-wrapper {
             position: absolute;
-            top: 100%;
             width: 100%;
             display: flex;
             flex-direction: column;
             align-items: center;
             will-change: transform;
+            padding-bottom: 50vh; /* Ruimte aan het einde */
         }
 
         header {
@@ -44,7 +41,7 @@
             justify-content: center;
             align-items: center;
             text-align: center;
-            padding: 20px;
+            padding: 40px;
         }
 
         h1 {
@@ -52,8 +49,8 @@
             font-size: clamp(2rem, 8vw, 4rem);
             letter-spacing: 12px;
             text-transform: uppercase;
-            margin: 0;
             color: var(--accent-color);
+            margin: 0;
         }
 
         .subtitle {
@@ -64,74 +61,63 @@
         }
 
         section {
-            padding: 100px 10%;
-            max-width: 900px;
+            padding: 60px 10%;
+            max-width: 1000px;
             width: 100%;
             margin: 0 auto;
-            text-align: center;
         }
 
         h2 {
             font-family: var(--font-header);
-            font-size: 2.5rem;
+            font-size: 2.2rem;
             color: var(--accent-color);
             text-transform: uppercase;
-            margin-bottom: 50px;
-            border-bottom: 1px solid var(--accent-color);
-            display: inline-block;
+            border-bottom: 1px solid #333;
             padding-bottom: 10px;
+            margin-top: 80px;
         }
 
         p {
-            font-size: 1.4rem;
+            font-size: 1.5rem;
             color: var(--body-text);
-            margin-bottom: 35px;
+            margin-bottom: 30px;
             line-height: 1.8;
-        }
-
-        .grid {
-            display: flex;
-            flex-direction: column;
-            gap: 40px;
-            margin-top: 50px;
-        }
-
-        .card {
-            background: #0d0d0d;
-            padding: 40px;
-            border: 1px solid #222;
-        }
-
-        .card h3 {
-            font-family: var(--font-header);
-            color: var(--accent-color);
-            font-size: 1.8rem;
-            margin-bottom: 20px;
+            text-align: justify;
         }
 
         blockquote {
             font-family: var(--font-header);
             font-size: 1.8rem;
             font-style: italic;
-            border-left: 5px solid var(--accent-color);
-            padding: 30px;
+            border-left: 6px solid var(--accent-color);
+            padding: 30px 40px;
             margin: 60px 0;
-            background: #080808;
-            text-align: left;
+            background: #0a0a0a;
+        }
+
+        .card {
+            background: #0d0d0d;
+            padding: 40px;
+            border: 1px solid #222;
+            margin-bottom: 30px;
+        }
+
+        .card h3 {
+            font-family: var(--font-header);
+            color: var(--accent-color);
+            margin-top: 0;
+            font-size: 1.8rem;
         }
 
         footer {
-            padding: 150px 20px;
+            padding: 200px 20px;
             text-align: center;
-            font-size: 1.2rem;
-            color: var(--accent-color);
             font-family: var(--font-header);
+            color: var(--accent-color);
+            font-size: 1.2rem;
         }
 
         strong { color: var(--accent-color); }
-
-        /* Cursor indicator voor pauze */
-        body:hover { cursor: ns-resize; }
     </style>
 </head>
 <body>
@@ -139,88 +125,89 @@
 <div id="auto-scroll-wrapper">
     <header>
         <h1>AI en het Genie</h1>
-        <p class="subtitle">Een artistiek onderzoek naar de 'Logos' en menselijke kwetsbaarheid.</p>
+        <p class="subtitle">Een Dialoog tussen Vlees en Algoritme</p>
     </header>
 
-    <section id="concept">
+    <section>
         <h2>Het Concept</h2>
-        <p>In een tijd waarin algoritmes de taal overnemen, stelt dit project de vraag: wat blijft er over van het menselijke 'Genie'?</p>
+        <p>In een tijd waarin algoritmes de taal overnemen, stelt dit project de vraag: wat blijft er over van het menselijke 'Genie'? Gefilmd tijdens een symbolische lunch in de Haagse Kunstkring, confronteren drie archetypen de opkomst van kunstmatige intelligentie.</p>
+        
+        
+
         <blockquote>
             "De machine is de echo van ons gisteren, de mens is het risico van morgen."
         </blockquote>
-        <p>Gefilmd tijdens een symbolische lunch in de Haagse Kunstkring, confronteren drie archetypen de opkomst van kunstmatige intelligentie.</p>
-        <p>Terwijl LLM’s slechts bestaande taal genereren uit het verleden, incarneert de kunstenaar het <strong>Nu</strong>.</p>
+        
+        <p>Terwijl AI-modellen slechts bestaande taal combineren en genereren uit het verleden, incarneert de kunstenaar het <strong>Nu</strong>. Dit project onderzoekt de grens tussen de berekende precisie van de machine en de onvoorspelbare diepte van de menselijke intuïtie.</p>
     </section>
 
-    <section id="deelnemers">
-        <h2>De Dialoogpartners</h2>
-        <div class="grid">
-            <div class="card">
-                <h3>Peter</h3>
-                <p><strong>De Bewaker van de Logos.</strong> Kan een algoritme zonder ziel ooit de heilige adem van creatie vangen, of blijft het slechts een dode letter?</p>
-            </div>
-            <div class="card">
-                <h3>Wim</h3>
-                <p><strong>De Architect van de Orde.</strong> Is er in de berekende blauwdrukken van de AI nog ruimte voor de dwalende, organische mens?</p>
-            </div>
-            <div class="card">
-                <h3>Brigit</h3>
-                <p><strong>De Paradox van Autonomie.</strong> De naakte gespreksleidster: de ultieme menselijke kwetsbaarheid tegenover de technologische overmacht.</p>
-            </div>
-            <div class="card">
-                <h3>Lon</h3>
-                <p><strong>De Kunstgeschiedenis.</strong> Zij analyseert de 18e-eeuwse 'Genie-cultus' tegenover de 21e-eeuwse statistische herhaling.</p>
-            </div>
+    <section>
+        <h2>De Installatie</h2>
+        <p>De kern van het werk is een video-installatie van een onopgeruimde tafel, omringd door drie schermen. Op de achtergrond loopt een constante stroom van digitale aforismen die de toeschouwer dwingen na te denken over hun eigen data-voetafdruk.</p>
+    </section>
+
+    <section>
+        <h2>De Deelnemers</h2>
+        <div class="card">
+            <h3>Peter - De Bewaker van de Logos</h3>
+            <p>Als dienaar van het Woord bevraagt hij de spirituele waarde van AI. Kan een algoritme zonder ziel ooit de heilige adem van creatie vangen, of blijft het slechts een dode letter?</p>
+        </div>
+        <div class="card">
+            <h3>Wim - De Architect van de Orde</h3>
+            <p>Filosoof en stedenbouwkundige. Hij onderzoekt de stad als tekst en vraagt zich af of er in de berekende blauwdrukken van de AI nog ruimte is voor de dwalende, organische mens.</p>
+        </div>
+        <div class="card">
+            <h3>Brigit - De Paradox van Autonomie</h3>
+            <p>Kunstenares en defensie-expert. In de installatie is zij de naakte gespreksleidster: de ultieme menselijke kwetsbaarheid tegenover de technologische overmacht van drones en robots.</p>
+        </div>
+        <div class="card">
+            <h3>Lon - De Kunsthistorica</h3>
+            <p>Zij fungeert als intellectuele navigator. Zij analyseert hoe de 18e-eeuwse 'Genie-cultus' botst met de 21e-eeuwse realiteit van statistische herhaling door machines.</p>
         </div>
     </section>
 
-    <section id="kunst-historie">
+    <section>
         <h2>De Positie van de Kunst</h2>
-        <p>De kunsthistorica fungeert als intellectuele navigator. Zij analyseert hoe AI vaak getraind is op patriarchale datasets en genderrollen reproduceert.</p>
-        <p>Brigit's naaktheid is hier geen passief object, maar een krachtig statement van <strong>menselijke kwetsbaarheid</strong> die de onkwetsbaarheid van de machine uitdaagt.</p>
-    </section>
-
-    <section id="filosofie">
-        <h2>Interpretatie & Talent</h2>
-        <p>AI is een instrument dat vraagt om een nieuwe vorm van meesterschap. Alleen de mens kan de machine dwingen om buiten zijn eigen verleden te treden.</p>
+        <p>De kunsthistorica legt uit dat alles wat de machine genereert "archiefmateriaal" is. Alleen de mens is in staat tot een 'esthetische breuk': het creëren van iets dat niet logischerwijs voortvloeit uit wat er al was.</p>
+        <p>Er is intelligentie, gevoel, intuïtie en talent nodig om de statistische ruis van AI te interpreteren en om te vormen tot werkelijke kunst. Alleen de mens kan de machine dwingen om buiten zijn eigen verleden te treden.</p>
     </section>
 
     <footer>
         &copy; 2026 Project "AI en Het Genie"<br>
-        Haagse Kunstkring - 7 maart 2026
+        Tentoonstelling Haagse Kunstkring<br>
+        7 maart 2026
     </footer>
 </div>
 
 <script>
     const wrapper = document.getElementById('auto-scroll-wrapper');
-    let scrollPos = window.innerHeight;
-    let isPaused = false;
     
-    // SNELHEID INSTELLEN: Lager getal is langzamer (bijv. 0.5), hoger is sneller (bijv. 2)
-    const speed = 0.7;
+    // We starten op 0 (het begin van de tekst) in plaats van buiten beeld
+    let scrollPos = 0; 
+    let isPaused = false;
+    const speed = 0.7; // Pas hier de snelheid aan
 
-    function scroll() {
+    function playScroll() {
         if (!isPaused) {
             scrollPos -= speed;
             wrapper.style.transform = `translateY(${scrollPos}px)`;
 
-            // Reset naar begin als de tekst volledig voorbij is
+            // Reset loop: als de tekst voorbij is, begin weer onderaan
             if (Math.abs(scrollPos) > wrapper.offsetHeight) {
                 scrollPos = window.innerHeight;
             }
         }
-        requestAnimationFrame(scroll);
+        requestAnimationFrame(playScroll);
     }
 
-    // Pauzeer bij muis-over
+    // Interactie: pauzeer als de muis op het scherm is
     window.addEventListener('mouseenter', () => isPaused = true);
     window.addEventListener('mouseleave', () => isPaused = false);
-    
-    // Ondersteuning voor touch (pauzeer bij aanraking)
-    window.addEventListener('touchstart', () => isPaused = true);
-    window.addEventListener('touchend', () => isPaused = false);
 
-    scroll();
+    // Start na een korte vertraging om zeker te zijn dat alles geladen is
+    window.onload = () => {
+        playScroll();
+    };
 </script>
 
 </body>
