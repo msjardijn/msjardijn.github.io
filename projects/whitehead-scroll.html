@@ -1,0 +1,506 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+  <head>
+
+    <meta http-equiv="content-type" content="text/html; charset=ISO-8859-1">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,
+      initial-scale=1.0">
+    <title>Alfred North Whitehead &#8211; Procesfilosofie</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            background-color: #000;
+            color: #fff;
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            overflow: hidden;
+            height: 100vh;
+        }
+        
+        .scrolling-container {
+            height: 100vh;
+            width: 100%;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .scrolling-content {
+            position: absolute;
+            width: 100%;
+            padding: 5vh 10vw;
+            font-size: 3vh;
+            animation: scroll 200s linear infinite;
+            text-align: left;
+        }
+        
+        @keyframes scroll {
+            0% {
+                top: 100vh;
+            }
+            100% {
+                top: -4000px;
+            }
+        }
+        
+        .controls {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 100;
+            display: flex;
+            gap: 10px;
+            opacity: 0.7;
+            transition: opacity 0.3s;
+        }
+        
+        .controls:hover {
+            opacity: 1;
+        }
+        
+        .control-btn {
+            background-color: rgba(255, 255, 255, 0.2);
+            color: white;
+            border: 1px solid rgba(255, 255, 255, 0.5);
+            padding: 8px 15px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s;
+        }
+        
+        .control-btn:hover {
+            background-color: rgba(255, 255, 255, 0.3);
+        }
+        
+        h1, h2, h3 {
+            color: #fff;
+            margin-bottom: 2vh;
+        }
+        
+        h1 {
+            font-size: 5vh;
+            text-align: center;
+            margin-top: 3vh;
+            margin-bottom: 4vh;
+            border-bottom: 2px solid rgba(255, 255, 255, 0.3);
+            padding-bottom: 2vh;
+        }
+        
+        h2 {
+            font-size: 4vh;
+            margin-top: 4vh;
+            color: #e0e0e0;
+        }
+        
+        p {
+            margin-bottom: 2.5vh;
+        }
+        
+        .abstract {
+            background-color: rgba(255, 255, 255, 0.05);
+            padding: 3vh;
+            border-radius: 8px;
+            margin-bottom: 4vh;
+            border-left: 4px solid rgba(255, 255, 255, 0.3);
+        }
+        
+        .keywords {
+            font-style: italic;
+            color: #aaa;
+            margin-bottom: 4vh;
+            padding-bottom: 2vh;
+        }
+        
+        .section {
+            margin-bottom: 5vh;
+        }
+        
+        .section-title {
+            color: #fff;
+            background-color: rgba(255, 255, 255, 0.1);
+            padding: 2vh 3vh;
+            border-radius: 6px;
+            margin-bottom: 3vh;
+        }
+        
+        .highlight {
+            color: #ffff99;
+            font-weight: bold;
+        }
+        
+        .concept {
+            color: #99ccff;
+            font-style: italic;
+        }
+        
+        .pause-notice {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background-color: rgba(0, 0, 0, 0.7);
+            color: white;
+            padding: 10px 15px;
+            border-radius: 5px;
+            font-size: 14px;
+            display: none;
+            z-index: 1000;
+        }
+    </style>
+  </head>
+  <body>
+    <div class="pause-notice" id="pauseNotice">Gepauzeerd - Beweeg muis
+      over tekst om door te gaan</div>
+    <div class="scrolling-container">
+      <div class="scrolling-content" id="content">
+        <h1>Alfred North Whitehead</h1>
+        <h2>Het Universum als Creatief Proces</h2>
+        <div class="abstract">
+          <h2>Abstract</h2>
+          <p>Dit artikel verkent het filosofische systeem van Alfred
+            North Whitehead, die op 70-jarige leeftijd de overstap
+            maakte van wiskundige logica naar metafysica. Centraal staat
+            zijn 'filosofie van het organisme', waarmee hij breekt met
+            de traditionele westerse focus op statische substanties.</p>
+          <p>Whitehead presenteert een universum dat bestaat uit een
+            dynamisch netwerk van 'actuele entiteiten' en creatieve
+            processen. Hij herdefinieert fundamentele concepten zoals
+            causaliteit, bewustzijn en God door de nadruk te leggen op
+            onderlinge verbondenheid.</p>
+          <p>Procesfilosofie biedt een essentieel conceptueel kader voor
+            het aanpakken van moderne mondiale crises, zoals
+            klimaatverandering en sociale ongelijkheid.</p>
+        </div>
+        <div class="keywords">
+          <p><strong>Kernwoorden:</strong> Alfred North Whitehead,
+            procesfilosofie, metafysica, filosofie van het organisme,
+            interdependentie, creativiteit.</p>
+        </div>
+        <div class="section">
+          <p>Een 70-jarige wiskundige arriveert in 1924 op Harvard,
+            waarbij hij de logische zekerheden achterlaat die hem
+            beroemd hadden gemaakt. Alfred North Whitehead had samen met
+            Bertrand Russell decennialang de grondslagen van de wiskunde
+            opgebouwd.</p>
+          <p>Toch stoorde er iets fundamenteels aan de wereld die hun
+            werk beschreef. De vergelijkingen waren elegant, de bewijzen
+            rigoureus, maar het levende universum leek door hun logische
+            netten te glippen als water door een zeef.</p>
+          <p>Deze wiskundige zou zijn resterende jaren besteden aan het
+            opbouwen van het meest ambitieuze filosofische systeem van
+            de 20e eeuw.</p>
+        </div>
+        <div class="section">
+          <h2 class="section-title">Deel 1: De opstand tegen substantie</h2>
+          <p>De filosofische traditie die Whitehead erfde, rustte op een
+            misleidend eenvoudige aanname: de werkelijkheid bestaat
+            fundamenteel uit <span class="concept">substanties</span>,
+            dingen die onafhankelijk bestaan en verschillende
+            eigenschappen bezitten.</p>
+          <p>Whitehead diagnosticeerde dit hele raamwerk als
+            fundamenteel onjuist. De fout begon met wat hij de <span
+              class="highlight">"fallacy of misplaced concreteness"</span>
+            noemde: onze neiging om abstracties op hoog niveau te
+            behandelen alsof ze de meest concrete werkelijkheden zijn.</p>
+          <p>We abstraheren het concept van een onveranderlijke steen
+            uit onze vloeiende zintuiglijke ervaring, en concluderen ten
+            onrechte dat statische substanties re&euml;ler zijn dan de
+            dynamische processen waaruit we ze hebben afgeleid.</p>
+          <p>Hardheid ontstaat alleen door de interactie tussen
+            moleculaire trillingen, druk van onze vingers, gevoeligheid
+            van zenuwuiteinden en interpreterende activiteit van ons
+            bewustzijn.</p>
+          <p>Verwijder een component uit dit relationele web en de
+            hardheid verdwijnt. De hardheid bestaat nergens als een
+            ge&iuml;soleerde eigenschap, maar overal als een patroon van
+            relaties tussen interagerende processen.</p>
+          <p>Dit inzicht bracht Whitehead ertoe een radicaal alternatief
+            voor te stellen: in plaats van de werkelijkheid op te bouwen
+            uit statische substanties, begon hij met dynamische
+            processen die tijdelijke stabiliteit bereiken door hun
+            interne organisatie.</p>
+          <p><span class="highlight">Proces wordt ontologisch eerder dan
+              substantie.</span> Wat wij dingen noemen, zijn eigenlijk
+            samenlevingen (societies) van processen die herkenbare
+            patronen in de tijd behouden.</p>
+        </div>
+        <div class="section">
+          <h2 class="section-title">Deel 2: Actuele gelegenheden van
+            ervaring</h2>
+          <p>Whiteheads procesfilosofie grondvest zich in wat hij <span
+              class="concept">actuele gelegenheden</span> (actual
+            occasions) van ervaring noemde, de uiteindelijke echte
+            dingen waaruit het universum is samengesteld.</p>
+          <p>Een actuele gelegenheid vertegenwoordigt een quantum van
+            wording, een discrete druppel ervaring die ontstaat,
+            voldoening (satisfaction) bereikt en vergaat in een
+            tijdelijk atomair moment.</p>
+          <p>In tegenstelling tot traditionele atomen, zijn actuele
+            gelegenheden fundamenteel ervaringsgericht in plaats van
+            materieel. Ze hebben ervaring niet als een toevallige
+            eigenschap, maar zijn ervaring in zijn meest elementaire
+            vorm.</p>
+          <p>De temporele atomiciteit van actuele gelegenheden loste
+            verschillende wiskundige en filosofische puzzels op. Net
+            zoals energie voorkomt in discrete pakketten volgens de
+            kwantummechanica, vindt temporele wording plaats in discrete
+            gelegenheden.</p>
+          <p>Elke actuele gelegenheid volgt wat Whitehead de <span
+              class="concept">genetische analyse van wording</span>
+            noemde. Dit proces begint met initi&euml;le conforme
+            gevoelens, waar de ontstane gelegenheid responsief aspecten
+            van zijn actuele omgeving grijpt.</p>
+          <p>Naarmate de gelegenheid zich ontwikkelt, oefent het
+            toenemende creativiteit uit in hoe het deze ge&euml;rfde
+            elementen integreert en synthetiseert. Het proces culmineert
+            in de voldoening (satisfaction) fase.</p>
+          <p>Deze genetische structuur verklaart hoe echte nieuwheid kan
+            ontstaan in een causaal samenhangend universum. De conforme
+            fase zorgt voor causale continu&iuml;teit, maar latere fasen
+            introduceren conceptuele gevoelens die pure mogelijkheden
+            verkennen.</p>
+        </div>
+        <div class="section">
+          <h2 class="section-title">Deel 3: Prehensie - Het weefsel van
+            relaties</h2>
+          <p><span class="concept">Prehensie</span> (apprehensie,
+            grijpen) vormt de fundamentele activiteit waardoor actuele
+            gelegenheden zich verhouden tot hun omgeving en hun eigen
+            definitieve vorm bereiken.</p>
+          <p>In tegenstelling tot mechanische interacties, omvatten
+            prehensies sympathische resonantie tussen gelegenheden die
+            hen in staat stellen aspecten van hun omgeving op te nemen
+            in hun eigen wording.</p>
+          <p>Dit maakt het de basisbouwsteen van alle relaties, van
+            kwantumverstrengeling tot bewuste perceptie tot emotionele
+            sympathie.</p>
+          <p>Whitehead onderscheidde positieve en negatieve prehensies.
+            Positieve prehensies brengen aspecten van andere
+            gelegenheden binnen in de constitutie van het grijpende
+            subject.</p>
+          <p>Negatieve prehensies betreffen de actieve afwijking van
+            mogelijke invloeden. Elke gelegenheid moet elke andere
+            gelegenheid in haar actuele universum prehenden, maar de
+            meeste zullen negatief zijn.</p>
+          <p>Dit verklaart hoe eindige gelegenheden kunnen bestaan in
+            een oneindig universum zonder overweldigd te worden door
+            onbeperkte complexiteit.</p>
+          <p>Fysieke prehensies vertegenwoordigen de meest primitieve
+            vorm van responsief grijpen. Wanneer de ene actuele
+            gelegenheid de andere fysiek prehendt, reproduceert het
+            aspecten van de emotionele toon binnen haar eigen ervaring.</p>
+          <p>Dit proces ligt ten grondslag aan wat we gewoonlijk causale
+            invloed noemen, maar het werkt via sympathische reproductie
+            in plaats van mechanische transmissie.</p>
+        </div>
+        <div class="section">
+          <h2 class="section-title">Deel 4: De filosofie van het
+            organisme</h2>
+          <p>Whitehead noemde zijn volwassen filosofische systeem de <span
+              class="concept">filosofie van het organisme</span> om de
+            afwijzing van mechanistisch reductionisme ten gunste van een
+            biologisch model van de werkelijkheid te benadrukken.</p>
+          <p>De metafoor van de machine die de moderne wetenschap
+            domineerde, behandelde de natuur als een verzameling
+            onafhankelijke delen die externe wetten volgen.</p>
+          <p>De metafoor van het organisme onthult de natuur als een
+            gemeenschap van onderling afhankelijke processen die
+            co&ouml;rdinatie bereiken door hun interne relaties.</p>
+          <p>Organismen verschillen fundamenteel van machines. Machines
+            worden samengesteld uit vooraf bestaande delen die hun
+            essenti&euml;le kenmerken behouden ongeacht hun context.</p>
+          <p>Organismen ontwikkelen zich door de differentiatie van een
+            initi&euml;le eenheid, waarbij elk deel zijn definitieve
+            karakter verkrijgt door zijn functionele relaties met andere
+            delen binnen het organische geheel.</p>
+          <p>Whiteheads concept van <span class="concept">samenleving</span>
+            (society) biedt de sleutel om te begrijpen hoe tijdelijke
+            stabiliteiten ontstaan binnen de flux van het proces.</p>
+          <p>Een samenleving bestaat uit een opeenvolging van actuele
+            gelegenheden die bepaalde defini&euml;rende kenmerken erven
+            van hun voorgangers, waardoor ze een herkenbaar patroon in
+            de tijd behouden.</p>
+          <p>Wat we gewoonlijk bestendige objecten noemen, van
+            elektronen tot menselijke persoonlijkheden, zijn eigenlijk
+            temporele samenlevingen die voldoende stabiliteit vertonen.</p>
+        </div>
+        <div class="section">
+          <h2 class="section-title">Deel 5: Creativiteit als het ultieme
+            principe</h2>
+          <p>Aan de top van Whiteheads categoriale schema staat <span
+              class="concept">creativiteit</span>, het ultieme principe
+            dat alle metafysische onderscheidingen overstijgt en
+            tegelijkertijd mogelijk maakt.</p>
+          <p>Creativiteit is niet een ding of wezen in enige
+            conventionele zin, maar eerder de fundamentele activiteit
+            waardoor het universum continu nieuwheid genereert uit de
+            synthese van actuele en mogelijke elementen.</p>
+          <p>Zonder creativiteit zou het universum instorten tot
+            statische repetitie of oplossen in chaotische veelheid.
+            Creativiteit zorgt ervoor dat elk moment echte nieuwheid
+            bereikt terwijl het voldoende samenhang behoudt.</p>
+          <p>Whiteheads conceptie van creativiteit verschilt
+            fundamenteel van traditionele theologische concepten van
+            creatio ex nihilo (schepping uit het niets).</p>
+          <p>Proces-creativiteit werkt continu door het kosmische
+            proces, niet als een enkele oorspronkelijke daad, maar als
+            het voortdurende principe waardoor het universum zichzelf
+            cre&euml;ert.</p>
+          <p>Elke actuele gelegenheid oefent creativiteit uit door haar
+            ge&euml;rfde apprehensies te synthetiseren tot een nieuw
+            patroon van voldoening dat iets echt nieuws toevoegt aan de
+            cumulatieve werkelijkheid.</p>
+          <p>Deze democratische verdeling van creativiteit door de hele
+            werkelijkheid verklaart hoe echte nieuwheid op elk niveau
+            van de kosmische hi&euml;rarchie kan ontstaan zonder
+            bovennatuurlijke interventie.</p>
+          <p>Het principe van creativiteit werkt via wat Whitehead de <span
+              class="concept">creatieve vooruitgang naar nieuwheid</span>
+            noemde: het voortdurende proces waardoor het universum zijn
+            eerdere prestaties overstijgt terwijl het daarop voortbouwt.</p>
+        </div>
+        <div class="section">
+          <h2 class="section-title">Procesfilosofie - Kernpunten</h2>
+          <p>1. <span class="highlight">Processen zijn primair</span>:
+            Alles is voortdurend in wording; stabiliteit is een
+            tijdelijk patroon van herhalende processen.</p>
+          <p>2. <span class="highlight">Onderlinge verbondenheid</span>:
+            Alles is met alles verbonden via prehensies &#8211; responsieve
+            relaties.</p>
+          <p>3. <span class="highlight">Creativiteit als ultiem
+              principe</span>: Het universum is voortdurend creatief en
+            genereert steeds nieuwe mogelijkheden.</p>
+          <p>4. <span class="highlight">Organisch wereldbeeld</span>:
+            De natuur wordt gezien als een levend geheel van onderling
+            afhankelijke processen, niet als een machine.</p>
+        </div>
+        <div class="section">
+          <h2 class="section-title">Proces-theologie</h2>
+          <p>Whiteheads procesfilosofie leidt tot een radicaal andere
+            visie op God en religie:</p>
+          <p>1. <span class="concept">God als dipolair wezen</span>:
+            Primordiale natuur (bron van mogelijkheden) en consequente
+            natuur (ontvanger van ervaringen).</p>
+          <p>2. <span class="concept">God is niet almachtig in
+              klassieke zin</span>: Gods macht is overredend, niet
+            dwingend.</p>
+          <p>3. <span class="concept">God is tijdelijk en evoluerend</span>:
+            God ontwikkelt zich mee met de wereld.</p>
+          <p>4. <span class="concept">Alle ervaring heeft waarde voor
+              God</span>: Niets gaat definitief verloren.</p>
+          <p>5. <span class="concept">Religie als samenwerking met God</span>:
+            Gebed en aanbidding zijn manieren om af te stemmen op Gods
+            creatieve kracht.</p>
+        </div>
+        <div class="section">
+          <h2>Conclusie</h2>
+          <p>Procesfilosofie ziet de werkelijkheid als een dynamisch
+            netwerk van creatieve processen, waarin alles voortdurend
+            wordt en met alles verbonden is. Theologisch leidt dit tot
+            een proces-God die meebeweegt met de wereld, niet almachtig
+            is in traditionele zin, maar wel alles omarmt en
+            transformeert.</p>
+          <p>Deze visie biedt een antwoord op het probleem van het
+            kwaad, benadrukt de waarde van elk moment, en nodigt uit tot
+            actieve, creatieve deelname aan de kosmische evolutie.</p>
+          <p>Whiteheads denken blijft relevant voor hedendaagse
+            uitdagingen zoals klimaatverandering, sociale ongelijkheid
+            en de zoektocht naar betekenis in een veranderende wereld.</p>
+        </div>
+      </div>
+    </div>
+    <div class="controls"> <button class="control-btn"
+        onclick="toggleScroll()">Pauzeren/Hervatten</button> <button
+        class="control-btn" onclick="resetScroll()">Opnieuw beginnen</button>
+      <button class="control-btn" onclick="changeSpeed(1.5)">Sneller</button>
+      <button class="control-btn" onclick="changeSpeed(0.7)">Langzamer</button>
+    </div>
+    <script>
+        const content = document.getElementById('content');
+        const pauseNotice = document.getElementById('pauseNotice');
+        let animationDuration = 200;
+        let isPaused = false;
+        
+        function toggleScroll() {
+            const style = window.getComputedStyle(content);
+            const animationPlayState = style.getPropertyValue('animation-play-state');
+            
+            if (animationPlayState === 'paused') {
+                content.style.animationPlayState = 'running';
+                pauseNotice.style.display = 'none';
+                event.target.textContent = 'Pauzeren';
+                isPaused = false;
+            } else {
+                content.style.animationPlayState = 'paused';
+                pauseNotice.style.display = 'block';
+                event.target.textContent = 'Hervatten';
+                isPaused = true;
+            }
+        }
+        
+        function resetScroll() {
+            content.style.animation = 'none';
+            void content.offsetHeight;
+            content.style.animation = `scroll ${animationDuration}s linear infinite`;
+            content.style.animationPlayState = 'running';
+            pauseNotice.style.display = 'none';
+            
+            const toggleBtn = document.querySelector('.control-btn');
+            toggleBtn.textContent = 'Pauzeren';
+            isPaused = false;
+        }
+        
+        function changeSpeed(factor) {
+            animationDuration = animationDuration / factor;
+            content.style.animationDuration = `${animationDuration}s`;
+            
+            const notification = document.createElement('div');
+            notification.textContent = `Snelheid: ${(200/animationDuration).toFixed(1)}x`;
+            notification.style.position = 'fixed';
+            notification.style.top = '20px';
+            notification.style.left = '20px';
+            notification.style.backgroundColor = 'rgba(0,0,0,0.7)';
+            notification.style.color = 'white';
+            notification.style.padding = '10px 15px';
+            notification.style.borderRadius = '5px';
+            notification.style.zIndex = '1000';
+            document.body.appendChild(notification);
+            
+            setTimeout(() => {
+                notification.remove();
+            }, 1000);
+        }
+        
+        // Pause on hover for better reading
+        content.addEventListener('mouseenter', () => {
+            if (!isPaused) {
+                content.style.animationPlayState = 'paused';
+                pauseNotice.style.display = 'block';
+            }
+        });
+        
+        content.addEventListener('mouseleave', () => {
+            if (!isPaused) {
+                content.style.animationPlayState = 'running';
+                pauseNotice.style.display = 'none';
+            }
+        });
+        
+        // Space bar to pause/resume
+        document.addEventListener('keydown', (e) => {
+            if (e.code === 'Space') {
+                e.preventDefault();
+                toggleScroll();
+            }
+        });
+        
+        // Initialize animation
+        content.style.animation = `scroll ${animationDuration}s linear infinite`;
+    </script>
+  </body>
+</html>
