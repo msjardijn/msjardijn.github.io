@@ -1,170 +1,140 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
-  <head>
-    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
-    <meta charset="UTF-8">
-    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,
-initial-scale=1.0">
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,
-initial-scale=1.0">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
 <title>Martin Sjardijn | Beeldend Kunstenaar &amp; Schrijver</title>
 <meta name="description" content="Officiële website van Martin
-Sjardijn. Ontdek schilderijen, sculpturen, tekeningen en boeken
-van deze hedendaagse Nederlandse kunstenaar.">
-<meta name="robots" content="index, follow">
+Sjardijn.">
 <meta name="author" content="Martin Sjardijn">
-<meta name="keywords" content="Martin Sjardijn, kunstenaar, Den
-Haag, schilderijen, sculpturen, Metamorphose, Pulchri Studio,
-hedendaagse kunst">
-<meta property="og:title" content="Martin Sjardijn - Beeldend
-Kunstenaar">
-<meta property="og:description" content="Portfolio van schilderijen,
-sculpturen en literair werk door Martin Sjardijn.">
-<meta property="og:image"
-content="https://msjardijn.github.io/sculptures/fonds2g.jpg">
-<meta property="og:url" content="https://msjardijn.github.io/">
-<meta property="og:type" content="website">
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Martin Sjardijn | Kunst &amp;
-Projecten">
-<meta name="twitter:description" content="Ontdek het diverse oeuvre
-van Martin Sjardijn, van abstracte schilderijen tot monumentale
-sculpturen.">
-<meta name="twitter:image"
-content="https://msjardijn.github.io/sculptures/fonds2g.jpg">
-<link rel="canonical" href="https://msjardijn.github.io/">
-    <title>Martin Sjardijn - HOME</title>
-    <style>
-        body {
-            margin: 0;
-            background: #111 url('https://msjardijn.github.io/sculptures/fonds2g.jpg') no-repeat center center fixed;
-            background-size: cover;
-            height: 100vh;
-            overflow: hidden;
-            font-family: Arial, sans-serif;
-        }
+<style>
+body {
+margin: 0;
+background: #111 url('https://msjardijn.github.io/sculptures/fonds2g.jpg') no-repeat center center fixed;
+background-size: cover;
+height: 100vh;
+overflow: hidden;
+font-family: Arial, sans-serif;
+}
 
-        /* De container die de 3D ruimte definieert */
-        .stage {
-            width: 200px;
-            height: 200px;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            margin-left: -100px;
-            margin-top: -100px;
-            perspective: 800px;
-            z-index: 999; /* Zorg dat hij overal bovenop staat */
-        }
-/* 2. Het Menu (zonder achtergrondkleur/band) */
-    nav {
-        position: relative;
-        z-index: 0;
-        padding: 0px;
-        text-align: center;
-        background: none; /* Verwijdert de zwarte band */
- }
+/* Navigatie styling */
+nav {
+position: relative;
+z-index: 1000;
+padding: 20px;
+text-align: center;
+background: none;
+}
+nav a {
+color: white;
+text-decoration: none;
+font-weight: bold;
+}
+nav td { padding: 0 10px; }
 
-        /* De kubus zelf */
-        .cube {
-            width: 100%;
-            height: 100%;
-            position: relative;
-            transform-style: preserve-3d;
-            animation: rotate 15s infinite linear;
-        }
+/* De 3D Stage */
+.stage {
+width: 200px;
+height: 200px;
+position: absolute;
+top: 55%; /* Iets lager voor betere balans met menu */
+left: 50%;
+margin-left: -100px;
+margin-top: -100px;
+perspective: 800px;
+z-index: 999;
+}
 
-        /* Elke zijde van de kubus */
-        .face {
-            position: absolute;
-            width: 200px;
-            height: 200px;
-            background: rgba(0, 0, 0, 0.9); /* Zwart met lichte glans */
-            border: 0px solid gold; /* Goudkleur valt beter op dan wit */
-            line-height: 200px;
-            text-align: center;
-            color: gold;
-            font-weight: bold;
-            box-sizing: border-box;
-        }
+/* De kubus zelf */
+.cube {
+width: 100%;
+height: 100%;
+position: relative;
+transform-style: preserve-3d;
+animation: rotate 15s infinite linear;
+}
 
-        /* Positionering met de juiste 3D transformaties */
-        .front  { transform: translateZ(100px); }
-        .back   { transform: rotateY(180deg) translateZ(100px); }
-        .right  { transform: rotateY(90deg) translateZ(100px); }
-        .left   { transform: rotateY(-90deg) translateZ(100px); }
-        .top    { transform: rotateX(90deg) translateZ(100px); }
-        .bottom { transform: rotateX(-90deg) translateZ(100px); }
+/* Elke zijde van de kubus */
+.face {
+position: absolute;
+width: 200px;
+height: 200px;
+background: rgba(0, 0, 0, 0.9);
+border: 1px solid gold;
+line-height: 200px;
+text-align: center;
+color: gold;
+font-weight: bold;
+box-sizing: border-box;
+overflow: hidden; /* Zorgt dat afbeelding niet uitsteekt */
+}
 
-        @keyframes rotate {
-            from { transform: rotateX(0deg) rotateY(0deg); }
-            to   { transform: rotateX(360deg) rotateY(360deg); }
-        }
+/* Specifieke styling voor de afbeelding-zijde */
+.face.front {
+padding: 0;
+}
+.face img {
+width: 100%;
+height: 100%;
+object-fit: cover; /* Vult de zijde perfect */
+display: block;
+}
+.face a {
+display: block;
+width: 100%;
+height: 100%;
+}
 
-        /* Menu bovenop */
-        nav {
-            position: relative;
-            z-index: 1000;
-            background: rgba(0,0,0,0);
-            padding: 20px;
-            text-align: center;
-        }
-        nav a { color: white; margin: 0 15px; text-decoration: none; font-weight: bold; }
-    </style>
-  </head>
-  <body>
-    <div class="content-container">
+/* Positionering 3D */
+.front { transform: translateZ(100px); }
+.back { transform: rotateY(180deg) translateZ(100px); }
+.right { transform: rotateY(90deg) translateZ(100px); }
+.left { transform: rotateY(-90deg) translateZ(100px); }
+.top { transform: rotateX(90deg) translateZ(100px); }
+.bottom { transform: rotateX(-90deg) translateZ(100px); }
+
+@keyframes rotate {
+from { transform: rotateX(0deg) rotateY(0deg); }
+to { transform: rotateX(360deg) rotateY(360deg); }
+}
+
+header h1 { margin-left: 20px; }
+.logo-bottom { position: absolute; bottom: 20px; left: 20px; }
+</style>
+</head>
+<body>
 <header>
-<h1>&nbsp;&nbsp; &nbsp; <font color="#ffffff"> MARTIN SJARDIJN</font></h1>
+<h1><font color="#ffffff">MARTIN SJARDIJN</font></h1>
 </header>
-    <nav>
-      <table width="100%" cellspacing="2" cellpadding="2" border="0">
-        <tbody>
-          <tr>
-            <td><a href="about/about.html"><strong>ABOUT</strong></a></td>
-            <td><a href="paintings/paintings.html"><strong>PAINTINGS</strong></a></td>
-            <td><a href="drawings/drawings.html"><strong>DRAWINGS</strong></a></td>
-            <td><a href="sculptures/sculptures.html"><strong>SCULPTURES</strong></a></td>
-            <td><a href="books/books.html"><strong>BOOKS</strong></a></td>
-            <td><a href="writings/writings.html"><strong>WRITINGS</strong></a></td>
-            <td><a href="projects/projects.html"><strong>PROJECTS</strong></a></td>
-            <td><a href="links/links.html"><strong>LINKS</strong></a></td>
-          </tr>
-        </tbody>
-      </table>
-    </nav>
-      <div class="stage">
-  <div class="cube">
-    <div class="face front">
-      <a href="https://msjardijn.github.io/projects/info/info.html" target="_blank">
-        <img src="foto1.jpg" alt="Beschrijving" style="width: 100%; height: 100%; object-fit: cover;">
-      </a>
-    </div>
-    
-    <div class="face back">AI en het GENIE</div>
-    <div class="face right">7 maart 2026</div>
-    <div class="face left">AI en het GENIE</div>
-    <div class="face top">AI en het GENIE</div>
-    <div class="face bottom"></div>
-  </div>
-</div>  
-    &nbsp;
-&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; <img
-src="stroom-logo.jpg"
-alt="" width="76" height="38">
-  </body>
+<nav>
+<table cellspacing="2" cellpadding="2" border="0" align="center">
+<tbody>
+<tr>
+<td><a href="about/about.html">ABOUT</a></td>
+<td><a href="paintings/paintings.html">PAINTINGS</a></td>
+<td><a href="drawings/drawings.html">DRAWINGS</a></td>
+<td><a href="sculptures/sculptures.html">SCULPTURES</a></td>
+<td><a href="books/books.html">BOOKS</a></td>
+<td><a href="writings/writings.html">WRITINGS</a></td>
+<td><a href="projects/projects.html">PROJECTS</a></td>
+<td><a href="links/links.html">LINKS</a></td>
+</tr>
+</tbody>
+</table>
+</nav>
+<div class="stage">
+<div class="cube">
+<div class="face front"> <a
+href="https://msjardijn.github.io/projects/info/info.html"
+target="_blank"> <img src="foto1.jpg" alt="Project Info"> </a>
+</div>
+<div class="face back">AI en het GENIE</div>
+<div class="face right">7 maart 2026</div>
+<div class="face left">AI en het GENIE</div>
+<div class="face top">AI en het GENIE</div>
+</div>
+</div>
+<div class="logo-bottom"> <img src="stroom-logo.jpg" alt="Logo"
+width="76" height="38"> </div>
+</body>
 </html>
-
-
-
-
-
-
-
-
-
-
 
