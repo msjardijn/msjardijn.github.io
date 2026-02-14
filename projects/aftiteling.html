@@ -1,12 +1,10 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
   <head>
-
     <meta http-equiv="content-type" content="text/html; charset=UTF-8">
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width,
-      initial-scale=1.0">
-    <title>Aftiteling</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aftiteling - Looping</title>
     <style>
         body {
             background-color: black;
@@ -23,13 +21,16 @@
             position: absolute;
             width: 80%;
             text-align: center;
-            /* Start sneller: de animatie begint dichter bij het midden */
-            animation: scrollUp 20s linear forwards;
+            /* Duur aangepast naar 40s voor langzamer scrollen */
+            /* 'infinite' zorgt voor de herhaling */
+            animation: scrollUp 40s linear infinite;
         }
 
         @keyframes scrollUp {
-            0% { transform: translateY(40vh); } 
-            100% { transform: translateY(-120%); }
+            /* Start volledig onder de zichtbare rand van het scherm */
+            0% { transform: translateY(100vh); } 
+            /* Eindig volledig boven de zichtbare rand */
+            100% { transform: translateY(-100%); }
         }
 
         h2 {
@@ -75,5 +76,3 @@
     </div>
   </body>
 </html>
-
-
