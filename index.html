@@ -17,7 +17,6 @@
             font-family: Arial, sans-serif;
         }
 
-        /* Navigatie styling */
         nav {
             position: relative;
             z-index: 1000;
@@ -32,12 +31,11 @@
         }
         nav td { padding: 0 10px; }
 
-        /* De 3D Stage */
         .stage {
             width: 200px;
             height: 200px;
             position: absolute;
-            top: 55%; /* Iets lager voor betere balans met menu */
+            top: 55%;
             left: 50%;
             margin-left: -100px;
             margin-top: -100px;
@@ -45,47 +43,48 @@
             z-index: 999;
         }
 
-        /* De kubus zelf */
+        /* ✅ De klikbare overlay – ligt precies over de kubus */
+        .cube-link {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 200px;
+            height: 200px;
+            z-index: 1001;       /* Boven de kubus */
+            cursor: pointer;
+            pointer-events: auto; /* Vangt alle klikken op */
+            /* (Eventueel tijdelijk een rode achtergrond om te testen) */
+            /* background: rgba(255,0,0,0.2); */
+        }
+
+        /* De kubus zelf mag geen muisgebeurtenis ontvangen – die gaan naar de overlay */
         .cube {
             width: 100%;
             height: 100%;
             position: relative;
             transform-style: preserve-3d;
             animation: rotate 15s infinite linear;
+            pointer-events: none; /* 🔥 Dit is de sleutel: klikken gaan door de kubus heen */
         }
 
-        /* Elke zijde van de kubus */
         .face {
             position: absolute;
             width: 200px;
             height: 200px;
-            background: rgba(0, 0, 0, 0.9);
+            background: none;
             border: 1px solid gold;
-            line-height: 200px;
-            text-align: center;
-            color: gold;
-            font-weight: bold;
             box-sizing: border-box;
-            overflow: hidden; /* Zorgt dat afbeelding niet uitsteekt */
+            overflow: hidden;
         }
 
-        /* Specifieke styling voor de afbeelding-zijde */
-        .face.front {
-            padding: 0;
-        }
         .face img {
             width: 100%;
             height: 100%;
-            object-fit: cover; /* Vult de zijde perfect */
+            object-fit: cover;
             display: block;
-        }
-        .face a {
-            display: block;
-            width: 100%;
-            height: 100%;
         }
 
-        /* Positionering 3D */
+        /* 3D-posities */
         .front  { transform: translateZ(100px); }
         .back   { transform: rotateY(180deg) translateZ(100px); }
         .right  { transform: rotateY(90deg) translateZ(100px); }
@@ -124,30 +123,38 @@
         </tbody>
       </table>
     </nav>
-     <div class="stage">
-      <div class="cube">
- <a href="https://msjardijn.github.io/projects/info/info.html" target="_blank">
-        <div class="face front">AI en het GENIE</div>
-        <div class="face back">AI en het GENIE</div>
-        <div class="face right">7 maart 2026</div>
-        <div class="face left">AI en het GENIE</div>
-        <div class="face top">AI en het GENIE</div>
-        <div class="face bottom">AI en hety Genie
- </a>
+
+    <div class="stage">
+        <!-- 🌟 De klikbare link (onzichtbaar) -->
+        <a href="https://msjardijn.github.io/projects/info/info.html" class="cube-link" target="_blank" rel="noopener noreferrer"></a>
+        
+        <!-- De kubus met afbeeldingen (niet klikbaar) -->
+        <div class="cube">
+            <div class="face front">
+                <!-- Vervang de src door je eigen foto's -->
+                <img src="https://picsum.photos/200/200?random=1" alt="Voorzijde">
+            </div>
+            <div class="face back">
+                <img src="https://picsum.photos/200/200?random=2" alt="Achterzijde">
+            </div>
+            <div class="face right">
+                <img src="https://picsum.photos/200/200?random=3" alt="Rechterzijde">
+            </div>
+            <div class="face left">
+                <img src="https://picsum.photos/200/200?random=4" alt="Linkerzijde">
+            </div>
+            <div class="face top">
+                <img src="https://picsum.photos/200/200?random=5" alt="Bovenzijde">
+            </div>
+            <div class="face bottom">
+                <img src="https://picsum.photos/200/200?random=6" alt="Onderzijde">
+            </div>
         </div>
+    </div>
+
     <div class="logo-bottom">
         <img src="stroom-logo.jpg" alt="Logo" width="76" height="38">
     </div>
 
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
