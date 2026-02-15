@@ -84,14 +84,10 @@
             cursor: pointer;
             pointer-events: auto;         /* Actief voor klik */
             background: transparent;       /* Volledig doorzichtig */
-            border-radius: 4px;            /* voor de sier, niet nodig */
+            border-radius: 4px;
         }
 
-        /* KUBUS ZELF: GEEN MUISGEBEURTENISSEN (klik gaat door naar overlay) 
-           MAAR WIJ WILLEN WEL HOVER OM ROTATIE TE STOPPEN. 
-           Daarom geven we de kubus zelf pointer-events: none; maar de hover 
-           definiëren we op de .stage container. Die kan wél reageren. 
-        */
+        /* KUBUS ZELF: GEEN MUISGEBEURTENISSEN (klik gaat door naar overlay) */
         .cube {
             width: 100%;
             height: 100%;
@@ -113,7 +109,7 @@
             position: absolute;
             width: 200px;
             height: 200px;
-            background: none;
+            background: #222; /* Donkere achtergrond voor als afbeelding niet laadt */
             border: 1px solid gold;
             box-sizing: border-box;
             overflow: hidden;
@@ -126,12 +122,12 @@
             height: 100%;
             object-fit: cover;
             display: block;
-            /* Zwart-wit filtering voor een artistiek effect — past bij de site-stijl */
+            /* Zwart-wit filtering voor een artistiek effect */
             filter: grayscale(80%) contrast(1.1);
             transition: filter 0.3s;
         }
-        /* Hover op een vlak (via stage, want kubus heeft pointer-events:none) 
-           maar we kunnen het een subtiel effect geven als de kubus stilstaat */
+        
+        /* Subtiel effect als de kubus stilstaat */
         .stage:hover .face img {
             filter: grayscale(40%) contrast(1.2); 
         }
@@ -168,7 +164,6 @@
             opacity: 1;
         }
 
-        /* kleine fallback */
         a, button {
             cursor: pointer;
         }
@@ -209,45 +204,38 @@
            aria-label="Meer informatie over projecten (opent in nieuwe tab)">
         </a>
 
-        <!-- ROTERENDE 3D KUBUS (geen pointer-events, maar hover op .stage regelt pauze) -->
+        <!-- ROTERENDE 3D KUBUS met ECHTE AFBEELDINGEN -->
         <div class="cube">
             <div class="face front">
-                <img src="https://via.placeholder.com/200x200/2c3e50/ffffff?text=Front" alt="Voorzijde kubus">
+                <img src="foto1.jpg" alt="Voorzijde kubus - Martin Sjardijn kunstwerk">
             </div>
             <div class="face back">
-                <img src="https://via.placeholder.com/200x200/34495e/ffffff?text=Back" alt="Achterzijde kubus">
+                <img src="foto1.jpg" alt="Achterzijde kubus - Martin Sjardijn kunstwerk">
             </div>
             <div class="face right">
-                <img src="https://via.placeholder.com/200x200/3d566e/ffffff?text=Right" alt="Rechterzijde kubus">
+                <img src="foto1.jpg" alt="Rechterzijde kubus - Martin Sjardijn kunstwerk">
             </div>
             <div class="face left">
-                <img src="https://via.placeholder.com/200x200/2b3e4f/ffffff?text=Left" alt="Linkerzijde kubus">
+                <img src="foto1.jpg" alt="Linkerzijde kubus - Martin Sjardijn kunstwerk">
             </div>
             <div class="face top">
-                <img src="https://via.placeholder.com/200x200/1f2c38/ffffff?text=Top" alt="Bovenzijde kubus">
+                <img src="foto1.jpg" alt="Bovenzijde kubus - Martin Sjardijn kunstwerk">
             </div>
             <div class="face bottom">
-                <img src="https://via.placeholder.com/200x200/17212b/ffffff?text=Bottom" alt="Onderzijde kubus">
+                <img src="foto1.jpg" alt="Onderzijde kubus - Martin Sjardijn kunstwerk">
             </div>
         </div>
     </div>
 
     <!-- VASTE LOGO ONDERLINKS -->
     <div class="logo-bottom">
-        <img src="https://via.placeholder.com/76x38/444/ccc?text=Stroom" alt="Stroom logo (placeholder)">
+        <img src="stroom-logo.jpg" alt="Stroom logo" width="76" height="38">
     </div>
 
     <!-- 
-        WERKING HOVER STOP: 
-        - .stage is de container rond kubus en overlay.
-        - Bij .stage:hover .cube zetten we animation-play-state: paused;
-        - Omdat .cube pointer-events: none heeft, gaat de klik nog steeds naar .cube-link.
-        - Ook het filter-effect op de afbeelding wordt iets sterker bij hover voor visuele feedback.
+        OPGELOST: De afbeeldingen zijn nu correct gelinkt met "foto1.jpg" zoals in het origineel.
+        Bij hover stopt de kubus met draaien en worden de afbeeldingen iets helderer.
+        De klikbare link werkt nog steeds.
     -->
 </body>
 </html>
-
-
-
-
-
