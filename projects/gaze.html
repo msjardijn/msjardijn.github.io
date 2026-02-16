@@ -3,118 +3,93 @@
   <head>
     <meta http-equiv="content-type" content="text/html; charset=UTF-8">
     <meta charset="UTF-8">
-    <title>AI en het Genie - Haagse Kunstkring</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aftiteling - Centered Start</title>
     <style>
         body {
-            background-color: #050505;
-            color: #d1d1d1;
-            font-family: 'Times New Roman', serif;
+            background-color: black;
+            color: white;
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
             margin: 0;
+            padding: 0;
             overflow: hidden;
             display: flex;
             justify-content: center;
+            align-items: center; /* Zorgt voor verticale centrering van de startpositie */
             height: 100vh;
         }
 
-        /* Container voor het scroll-effect */
         .scroll-container {
-            width: 75%;
-            height: 100vh;
-            overflow: hidden;
-            position: relative;
-        }
-
-        /* De eigenlijke tekst met animatie */
-        .scroll-content {
             position: absolute;
-            width: 100%;
-            top: 0;
-            left: 0;
-            /* Snelheid: 240 seconden per loop - pas dit getal aan om te versnellen */
-            animation: scroll-loop 50s linear infinite; 
+            width: 80%;
             text-align: center;
-            will-change: transform; /* Verbetert de vloeiendheid op beamers */
+            /* Startpositie: exact in het midden van het scherm */
+            transform: translateY(0); 
+            animation: scrollUp 45s linear infinite;
+            will-change: transform;
         }
 
-        /* Inhoud herhalen voor naadloze loop */
-        .essay-block {
-            padding-bottom: 200px; /* Ruimte tussen de loops */
-        }
-
-        h1 { font-size: 3.5rem; color: #ffffff; margin-bottom: 50px; text-transform: uppercase; letter-spacing: 4px; }
-        h2 { font-size: 2.2rem; color: #c5a059; margin-top: 80px; border-bottom: 1px solid #333; display: inline-block; }
-        h3 { font-size: 1.8rem; color: #a0a0a0; margin-top: 40px; }
-        p { font-size: 1.5rem; line-height: 1.8; margin-bottom: 40px; text-align: justify; }
-        
-        .metadata { font-size: 1.2rem; color: #777; margin-bottom: 100px; padding-top: 100px; }
-        .quote { font-style: italic; font-size: 2rem; color: #c5a059; margin: 100px 0; padding: 40px; background: #0c0c0c; border-left: 5px solid #c5a059; }
-        
-        table { width: 100%; border-collapse: collapse; margin: 60px 0; background: #0c0c0c; font-size: 1.2rem; text-align: left; }
-        th, td { border: 1px solid #444; padding: 20px; }
-        th { background-color: #1a1a1a; color: #c5a059; }
-
-        @keyframes scroll-loop {
-            /* 0% staat nu op 50vh, zodat het essay midden op de pagina begint bij start */
+        @keyframes scrollUp {
+            /* 0% is nu het midden van het scherm door de flex-center op de body */
             0% { 
                 transform: translateY(50vh); 
-            }
+            } 
+            /* Beweegt de tekst volledig omhoog tot deze buiten beeld is */
             100% { 
-                /* De tekst scrollt volledig omhoog tot de onderkant buiten beeld is */
-                transform: translateY(-100%); 
+                transform: translateY(-120%); 
             }
+        }
+
+        h2 {
+            font-weight: 300;
+            font-size: 1.1rem;
+            color: #bbbbbb;
+            margin-bottom: 8px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        p {
+            font-weight: bold;
+            font-size: 1.8rem;
+            margin-top: 0;
+            margin-bottom: 60px;
+        }
+
+        .divider {
+            height: 1px;
+            background: #444;
+            width: 80px;
+            margin: 20px auto 60px auto;
         }
     </style>
   </head>
   <body>
     <div class="scroll-container">
-      <div class="scroll-content">
-        <div class="essay-block">
-          <div class="metadata"> Project: AI en het Genie<br>
-            Haagse Kunstkring — 7 maart 2026 </div>
-
-          <p>Dit essay onderzoekt de dynamiek tussen de male gaze, de
-            female gaze en de opkomst van kunstmatige intelligentie
-            binnen de context van het concept ‘het genie’.</p>
-
-          <h1>De Blik van het Algoritme: De Male Gaze, de Female Gaze en AI</h1>
-          <p>In de kunstgeschiedenis is de ‘blik’ nooit neutraal. Sinds
-            filmtheoreticus Laura Mulvey in 1975 de term male gaze
-            introduceerde, zijn we ons pijnlijk bewust van hoe visuele
-            cultuur de wereld (en de vrouw) vaak weergeeft vanuit een
-            mannelijk, heteroseksueel perspectief: de vrouw als object,
-            de man als subject.</p>
-
-          <h2>De Male Gaze als Blauwdruk</h2>
-          <p>De male gaze is meer dan alleen een manier van kijken; het
-            is een machtsstructuur. Het reduceert de autonomie van het
-            geobserveerde subject tot een passieve rol. Wanneer we
-            kijken naar de training van AI-modellen, zien we dat deze
-            systemen worden gevoed met de ‘canon’ van onze cultuur. Deze
-            canon is eeuwenlang gedomineerd door mannelijke makers.</p>
-
-          <blockquote>
-            <p>"De machine heeft geen geslacht, maar de data die haar
-              voedt is doordrenkt van gender".</p>
-          </blockquote>
-
-          <h2>Conclusie</h2>
-          <p>Het project AI en het Genie dwingt ons om opnieuw te
-            definiëren wat we onder creativiteit verstaan. Alleen door de technologie in te zetten als een
-            instrument voor de female gaze, kan AI werkelijk een nieuwe vorm
-            van genie worden—een die inclusiever en menselijker is dan
-            de canon die eraan voorafging.</p>
-
-          <h3>Manieren van integratie door kunstenaars:</h3>
-          <p><strong>1. Stephanie Dinkins: "Small Data" en de Zorgzame AI</strong></p>
-          <p>Waar de male gaze vaak streeft naar universaliteit en
-            dominantie, focust Dinkins op "small data": intieme, specifieke data van zwarte vrouwen en hun familiegeschiedenissen.</p>
-
-          <h1>Manifest voor de Algoritmische Female Gaze </h1>
-        </div>
-      </div>
+      <h2>Camera &amp; Montage</h2>
+      <p>Bram Bokken</p>
+      
+      <h2>Geluidstechniek</h2>
+      <p>Mike de Laat</p>
+      
+      <h2>Regie / Licht / Openingsspeech</h2>
+      <p>Max von Kreyfelt</p>
+      
+      <h2>Curator / Kunstenaar</h2>
+      <p>Martin Sjardijn</p>
+      
+      <h2>Performer / Kunstenaar</h2>
+      <p>Brigit Law</p>
+      
+      <h2>Performer / Stedenbouwkundig Filosoof</h2>
+      <p>Wim Nijenhuis</p>
+      
+      <h2>Performer / Geestelijke / Kunstenaar</h2>
+      <p>Peter Kattenberg</p>
     </div>
   </body>
 </html>
+
 
 
 
