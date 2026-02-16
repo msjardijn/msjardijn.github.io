@@ -1,90 +1,112 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
-<html>
-  <head>
-    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<!DOCTYPE html>
+<html lang="nl">
+<head>
     <meta charset="UTF-8">
-    <title>AI en het Genie - Haagse Kunstkring</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>De Blik van het Algoritme - Installatie</title>
     <style>
         body {
-            background-color: #050505;
-            color: #d1d1d1;
-            font-family: 'Times New Roman', serif;
+            background-color: #000000;
+            color: #ffffff;
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
             margin: 0;
+            padding: 0;
             overflow: hidden;
             display: flex;
             justify-content: center;
-        }
-
-        /* Container voor het scroll-effect */
-        .scroll-container {
-            width: 75%;
+            align-items: center; /* Zorgt dat de tekst in het midden begint */
             height: 100vh;
-            overflow: hidden;
-            position: relative;
         }
 
-        /* De eigenlijke tekst met animatie */
-        .scroll-content {
+        .scroll-container {
             position: absolute;
-            width: 100%;
-            top: 0;
-            left: 0;
-            /* Zorgt dat de eerste regel tekst precies in het midden begint */
-            padding-top: 50vh; 
-            animation: scroll-loop 240s linear infinite;
+            width: 70%; /* Iets smaller voor betere leesbaarheid van zinnen */
             text-align: center;
+            transform: translateY(0); 
+            /* Snelheid op 80s gezet voor een essay; pas aan naar wens */
+            animation: scrollUp 80s linear infinite;
+            will-change: transform;
         }
 
-        /* Inhoud herhalen voor naadloze loop */
-        .essay-block {
-            padding-bottom: 200px;
+        @keyframes scrollUp {
+            0% { 
+                transform: translateY(60vh); /* Begint net onder het midden */
+            } 
+            100% { 
+                transform: translateY(-110%); /* Loopt door tot de tekst weg is */
+            }
         }
 
-        h1 { font-size: 3.5rem; color: #ffffff; margin-bottom: 50px; text-transform: uppercase; letter-spacing: 4px; }
-        h2 { font-size: 2.2rem; color: #c5a059; margin-top: 80px; border-bottom: 1px solid #333; display: inline-block; }
-        h3 { font-size: 1.8rem; color: #a0a0a0; margin-top: 40px; }
-        p { font-size: 1.5rem; line-height: 1.8; margin-bottom: 40px; text-align: justify; }
-        .metadata { font-size: 1.2rem; color: #777; margin-bottom: 100px; padding-top: 100px; }
-        .quote { font-style: italic; font-size: 2rem; color: #c5a059; margin: 100px 0; padding: 40px; background: #0c0c0c; border-left: 5px solid #c5a059; }
-
-        @keyframes scroll-loop {
-            /* Start nu op 0 (gecombineerd met de 50vh padding) in plaats van 100vh */
-            0% { transform: translateY(0); }
-            /* Scrollt door tot de volledige lengte van de content (inclusief de padding) weg is */
-            100% { transform: translateY(-100%); }
+        h1 {
+            font-weight: 300;
+            font-size: 1.2rem;
+            color: #00FF41; /* AI Groen voor de titels */
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            letter-spacing: 4px;
         }
+
+        h2 {
+            font-weight: bold;
+            font-size: 2.2rem;
+            margin-top: 0;
+            margin-bottom: 80px;
+            line-height: 1.2;
+        }
+
+        p {
+            font-size: 1.6rem;
+            line-height: 1.6;
+            margin-bottom: 100px;
+            color: #e0e0e0;
+        }
+
+        .quote {
+            font-style: italic;
+            font-size: 2rem;
+            color: #ffffff;
+            border-left: none;
+            margin: 120px 0;
+            padding: 0;
+        }
+
+        .divider {
+            height: 1px;
+            background: #444;
+            width: 100px;
+            margin: 50px auto;
+        }
+
     </style>
-  </head>
-  <body>
+</head>
+<body>
+
     <div class="scroll-container">
-      <div class="scroll-content">
-        <div class="essay-block">
-          <div class="metadata"> 
-            Project: AI en het Genie<br>
-            Haagse Kunstkring — 7 maart 2026
-          </div>
-          <h1>De Blik van het Algoritme</h1>
-          <p>Dit essay onderzoekt de dynamiek tussen de male gaze, de female gaze en de opkomst van kunstmatige intelligentie binnen de context van het concept ‘het genie’.</p>
-          
-          <h1>De Blik van het Algoritme: De Male Gaze, de Female Gaze en AI</h1>
-          <p>In de kunstgeschiedenis is de ‘blik’ nooit neutraal. Sinds filmtheoreticus Laura Mulvey in 1975 de term male gaze introduceerde, zijn we ons pijnlijk bewust van hoe visuele cultuur de wereld (en de vrouw) vaak weergeeft vanuit een mannelijk, heteroseksueel perspectief.</p>
+        <h1>Essay</h1>
+        <h2>De Blik van het Algoritme</h2>
+        
+        <div class="divider"></div>
 
-          <h2>De Male Gaze als Blauwdruk</h2>
-          <p>De male gaze is meer dan alleen een manier van kijken; het is een machtsstructuur. Het reduceert de autonomie van het geobserveerde subject tot een passieve rol. Wanneer we kijken naar de training van AI-modellen, zien we dat deze systemen worden gevoed met de ‘canon’ van onze cultuur.</p>
+        <p>In de kunstgeschiedenis is de ‘blik’ nooit neutraal. Sinds Laura Mulvey in 1975 de term <strong>male gaze</strong> introduceerde, zijn we ons bewust van hoe visuele cultuur de wereld vaak weergeeft vanuit een mannelijk perspectief.</p>
 
-          <blockquote>
-            <p>"De machine heeft geen geslacht, maar de data die haar voedt is doordrenkt van gender".</p>
-          </blockquote>
+        <h1>De Blauwdruk</h1>
+        <p>De male gaze is een machtsstructuur die het subject reduceert tot een passieve rol. AI-modellen worden gevoed met de ‘canon’ van onze cultuur, waardoor deze blik diep in de code wordt verankerd.</p>
 
-          <h2>Conclusie</h2>
-          <p>Het project AI en het Genie dwingt ons om opnieuw te definiëren wat we onder creativiteit verstaan. Alleen door de technologie in te zetten als een instrument voor de female gaze, kan AI werkelijk een nieuwe vorm van genie worden—een die inclusiever en menselijker is dan de canon die eraan voorafging.</p>
-          
-          <h1>Manifest voor de Algoritmische Female Gaze</h1>
+        <div class="quote">
+            "De machine heeft geen geslacht, maar de data die haar voedt is doordrenkt van gender."
         </div>
-      </div>
+
+        <h1>Conclusie</h1>
+        <p>Het project <strong>AI en het Genie</strong> dwingt ons om creativiteit opnieuw te definiëren. Alleen door technologie in te zetten als instrument voor de female gaze, kan AI een nieuwe, inclusieve vorm van genie worden.</p>
+
+        <h2>Manifest voor de Algoritmische Female Gaze</h2>
+        
+        <div class="divider"></div>
+        
+        <p style="font-size: 1rem; color: #666;">Einde van de tekst - Looping...</p>
     </div>
-  </body>
+
+</body>
 </html>
-  </body>
-</html>
+
 
