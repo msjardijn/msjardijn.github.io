@@ -4,16 +4,18 @@
     <meta http-equiv="content-type" content="text/html; charset=UTF-8">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aftiteling - Looping</title>
+    <title>Aftiteling - Centered Start</title>
     <style>
         body {
             background-color: black;
             color: white;
             font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
             margin: 0;
+            padding: 0;
             overflow: hidden;
             display: flex;
             justify-content: center;
+            align-items: center; /* Zorgt voor verticale centrering van de startpositie */
             height: 100vh;
         }
 
@@ -21,16 +23,21 @@
             position: absolute;
             width: 80%;
             text-align: center;
-            /* Duur aangepast naar 40s voor langzamer scrollen */
-            /* 'infinite' zorgt voor de herhaling */
-            animation: scrollUp 40s linear infinite;
+            /* Startpositie: exact in het midden van het scherm */
+            transform: translateY(0); 
+            animation: scrollUp 45s linear infinite;
+            will-change: transform;
         }
 
         @keyframes scrollUp {
-            /* Start volledig onder de zichtbare rand van het scherm */
-            0% { transform: translateY(100vh); } 
-            /* Eindig volledig boven de zichtbare rand */
-            100% { transform: translateY(-100%); }
+            /* 0% is nu het midden van het scherm door de flex-center op de body */
+            0% { 
+                transform: translateY(50vh); 
+            } 
+            /* Beweegt de tekst volledig omhoog tot deze buiten beeld is */
+            100% { 
+                transform: translateY(-120%); 
+            }
         }
 
         h2 {
@@ -61,20 +68,24 @@
     <div class="scroll-container">
       <h2>Camera &amp; Montage</h2>
       <p>Bram Bokken</p>
+      
       <h2>Geluidstechniek</h2>
       <p>Mike de Laat</p>
+      
       <h2>Regie / Licht / Openingsspeech</h2>
       <p>Max von Kreyfelt</p>
+      
       <h2>Curator / Kunstenaar</h2>
       <p>Martin Sjardijn</p>
+      
       <h2>Performer / Kunstenaar</h2>
       <p>Brigit Law</p>
+      
       <h2>Performer / Stedenbouwkundig Filosoof</h2>
       <p>Wim Nijenhuis</p>
+      
       <h2>Performer / Geestelijke / Kunstenaar</h2>
       <p>Peter Kattenberg</p>
     </div>
   </body>
 </html>
-
-
