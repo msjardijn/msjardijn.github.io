@@ -13,6 +13,7 @@
             overflow: hidden;
             display: flex;
             justify-content: center;
+            height: 100vh;
         }
 
         /* Container voor het scroll-effect */
@@ -29,8 +30,10 @@
             width: 100%;
             top: 0;
             left: 0;
-            animation: scroll-loop 240s linear infinite; /* Snelheid: 240 seconden per loop */
+            /* Snelheid: 240 seconden per loop - pas dit getal aan om te versnellen */
+            animation: scroll-loop 240s linear infinite; 
             text-align: center;
+            will-change: transform; /* Verbetert de vloeiendheid op beamers */
         }
 
         /* Inhoud herhalen voor naadloze loop */
@@ -45,14 +48,20 @@
         
         .metadata { font-size: 1.2rem; color: #777; margin-bottom: 100px; padding-top: 100px; }
         .quote { font-style: italic; font-size: 2rem; color: #c5a059; margin: 100px 0; padding: 40px; background: #0c0c0c; border-left: 5px solid #c5a059; }
-
+        
         table { width: 100%; border-collapse: collapse; margin: 60px 0; background: #0c0c0c; font-size: 1.2rem; text-align: left; }
         th, td { border: 1px solid #444; padding: 20px; }
         th { background-color: #1a1a1a; color: #c5a059; }
 
         @keyframes scroll-loop {
-            0% { transform: translateY(100vh); }
-            100% { transform: translateY(-100%); }
+            /* 0% staat nu op 50vh, zodat het essay midden op de pagina begint bij start */
+            0% { 
+                transform: translateY(50vh); 
+            }
+            100% { 
+                /* De tekst scrollt volledig omhoog tot de onderkant buiten beeld is */
+                transform: translateY(-100%); 
+            }
         }
     </style>
   </head>
@@ -61,23 +70,20 @@
       <div class="scroll-content">
         <div class="essay-block">
           <div class="metadata"> Project: AI en het Genie<br>
-            Haagse Kunstkring — 7 maart 2026 [cite: 2, 21] </div>
+            Haagse Kunstkring — 7 maart 2026 </div>
           <h1>De Blik van het Algoritme</h1>
           <p>Dit essay onderzoekt de dynamiek tussen de male gaze, de
             female gaze en de opkomst van kunstmatige intelligentie
             binnen de context van het concept ‘het genie’.</p>
-          <p>Enkele essays in het kader van AI en het Genie – Haagse
-            Kunstkring, 7 maart 2026.</p>
-          <h1>De Blik van het Algoritme: De Male Gaze, de Female Gaze en
-            AI</h1>
+
+          <h1>De Blik van het Algoritme: De Male Gaze, de Female Gaze en AI</h1>
           <p>In de kunstgeschiedenis is de ‘blik’ nooit neutraal. Sinds
             filmtheoreticus Laura Mulvey in 1975 de term male gaze
             introduceerde, zijn we ons pijnlijk bewust van hoe visuele
             cultuur de wereld (en de vrouw) vaak weergeeft vanuit een
             mannelijk, heteroseksueel perspectief: de vrouw als object,
-            de man als subject. Nu we aan de vooravond staan van een
-            technologische revolutie met projecten zoals AI en het
-            Genie, rijst de vraag: wiens blik hanteert de machine?</p>
+            de man als subject.</p>
+
           <h2>De Male Gaze als Blauwdruk</h2>
           <p>De male gaze is meer dan alleen een manier van kijken; het
             is een machtsstructuur. Het reduceert de autonomie van het
@@ -85,126 +91,28 @@
             kijken naar de training van AI-modellen, zien we dat deze
             systemen worden gevoed met de ‘canon’ van onze cultuur. Deze
             canon is eeuwenlang gedomineerd door mannelijke makers.</p>
-          <p>Het resultaat? Een AI die de neiging heeft om
-            genderstereotypen te reproduceren. Als een algoritme
-            duizenden schilderijen van ‘schoonheid’ analyseert die
-            vanuit de male gaze zijn vervaardigd, zal de door AI
-            gegenereerde output diezelfde objectivering reflecteren. Het
-            ‘genie’ van de AI is in dat geval niet meer dan een
-            hyper-efficiënte spiegel van onze eigen historische
-            vooroordelen.</p>
-          <h2>De Female Gaze: De Kracht van de Subjectiviteit</h2>
-          <p>Tegenover de male gaze staat de female gaze. Dit is niet
-            simpelweg het omdraaien van de rollen (de man als object),
-            maar een fundamenteel andere benadering. De female gaze
-            richt zich op:</p>
-          <ul>
-            <li><strong>Intersubjectiviteit:</strong> De verbinding
-              tussen maker en subject.</li>
-            <li><strong>Emotionele resonantie:</strong> Hoe voelt het om
-              in dit lichaam te zitten, in plaats van hoe ziet dit
-              lichaam eruit voor een ander?</li>
-            <li><strong>Kwetsbaarheid:</strong> Het opheffen van de
-              afstandelijke, controlerende blik.</li>
-          </ul>
-          <p>In het project AI en het Genie ligt hier de grote
-            uitdaging. Kan een machine, die fundamenteel gebaseerd is op
-            data en patronen (kijken), ooit de essentie van de female
-            gaze (voelen en ervaren) vatten?</p>
-          <h2>Het Genie: Van Romantiek naar Algoritme</h2>
-          <p>Het begrip ‘genie’ is historisch gezien vaak geclaimd door
-            de mannelijke kunstenaar—de eenzame held die vanuit het
-            niets creëert. AI doorbreekt dit idee van individueel genie,
-            omdat het een collectieve creatie is, gebaseerd op de input
-            van miljoenen mensen.</p>
-          <p>Echter, als we de AI beschouwen als het nieuwe ‘genie’,
-            moeten we kritisch kijken naar de curatie van de data. Een
-            AI die enkel leert van de male gaze, blijft steken in een
-            herhaling van het verleden. Het ware ‘genie’ van de toekomst
-            ligt in het vermogen van AI-ontwikkelaars en kunstenaars om
-            de machine de empathie en de gelaagdheid van de female gaze
-            aan te leren.</p>
+
           <blockquote>
             <p>"De machine heeft geen geslacht, maar de data die haar
               voedt is doordrenkt van gender".</p>
           </blockquote>
+
           <h2>Conclusie</h2>
           <p>Het project AI en het Genie dwingt ons om opnieuw te
-            definiëren wat we onder creativiteit verstaan. Als we AI de
-            ruimte geven om enkel de male gaze te perfectioneren,
-            creëren we een steriele, geobjectiveerde toekomst. De
-            uitdaging is om de technologie in te zetten als een
-            instrument voor de female gaze: een tool die niet alleen
-            observeert, maar die verbinding zoekt en de subjectieve
-            ervaring viert. Alleen dan kan AI werkelijk een nieuwe vorm
+            definiëren wat we onder creativiteit verstaan. Alleen door de technologie in te zetten als een
+            instrument voor de female gaze, kan AI werkelijk een nieuwe vorm
             van genie worden—een die inclusiever en menselijker is dan
             de canon die eraan voorafging.</p>
-          <p>Het is fascinerend om te zien dat kunstenaars niet langer
-            genoegen nemen met de "standaardinstellingen" van AI. In
-            plaats van de machine simpelweg opdrachten te geven, breken
-            ze de 'black box' open om de onderliggende vooroordelen te
-            corrigeren.</p>
+
           <h3>Manieren van integratie door kunstenaars:</h3>
-          <p><strong>1. Stephanie Dinkins: "Small Data" en de Zorgzame
-              AI</strong></p>
+          <p><strong>1. Stephanie Dinkins: "Small Data" en de Zorgzame AI</strong></p>
           <p>Waar de male gaze vaak streeft naar universaliteit en
-            dominantie, focust de Amerikaanse kunstenaar Stephanie
-            Dinkins op wat zij "small data" noemt. Zij traint modellen
-            op intieme, specifieke data van zwarte vrouwen en hun
-            familiegeschiedenissen. Dit verschuift de blik van de
-            "anonieme vrouw als object" naar de "vrouw als drager van
-            generatie-overschrijdende wijsheid". Het genie is hier de
-            beheerder van een gemeenschappelijk geheugen.</p>
-          <p><strong>2. Sougwen Chung: Belichaamde Samenwerking</strong></p>
-          <p>Sougwen Chung werkt met robots die haar eigen
-            penseelstreken in real-time nabootsen via AI. Zij ziet de AI
-            niet als een slaafse tool, maar als een danspartner. Haar
-            algoritmen zijn getraind op haar eigen fysieke gebaren. De
-            female gaze draait hier om de ervaring van het lichaam. Door
-            de nadruk op fysieke handeling en imperfectie brengt Chung
-            de AI terug naar de subjectieve beleving.</p>
-          <p><strong>3. Linda Dounia: Algoritmisch Verzet tegen de Canon</strong></p>
-          <p>Linda Dounia Rebeiz onderzoekt hoe AI vaak de "westerse
-            male gaze" reproduceert. Zij cureert haar eigen datasets
-            gericht op West-Afrikaanse kunst en flora. Ze gebruikt
-            "adversarial" technieken om patronen te herkennen buiten de
-            traditionele mannelijke canon. Het is een daad van
-            herovering, waarbij schoonheid wordt gezien in
-            authenticiteit en lokale context.</p>
-          <h2>De "Gecureerde Blik"</h2>
-          <p>Deze kunstenaars zien het curatorschap als de hoogste vorm
-            van genie. De female gaze in AI ontstaat door:</p>
-          <ol>
-            <li>De broncode te diversifiëren.</li>
-            <li>Kwetsbaarheid toe te laten: de machine mag twijfelen en
-              abstract zijn.</li>
-            <li>Relaties op te bouwen: de AI als verlengstuk van de
-              maker.</li>
-          </ol>
-          <p>Het genie in de 21e eeuw leert de AI om met empathie en
-            nuance te kijken.</p>
-          <p>Dit essay is geschreven vanuit het perspectief van de
-            kunstenaar die met een algoritme de wereld bevraagt.</p>
-          <h2>Van Eenzaam Idool naar Algoritmische Alchemist</h2>
-          <p>Eeuwenlang was de Romantische kunstenaar een eenzame held
-            op een bergtop. De wereld en de vrouw vormden het passieve
-            decor. Dit is de male gaze: een blik die controleert en
-            bezit. In 2026 is de bergtop vervangen door een serverpark
-            en de eenzame strijd door een dialoog met de AI.</p>
-          <p>De AI is een spiegel van alles wat we hebben vastgelegd.
-            Als we de AI de vrije loop laten, reproduceert hij de male
-            gaze met ongekende precisie. De kunstenaar is nu een
-            curator. Curatorschap binnen AI is een politieke daad. De
-            female gaze herstructureert hier de macht. Waar de male gaze
-            vraagt om objectivering, vraagt de female gaze om
-            subjectiviteit.</p>
-          <p>De machine dwingt ons om menselijker te kijken. Onze
-            subjectiviteit en vrouwelijke blik zijn ons meest
-            waardevolle bezit. Het genie stelt empathische vragen aan de
-            machine.</p>
+            dominantie, focust Dinkins op "small data": intieme, specifieke data van zwarte vrouwen en hun familiegeschiedenissen.</p>
+
           <h1>Manifest voor de Algoritmische Female Gaze </h1>
         </div>
       </div>
     </div>
   </body>
 </html>
+
