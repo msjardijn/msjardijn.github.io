@@ -5,14 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AI en het Genie · Haagse Kunstkring</title>
     <style>
-        /* ----- gedeelde stijl — info.html basis + dashboard accenten ----- */
         :root {
             --primary-blue: #00d4ff;
             --primary-gold: #ffcc00;
-            --bg-dark: #0a0a0a;
-            --card-bg: rgba(22, 22, 22, 0.85); /* Semi-transparant voor leesbaarheid */
-            --text-gray: #b0b0b0;
-            --border-dim: #333;
+            /* Transparantie gelijkgetrokken aan de 'disabled' kaarten */
+            --card-bg: rgba(30, 30, 30, 0.4); 
+            --text-gray: #d0d0d0;
+            --border-dim: rgba(255, 255, 255, 0.1);
         }
 
         * {
@@ -22,22 +21,23 @@
         }
 
         body {
-            /* Achtergrondafbeelding met een donkere overlay voor contrast */
+            /* Helderheid aangepast naar 0.4 voor een lichter beeld */
             background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), 
                         url('foto1.jpg') no-repeat center center fixed;
             background-size: cover;
             color: #ffffff;
             font-family: 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
             line-height: 1.6;
+            min-height: 100vh;
         }
 
-        /* header met gradient */
         header {
-            background: linear-gradient(180deg, rgba(17,17,17,0.9) 0%, rgba(10,10,10,0.6) 100%);
+            /* Header ook transparant gemaakt */
+            background: rgba(0, 0, 0, 0.3);
             padding: 60px 20px 40px 20px;
             text-align: center;
-            border-bottom: 1px solid #444;
-            backdrop-filter: blur(5px);
+            border-bottom: 1px solid var(--border-dim);
+            backdrop-filter: blur(8px);
         }
 
         h1 {
@@ -46,18 +46,19 @@
             margin: 0;
             letter-spacing: 2px;
             text-transform: uppercase;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+            text-shadow: 2px 2px 10px rgba(0,0,0,0.8);
         }
 
         .subtitle {
             font-size: 1.2em;
-            color: var(--text-gray);
+            color: #fff;
             margin-top: 10px;
             font-style: italic;
+            text-shadow: 1px 1px 5px rgba(0,0,0,0.5);
         }
 
         .opening-detail {
-            background: rgba(17, 17, 17, 0.8);
+            background: rgba(0, 0, 0, 0.5);
             display: inline-block;
             padding: 0.5rem 1.5rem;
             border-radius: 40px;
@@ -69,7 +70,6 @@
 
         .opening-detail strong {
             color: var(--primary-gold);
-            font-weight: 600;
         }
 
         .container {
@@ -84,7 +84,7 @@
             margin: 50px 0 25px 0;
             font-size: 1.8em;
             color: #fff;
-            text-shadow: 1px 1px 3px rgba(0,0,0,0.8);
+            text-shadow: 2px 2px 8px rgba(0,0,0,1);
         }
 
         .grid {
@@ -93,41 +93,39 @@
             gap: 20px;
         }
 
-        /* Kaarten met Glassmorphism effect */
-        .card, .dashboard-card {
+        /* Alle kaarten nu met dezelfde transparantie */
+        .card, .dashboard-card, .project-text {
             background: var(--card-bg);
-            padding: 20px;
-            border-radius: 8px;
+            padding: 25px;
+            border-radius: 12px;
             border: 1px solid var(--border-dim);
             transition: all 0.3s ease;
-            backdrop-filter: blur(10px); /* Maakt de achtergrond achter de kaart wazig */
-        }.
+            backdrop-filter: blur(12px); /* Blur zorgt voor leesbaarheid op lichte foto's */
+            color: #fff;
+        }
 
         .card:hover, .dashboard-card:hover {
             transform: translateY(-5px);
             border-color: var(--primary-blue);
-            background: rgba(30, 30, 30, 0.9);
+            background: rgba(255, 255, 255, 0.1);
         }
 
         .card h3, .dashboard-card h2 {
             margin: 10px 0 8px 0;
             color: #fff;
-        }
-
-        .card p, .dashboard-card p {
-            color: #ccc;
-            font-size: 0.95em;
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
         }
 
         .tag {
             display: inline-block;
-            background: rgba(0, 212, 255, 0.2);
-            color: var(--primary-blue);
+            background: rgba(0, 212, 255, 0.3);
+            color: #fff;
             padding: 4px 12px;
             border-radius: 4px;
             font-size: 0.75em;
             text-transform: uppercase;
             margin-bottom: 10px;
+            font-weight: bold;
         }
 
         .tag-gold {
@@ -137,6 +135,7 @@
             letter-spacing: 1px;
             display: block;
             margin-bottom: 1rem;
+            font-weight: bold;
         }
 
         .card-footer-link {
@@ -146,27 +145,17 @@
         }
 
         .disabled-card {
-            opacity: 0.6;
-        }
-
-        .project-text {
-            background: rgba(17, 17, 17, 0.85);
-            padding: 30px;
-            border-radius: 12px;
-            border: 1px solid #444;
-            font-size: 1.15rem;
-            color: #ddd;
-            margin-top: 20px;
-            backdrop-filter: blur(10px);
+            opacity: 0.7; /* Iets minder doorzichtig dan de rest om het 'inactieve' te tonen */
         }
 
         footer {
             text-align: center;
             padding: 60px 20px;
-            color: #bbb;
-            background: rgba(0,0,0,0.8);
-            border-top: 1px solid #333;
-            margin-top: 40px;
+            color: #fff;
+            background: rgba(0,0,0,0.5);
+            backdrop-filter: blur(10px);
+            border-top: 1px solid var(--border-dim);
+            margin-top: 60px;
         }
     </style>
 </head>
@@ -176,9 +165,8 @@
     <h1>AI en het Genie</h1>
     <p class="subtitle">Tentoonstelling over de synergie tussen menselijke creativiteit en algoritmische intelligentie</p>
     <div class="opening-detail">
-        <strong>Haagse Kunstkring · Opening 7 maart 2026 door Max von Kreyfelt om 16:00 uur</strong>
+        <strong>Haagse Kunstkring · Opening 7 maart 2026 om 16:00 uur</strong>
     </div>
-    <p style="color: #ccc; margin-top: 15px;">Scrolling presentaties, essays & beeldwerken — Martin Sjardijn</p>
 </header>
 
 <div class="container">
@@ -195,14 +183,14 @@
             <span class="tag-gold">Binnenkort</span>
             <h2>Nieuw Essay</h2>
             <p>Hier kun je een tweede scrolling tekstbestand toevoegen.</p>
-            <div class="card-footer-link" style="color: #666;">Nog niet beschikbaar</div>
+            <div class="card-footer-link" style="color: rgba(255,255,255,0.4);">Nog niet beschikbaar</div>
         </div>
 
         <div class="dashboard-card disabled-card">
             <span class="tag-gold">Archief</span>
             <h2>Project Overzicht</h2>
             <p>Documentatie over de interface tussen AI en menselijke creativiteit.</p>
-            <div class="card-footer-link" style="color: #666;">In voorbereiding</div>
+            <div class="card-footer-link" style="color: rgba(255,255,255,0.4);">In voorbereiding</div>
         </div>
     </div>
 
@@ -225,84 +213,15 @@
         </div>
     </div>
 
-    <div class="section-title">Beeldwerken</div>
-    <div class="grid">
-        <div class="card">
-            <span class="tag">AI Generated Art</span>
-            <h3>Neural Prehension</h3>
-            <p>Een visualisatie van het 'grijpen' van informatie in een neuraal netwerk.</p>
-        </div>
-        <div class="card">
-            <span class="tag">Digital Rendering</span>    padding: 20px;
-            position: relative;
-            z-index: 1; /* Zorgt dat content bovenop de bg-container ligt */
-        }
-
-        .section-title {
-            border-left: 4px solid var(--primary-blue);
-            padding-left: 15px;
-            margin: 40px 0 20px 0;
-            font-size: 1.8em;
-            color: var(--primary-blue);
-        }
-
-        .grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 20px;
-        }
-
-        .card, .dashboard-card {
-            background: var(--card-bg);
-            padding: 30px;
-            border-radius: 12px;
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(10px); /* Modern 'glass' effect */
-            transition: transform 0.3s ease;
-        }
-
-        .card:hover {
-            transform: translateY(-5px);
-            border-color: var(--primary-blue);
-        }
-
-        .project-text {
-            background: rgba(10, 10, 10, 0.9);
-            padding: 40px;
-            border-radius: 12px;
-            margin-top: 30px;
-            border: 1px solid #333;
-        }
-
-        footer {
-            text-align: center;
-            padding: 60px;
-            color: #666;
-            position: relative;
-            z-index: 1;
-        }
-    </style>
-</head>
-            <h3>The Ghost in the Machine</h3>
-            <p>Portret van Whitehead verweven met abstracte logische patronen.</p>
-        </div>
-        <div class="card">
-            <span class="tag">Visualisation</span>
-            <h3>Quantum Probability</h3>
-            <p>Grafische weergave van de onvoorspelbare emergentie in AI-systemen.</p>
-        </div>
-    </div>
-
     <div class="section-title">Projectomschrijving</div>
     <div class="project-text">
-        <p>Het project <strong>"AI en het Genie"</strong> onderzoekt de grenzen van de menselijke geest in het tijdperk van kunstmatige intelligentie. Geïnspireerd door de procesfilosofie van Alfred North Whitehead, wordt AI niet gezien als een dode machine, maar als een nieuwe vorm van 'actuele gelegenheid' in ons gedeelde universum.</p>
-        <p>De tentoonstelling combineert scrolling essays, AI-gegenereerde beeldwerken en filosofische transcripties om de interactie tussen algoritme en intuïtie te verkennen.</p>
+        <p>Het project <strong>"AI en het Genie"</strong> onderzoekt de grenzen van de menselijke geest in het tijdperk van kunstmatige intelligentie. Geïnspireerd door de procesfilosofie van Alfred North Whitehead, wordt AI niet gezien als een dode machine, maar als een nieuwe vorm van 'actuele gelegenheid'.</p>
     </div>
 </div>
 
 <footer>
     © 2026 Martin Sjardijn · AI Supported Research &amp; Presentation<br>
-    <span style="color: #777;">Haagse Kunstkring — opening 7 maart 2026, 16:00 uur</span>
+    <span style="color: var(--primary-gold);">Haagse Kunstkring — opening 7 maart 2026, 16:00 uur</span>
 </footer>
 
 </body>
