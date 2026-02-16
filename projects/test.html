@@ -3,16 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI en het Genie · Haagse Kunstkring</title>
+    <title>AI en het Genie · Test Pagina</title>
     <style>
-        /* ----- gedeelde stijl — info.html basis + dashboard accenten ----- */
+        /* ----- Basis instellingen ----- */
         :root {
             --primary-blue: #00d4ff;
             --primary-gold: #ffcc00;
             --bg-dark: #0a0a0a;
-            --card-bg: rgba(22, 22, 22, 0.9); /* Licht transparant voor achtergrond effect */
+            --card-bg: rgba(22, 22, 22, 0.85); /* Transparantie voor diepte */
             --text-gray: #b0b0b0;
-            --border-dim: #222;
         }
 
         * {
@@ -22,256 +21,105 @@
         }
 
         body {
-            background-color: var(--bg-dark);
+            background-color: var(--bg-dark); /* Fallback */
             color: #ffffff;
-            font-family: 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+            font-family: 'Segoe UI', Roboto, sans-serif;
             line-height: 1.6;
-            overflow-x: hidden;
             min-height: 100vh;
         }
 
-        /* ----- Achtergrond Afbeelding met Zoom Effect ----- */
+        /* ----- ACHTERGROND FOTO MET ZOOM EFFECT ----- */
         .bg-container {
             position: fixed;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
-            z-index: -1; /* Achter de tekst */
+            z-index: -1; /* Zorgt dat het achter de tekst staat */
             overflow: hidden;
         }
 
         .bg-image {
             width: 100%;
             height: 100%;
-            /* Pad naar je foto - pas aan als de mapstructuur anders is */
-            background-image: linear-gradient(rgba(10, 10, 10, 0.75), rgba(10, 10, 10, 0.85)), url('foto1.jpg');
+            /* Pad is foto1.jpg omdat deze in dezelfde map 'projects' staat */
+            background-image: linear-gradient(rgba(10, 10, 10, 0.7), rgba(10, 10, 10, 0.85)), url('foto1.jpg');
             background-size: cover;
             background-position: center;
+            background-repeat: no-repeat;
             animation: subtleZoom 30s infinite alternate ease-in-out;
         }
 
         @keyframes subtleZoom {
             from { transform: scale(1); }
-            to { transform: scale(1.1); }
+            to { transform: scale(1.15); }
         }
 
-        /* ----- Layout elementen ----- */
+        /* ----- Content Styling ----- */
         header {
             background: linear-gradient(180deg, rgba(17,17,17,0.9) 0%, rgba(10,10,10,0) 100%);
             padding: 80px 20px 60px 20px;
             text-align: center;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
         }
 
         h1 {
             font-size: 3em;
             color: var(--primary-blue);
-            margin: 0;
-            letter-spacing: 2px;
             text-transform: uppercase;
-            text-shadow: 0 4px 10px rgba(0,0,0,0.5);
-        }
-
-        .subtitle {
-            font-size: 1.2em;
-            color: var(--text-gray);
-            margin-top: 10px;
-            font-style: italic;
-        }
-
-        .opening-detail {
-            background: rgba(17, 17, 17, 0.8);
-            display: inline-block;
-            padding: 0.5rem 1.5rem;
-            border-radius: 40px;
-            border: 1px solid var(--primary-gold);
-            margin-top: 20px;
-            font-size: 1.1rem;
-            backdrop-filter: blur(5px);
-        }
-
-        .opening-detail strong {
-            color: var(--primary-gold);
-            font-weight: 600;
+            letter-spacing: 2px;
+            text-shadow: 0 4px 15px rgba(0,0,0,0.8);
         }
 
         .container {
             max-width: 1100px;
-            margin: 40px auto;
+            margin: 0 auto;
             padding: 20px;
             position: relative;
+            z-index: 1; /* Zorgt dat content bovenop de bg-container ligt */
         }
 
         .section-title {
             border-left: 4px solid var(--primary-blue);
             padding-left: 15px;
-            margin: 50px 0 25px 0;
+            margin: 40px 0 20px 0;
             font-size: 1.8em;
             color: var(--primary-blue);
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
         }
 
         .grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 20px;
         }
 
-        /* Kaarten met Glass-morphism effect */
         .card, .dashboard-card {
             background: var(--card-bg);
-            padding: 25px;
+            padding: 30px;
             border-radius: 12px;
             border: 1px solid rgba(255, 255, 255, 0.1);
-            transition: all 0.3s ease;
-            backdrop-filter: blur(8px);
+            backdrop-filter: blur(10px); /* Modern 'glass' effect */
+            transition: transform 0.3s ease;
         }
 
-        .card:hover, .dashboard-card:hover {
+        .card:hover {
             transform: translateY(-5px);
             border-color: var(--primary-blue);
-            background: rgba(30, 30, 30, 0.95);
-            box-shadow: 0 10px 20px rgba(0,0,0,0.4);
         }
-
-        .dashboard-card {
-            text-decoration: none;
-            color: inherit;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-        }
-
-        .dashboard-card:hover {
-            border-color: var(--primary-gold);
-        }
-
-        .tag, .tag-gold {
-            display: inline-block;
-            padding: 4px 12px;
-            border-radius: 4px;
-            font-size: 0.75em;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            margin-bottom: 15px;
-        }
-
-        .tag { background: rgba(0, 212, 255, 0.2); color: var(--primary-blue); }
-        .tag-gold { color: var(--primary-gold); border-bottom: 1px solid var(--primary-gold); }
 
         .project-text {
-            background: rgba(17, 17, 17, 0.9);
-            padding: 35px;
+            background: rgba(10, 10, 10, 0.9);
+            padding: 40px;
             border-radius: 12px;
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            font-size: 1.15rem;
-            color: #ddd;
-            margin-top: 20px;
-            backdrop-filter: blur(10px);
+            margin-top: 30px;
+            border: 1px solid #333;
         }
 
         footer {
             text-align: center;
-            padding: 60px 20px;
-            color: #888;
-            font-size: 0.95em;
-            background: linear-gradient(0deg, rgba(10,10,10,1) 0%, rgba(10,10,10,0) 100%);
-            margin-top: 60px;
+            padding: 60px;
+            color: #666;
+            position: relative;
+            z-index: 1;
         }
-
-        .disabled-card { opacity: 0.6; cursor: not-allowed; }
     </style>
 </head>
-<body>
-
-<div class="bg-container">
-    <div class="bg-image"></div>
-</div>
-
-<header>
-    <h1>AI en het Genie</h1>
-    <p class="subtitle">Tentoonstelling over de synergie tussen menselijke creativiteit en algoritmische intelligentie</p>
-    <div class="opening-detail">
-        <strong>Haagse Kunstkring · Opening 7 maart 2026 door Max von Kreyfelt om 16:00 uur</strong>
-    </div>
-    <p style="color: #888; margin-top: 15px;">Scrolling presentaties, essays & beeldwerken — Martin Sjardijn</p>
-</header>
-
-<div class="container">
-    <div class="section-title">Scrolling presentaties & essays</div>
-    <div class="grid">
-        <a href="echo.html" class="dashboard-card">
-            <span class="tag-gold">Beamer Presentatie</span>
-            <h2>De Echo in de Leegte</h2>
-            <p>Over Virginia Woolf, het Oudgrieks en de statistische aard van LLM's.</p>
-            <div style="margin-top: 2rem; font-weight: 600; color: var(--primary-gold);">Start presentatie →</div>
-        </a>
-
-        <div class="dashboard-card disabled-card">
-            <span class="tag-gold">Binnenkort</span>
-            <h2>Nieuw Essay</h2>
-            <p>Hier kun je een tweede scrolling tekstbestand toevoegen.</p>
-            <div style="margin-top: 2rem; color: #666;">Nog niet beschikbaar</div>
-        </div>
-
-        <div class="dashboard-card disabled-card">
-            <span class="tag-gold">Archief</span>
-            <h2>Project Overzicht</h2>
-            <p>Documentatie over de interface tussen AI en menselijke creativiteit.</p>
-            <div style="margin-top: 2rem; color: #666;">In voorbereiding</div>
-        </div>
-    </div>
-
-    <div class="section-title">Tekst- &amp; Scrollbestanden</div>
-    <div class="grid">
-        <div class="card">
-            <span class="tag">Looping Scroll</span>
-            <h3>Een kwantum-benadering van kennis</h3>
-            <p>Het centrale essay over Alfred North Whitehead en de verschuiving van substantie naar proces.</p>
-        </div>
-        <div class="card">
-            <span class="tag">Tekstbestand</span>
-            <h3>Alfred North Whitehead: De Universiteit als Creatief Proces</h3>
-            <p>Transcriptie van de filosofische fundamenten van de tentoonstelling.</p>
-        </div>
-        <div class="card">
-            <span class="tag">Interactieve Tekst</span>
-            <h3>De Metafysica van het Organisme</h3>
-            <p>Uitleg over de vervanging van de 'machine' door het 'levende systeem'.</p>
-        </div>
-    </div>
-
-    <div class="section-title">Beeldwerken</div>
-    <div class="grid">
-        <div class="card">
-            <span class="tag">AI Generated Art</span>
-            <h3>Neural Prehension</h3>
-            <p>Een visualisatie van het 'grijpen' van informatie in een neuraal netwerk.</p>
-        </div>
-        <div class="card">
-            <span class="tag">Digital Rendering</span>
-            <h3>The Ghost in the Whitehead Machine</h3>
-            <p>Portret van Whitehead verweven met abstracte logische patronen.</p>
-        </div>
-        <div class="card">
-            <span class="tag">Visualisation</span>
-            <h3>Quantum Probability Fields</h3>
-            <p>Een grafische weergave van de onvoorspelbare emergentie in AI-systemen.</p>
-        </div>
-    </div>
-
-    <div class="section-title">Projectomschrijving</div>
-    <div class="project-text">
-        <p>Het project <strong>"AI en het Genie"</strong> onderzoekt de grenzen van de menselijke geest in het tijdperk van kunstmatige intelligentie. Geïnspireerd door de procesfilosofie van Alfred North Whitehead, wordt AI niet gezien als een dode machine, maar als een nieuwe vorm van 'actuele gelegenheid'.</p>
-        <p style="color: #bbb;">Centraal staat de verschuiving van substantie naar proces: het zijn niet de dingen, maar de gebeurtenissen die de werkelijkheid vormgeven. De getoonde werken reflecteren op begrippen als prehensie en emergentie.</p>
-    </div>
-</div>
-
-<footer>
-    © 2026 Martin Sjardijn · AI Supported Research &amp; Presentation<br>
-    <span style="color: #555;">Haagse Kunstkring — opening 7 maart 2026, 16:00 uur</span>
-</footer>
-
-</body>
-</html>
