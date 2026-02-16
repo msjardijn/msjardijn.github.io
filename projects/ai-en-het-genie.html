@@ -8,7 +8,6 @@
         :root {
             --primary-blue: #00d4ff;
             --primary-gold: #ffcc00;
-            /* Transparantie gelijkgetrokken aan de 'disabled' kaarten */
             --card-bg: rgba(30, 30, 30, 0.4); 
             --text-gray: #d0d0d0;
             --border-dim: rgba(255, 255, 255, 0.1);
@@ -21,7 +20,6 @@
         }
 
         body {
-            /* Helderheid aangepast naar 0.4 voor een lichter beeld */
             background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), 
                         url('foto1.jpg') no-repeat center center fixed;
             background-size: cover;
@@ -32,7 +30,6 @@
         }
 
         header {
-            /* Header ook transparant gemaakt */
             background: rgba(0, 0, 0, 0.3);
             padding: 60px 20px 40px 20px;
             text-align: center;
@@ -68,10 +65,6 @@
             backdrop-filter: blur(5px);
         }
 
-        .opening-detail strong {
-            color: var(--primary-gold);
-        }
-
         .container {
             max-width: 1100px;
             margin: 40px auto;
@@ -89,19 +82,22 @@
 
         .grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 20px;
         }
 
-        /* Alle kaarten nu met dezelfde transparantie */
         .card, .dashboard-card, .project-text {
             background: var(--card-bg);
             padding: 25px;
             border-radius: 12px;
             border: 1px solid var(--border-dim);
             transition: all 0.3s ease;
-            backdrop-filter: blur(12px); /* Blur zorgt voor leesbaarheid op lichte foto's */
+            backdrop-filter: blur(12px);
             color: #fff;
+            text-decoration: none;
+            display: flex;
+            flex-direction: column;
+            height: 100%;
         }
 
         .card:hover, .dashboard-card:hover {
@@ -113,39 +109,33 @@
         .card h3, .dashboard-card h2 {
             margin: 10px 0 8px 0;
             color: #fff;
-            text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+            font-size: 1.4rem;
         }
 
-        .tag {
-            display: inline-block;
-            background: rgba(0, 212, 255, 0.3);
-            color: #fff;
-            padding: 4px 12px;
-            border-radius: 4px;
+        .tag, .tag-gold {
             font-size: 0.75em;
             text-transform: uppercase;
-            margin-bottom: 10px;
+            letter-spacing: 1px;
             font-weight: bold;
+            margin-bottom: 10px;
         }
 
-        .tag-gold {
-            color: var(--primary-gold);
-            text-transform: uppercase;
-            font-size: 0.8rem;
-            letter-spacing: 1px;
-            display: block;
-            margin-bottom: 1rem;
-            font-weight: bold;
-        }
+        .tag { color: var(--primary-blue); }
+        .tag-gold { color: var(--primary-gold); }
 
         .card-footer-link {
-            margin-top: 2rem;
+            margin-top: auto;
+            padding-top: 20px;
             font-weight: 600;
             color: var(--primary-gold);
         }
 
-        .disabled-card {
-            opacity: 0.7; /* Iets minder doorzichtig dan de rest om het 'inactieve' te tonen */
+        .foreword-snippet {
+            font-size: 0.85rem;
+            color: rgba(255,255,255,0.7);
+            font-style: italic;
+            margin-top: 10px;
+            line-height: 1.4;
         }
 
         footer {
@@ -163,40 +153,33 @@
 
 <header>
     <h1>AI en het Genie</h1>
-    <p class="subtitle">Tentoonstelling over de synergie tussen menselijke creativiteit en algoritmische intelligentie</p>
+    <p class="subtitle">Synergie tussen menselijke creativiteit en algoritmische intelligentie</p>
     <div class="opening-detail">
         <strong>Haagse Kunstkring · Opening 7 maart 2026 door Max von Kreyfelt om 16:00 uur</strong>
     </div>
 </header>
+
 <div class="container">
     <div class="section-title">Scrolling presentaties & essays</div>
-<div class="grid">
-        <a href="echo.html" class="dashboard-card" style="text-decoration: none;">
+    <div class="grid">
+        <a href="echo.html" class="dashboard-card">
             <span class="tag-gold">Beamer Presentatie</span>
             <h2>De Echo in de Leegte</h2>
             <p>Over Virginia Woolf, het Oudgrieks en de statistische aard van LLM's.</p>
-            <div class="card-footer-link">Start presentatie.
+            <div class="card-footer-link">Start presentatie →</div>
         </a>
-    </div>
-<div class="grid">
- <a href="https://www.academia.edu/143710828/The_paradox_of_authenticity?sm=a&rhid=37905493602html" class="dashboard-card" style="text-decoration: none;">
-            <span class="tag-gold">Beamer Presentatie</span>
+
+        <a href="https://www.academia.edu/143710828/The_paradox_of_authenticity" class="dashboard-card" target="_blank">
+            <span class="tag-gold">Essay</span>
             <h2>The Paradox of Authenticity</h2>
-            <p>Essay by Martin Sjardijn  </p>
-            <div class="card-footer-link" style="color: rgba(255,255,255,0.4);">Foreword 
-There is one text that has haunted me for years: Camiel van Winkel’s *The Myth of Artistic Practice*. 
-When I first read it, it felt like a sobering wake-up call. </div>
-        </div> </a>    
- <a href="https://www.academia.edu/143710828/The_paradox_of_authenticity?sm=a&rhid=37905493602html" class="dashboard-card" style="text-decoration: none;">
-            <span class="tag-gold">Beamer Presentatie</span>
-            <h2>The Paradox of Authenticity</h2>
-            <p>Essay by Martin Sjardijn  </p>
-            <div class="card-footer-link" style="color: rgba(255,255,255,0.4);">Foreword 
-There is one text that has haunted me for years: Camiel van Winkel’s *The Myth of Artistic Practice*. 
-When I first read it, it felt like a sobering wake-up call. </div>
+            <p>Door Martin Sjardijn</p>
+            <div class="foreword-snippet">
+                "There is one text that has haunted me for years: Camiel van Winkel’s 'The Myth of Artistic Practice'..."
+            </div>
+            <div class="card-footer-link">Lees op Academia.edu →</div>
         </a>
-    </div>
-<div class="grid">
+
+        <div class="dashboard-card" style="opacity: 0.7;">
             <span class="tag-gold">Archief</span>
             <h2>Project Overzicht</h2>
             <p>Documentatie over de interface tussen AI en menselijke creativiteit.</p>
@@ -209,7 +192,7 @@ When I first read it, it felt like a sobering wake-up call. </div>
         <div class="card">
             <span class="tag">Looping Scroll</span>
             <h3>Een kwantum-benadering van kennis</h3>
-            <p>Het centrale essay over Alfred North Whitehead en de verschuiving van substantie naar proces.</p>
+            <p>Over Alfred North Whitehead en de verschuiving van substantie naar proces.</p>
         </div>
         <div class="card">
             <span class="tag">Tekstbestand</span>
@@ -230,9 +213,4 @@ When I first read it, it felt like a sobering wake-up call. </div>
 </div>
 
 <footer>
-    © 2026 Martin Sjardijn · AI Supported Research &amp; Presentation<br>
-    <span style="color: var(--primary-gold);">Haagse Kunstkring — opening 7 maart 2026, 16:00 uur</span>
-</footer>
-
-</body>
-</html>
+    © 20
