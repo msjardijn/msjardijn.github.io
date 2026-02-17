@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI en het Genie · Haagse Kunstkring</title>
+    <style>
+        :root {
+            --primary-blue: #00d4ff;
+            --primary-gold: #ffcc00;
+            /* Basis transparantie (0.4 is 40% zichtbaar) */
+            --card-bg: rgba(0, 0, 0, 0.4); 
+            /* Hover transparantie (0.7 is 70% zichtbaar) */
+            --card-hover-bg: rgba(0, 0, 0, 0.7);
+            --border-dim: rgba(255, 255, 255, 0.15);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            /* De foto blijft behouden op de achtergrond */
+            background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), 
+                        url('foto1.jpg') no-repeat center center fixed;
+            background-size: cover;
+            color: #ffffff;
+            font-family: 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            min-height: 100vh;
+        }
+
+        header {
+            padding: 60px 20px;
+            text-align: center;
+            backdrop-filter: blur(8px);
+            border-bottom: 1px solid var(--border-dim);
+        }
+
+        h1 {
+            font-size: 3em;
+            color: var(--primary-blue);
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            text-shadow: 2px 2px 10px rgba(0,0,0,0.8);
+        }
+
+        .opening-detail {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 25px;
+            border: 1px solid var(--primary-gold);
+            border-radius: 40px;
+            background: rgba(0, 0, 0, 0.5);
+            font-weight: bold;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        /* Grid met 12 blokjes in rijen van drie */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px; /* Kleine afstand tussen de blokken */
+        }
+
+        .card {
+            background: var(--card-bg);
+            padding: 25px;
+            border-radius: 12px;
+            border: 1px solid var(--border-dim);
+            backdrop-filter: blur(12px); /* Maakt foto erachter wazig voor leesbaarheid */
+            text-decoration: none;
+            color: #fff;
+            display: flex;
+            flex-direction: column;
+            transition: all 0.3s ease; /* Zorgt voor vloeiende overgang bij hover */
+            height: 100%;
+        }
+
+        /* Hover effect: minder transparant en blauwe rand */
+        .card:hover {
+            background: var(--card-hover-bg);
+            transform: translateY(-5px);
+            border-color: var(--primary-blue);
+        }
+
+        .tag {
+            font-size: 0.75em;
+            color: var(--primary-gold);
+            text-transform: uppercase;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .card h2 {
+            font-size: 1.4rem;
+            margin-bottom: 10px;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+        }
+
+        .card p {
+            font-size: 0.95rem;
+            color: #d0d0d0;
+            margin-bottom: 15px;
+        }
+
+        .card-footer {
+            margin-top: auto;
+            font-weight: bold;
+            color: var(--primary-blue);
+        }
+
+        footer {
+            text-align: center;
+            padding: 50px 20px;
+            margin-top: 50px;
+            background: rgba(0,0,0,0.6);
+            border-top: 1px solid var(--border-dim);
+        }
+
+        /* Mobiele aanpassingen */
+        @media (max-width: 900px) {
+            .grid { grid-template-columns: repeat(2, 1fr); }
+        }
+        @media (max-width: 600px) {
+            .grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>AI en het Genie</h1>
+    <p style="font-style: italic;">Synergie tussen menselijke creativiteit en algoritmische intelligentie</p>
+    <div class="opening-detail">
+        Haagse Kunstkring · Opening 7 maart 2026 om 16:00 uur
+    </div>
+</header>
+
+<div class="container">
+    <div class="grid">
+        
+        <a href="echo.html" class="card">
+            <span class="tag">Beamer Presentatie</span>
+            <h2>De Echo in de Leegte</h2>
+            <p>Over Virginia Woolf, het Oudgrieks en de statistische aard van LLM's.</p>
+            <div class="card-footer">Start presentatie →</div>
+        </a>
+
+        <a href="https://www.academia.edu/143710828/" class="card" target="_blank">
+            <span class="tag">Essay</span>
+            <h2>The Paradox of Authenticity</h2>
+            <p>Door Martin Sjardijn. Reflectie op "The Myth of Artistic Practice".</p>
+            <div class="card-footer">Lees op Academia.edu →</div>
+        </a>
+
+        <a href="gaze.html" class="card">
+            <span class="tag">Essay</span>
+            <h2>Man- and Female Gaze</h2>
+            <p>Herdefiniëren van creativiteit als instrument voor inclusiviteit.</p>
+            <div class="card-footer">Open essay →</div>
+        </a>
+
+        <a href="de-digitale-vroedvrouw.html" class="card">
+            <span class="tag">Beamer Presentatie</span>
+            <h2>De Digitale Vroedvrouw</h2>
+            <p>Hoe AI op klassieke wijze te gebruiken als creatieve katalysator.</p>
+            <div class="card-footer">Start presentatie →</div>
+        </a>
+
+        <div class="card">
+            <span class="tag">Looping Scroll</span>
+            <h2>Kwantum-benadering van kennis</h2>
+            <p>Alfred North Whitehead: de verschuiving van substantie naar proces.</p>
+            <div class="card-footer">In ontwikkeling...</div>
+        </div>
+
+        <div class="card">
+            <span class="tag">Tekstbestand</span>
+            <h2>Alfred North Whitehead</h2>
+            <p>Transcriptie van de filosofische fundamenten van dit project.</p>
+            <div class="card-footer">Bekijk tekst →</div>
+        </div>
+
+        <div class="card">
+            <span class="tag">Interactieve Tekst</span>
+            <h2>De Metafysica van het Organisme</h2>
+            <p>Uitleg over de vervanging van de 'machine' door het 'levende systeem'.</p>
+            <div class="card-footer">Lees meer →</div>
+        </div>
+
+        <div class="card">
+            <span class="tag">Projectomschrijving</span>
+            <h2>AI als 'Actuele Gelegenheid'</h2>
+            <p>De actuele status van AI binnen de moderne kunstpraktijk.</p>
+            <div class="card-footer">Details →</div>
+        </div>
+
+        <div class="card">
+            <span class="tag">Media</span>
+            <h2>Algoritmische Flow</h2>
+            <p>Een verkenning van visuele synergie tussen mens en computer.</p>
+            <div class="card-footer">Bekijk video →</div>
+        </div>
+
+        <div class="card">
+            <span class="tag">Archief</span>
+            <h2>De Canon van Morgen</h2>
+            <p>Hoe algoritmes de kunstgeschiedenis van de toekomst vormen.</p>
+            <div class="card-footer">Naar archief →</div>
+        </div>
+
+        <div class="card">
+            <span class="tag">Dialoog</span>
+            <h2>Mens & Machine</h2>
+            <p>Interviews en reflecties over artistieke autonomie en AI.</p>
+            <div class="card-footer">Lees gesprekken →</div>
+        </div>
+
+        <div class="card">
+            <span class="tag">Colofon</span>
+            <h2>Over de Makers</h2>
+            <p>Achtergrondinformatie over Martin Sjardijn en de Haagse Kunstkring.</p>
+            <div class="card-footer">Info →</div>
+        </div>
+
+    </div>
+</div>
+
+<footer>
+    <p>© 2026 Martin Sjardijn · AI Supported Research & Presentation</p>
+    <p style="color: var(--primary-gold); margin-top: 10px; font-size: 0.9em;">Haagse Kunstkring — Opening 7 maart 2026</p>
+</footer>
+
+</body>
+</html>
