@@ -1,255 +1,202 @@
-<html>
+<!DOCTYPE html>
+<html lang="nl">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI en het Genie · Haagse Kunstkring</title>
+    <style>
+        :root {
+            --primary-blue: #00d4ff;
+            --primary-gold: #ffcc00;
+            --card-bg: rgba(20, 20, 20, 0.75); /* Iets donkerder voor betere leesbaarheid op foto */
+            --border-dim: rgba(255, 255, 255, 0.15);
+        }
 
-<meta http-equiv="content-type" content="text/html; charset=UTF-8">
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,
-initial-scale=1.0">
-<title>AI en het Genie · Haagse Kunstkring</title>
-<style>
-:root {
---primary-blue: #00d4ff;
---primary-gold: #ffcc00;
---card-bg: rgba(30, 30, 30, 0.4);
---text-gray: #d0d0d0;
---border-dim: rgba(255, 255, 255, 0.1);
-}
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-* {
-margin: 0;
-padding: 0;
-box-sizing: border-box;
-}
+        body {
+            /* De foto blijft hier behouden als basis */
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
+                        url('foto1.jpg') no-repeat center center fixed;
+            background-size: cover;
+            color: #ffffff;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.5;
+        }
 
-body {
-background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
-url('foto1.jpg') no-repeat center center fixed;
-background-size: cover;
-color: #ffffff;
-font-family: 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
-line-height: 1.6;
-min-height: 100vh;
-}
+        header {
+            padding: 50px 20px;
+            text-align: center;
+            backdrop-filter: blur(5px);
+            border-bottom: 1px solid var(--border-dim);
+        }
 
-header {
-background: rgba(0, 0, 0, 0.3);
-padding: 60px 20px 40px 20px;
-text-align: center;
-border-bottom: 1px solid var(--border-dim);
-backdrop-filter: blur(8px);
-}
+        h1 {
+            font-size: 2.8em;
+            color: var(--primary-blue);
+            text-transform: uppercase;
+            letter-spacing: 3px;
+        }
 
-h1 {
-font-size: 3em;
-color: var(--primary-blue);
-margin: 0;
-letter-spacing: 2px;
-text-transform: uppercase;
-text-shadow: 2px 2px 10px rgba(0,0,0,0.8);
-}
+        .opening-detail {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 8px 20px;
+            border: 1px solid var(--primary-gold);
+            border-radius: 30px;
+            background: rgba(0,0,0,0.4);
+            font-weight: bold;
+        }
 
-.subtitle {
-font-size: 1.2em;
-color: #fff;
-margin-top: 10px;
-font-style: italic;
-text-shadow: 1px 1px 5px rgba(0,0,0,0.5);
-}
+        .container {
+            max-width: 1100px;
+            margin: 30px auto;
+            padding: 0 15px;
+        }
 
-.opening-detail {
-background: rgba(0, 0, 0, 0.5);
-display: inline-block;
-padding: 0.5rem 1.5rem;
-border-radius: 40px;
-border: 1px solid var(--primary-gold);
-margin-top: 20px;
-font-size: 1.2rem;
-backdrop-filter: blur(5px);
-}
+        /* De Grid: 12 blokken in rijen van drie */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr); /* 3 kolommen */
+            gap: 15px; /* De kleine afstand tussen de blokken */
+        }
 
-.container {
-max-width: 1100px;
-margin: 40px auto;
-padding: 20px;
-}
+        .card {
+            background: var(--card-bg);
+            border: 1px solid var(--border-dim);
+            padding: 20px;
+            border-radius: 8px;
+            text-decoration: none;
+            color: white;
+            transition: transform 0.2s, border-color 0.2s;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            min-height: 180px;
+            backdrop-filter: blur(10px);
+        }
 
-.section-title {
-border-left: 4px solid var(--primary-blue);
-padding-left: 15px;
-margin: 50px 0 25px 0;
-font-size: 1.8em;
-color: #fff;
-text-shadow: 2px 2px 8px rgba(0,0,0,1);
-}
+        .card:hover {
+            transform: scale(1.02);
+            border-color: var(--primary-blue);
+            background: rgba(40, 40, 40, 0.85);
+        }
 
-.grid {
-display: grid;
-grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-gap: 20px;
-}
+        .tag {
+            font-size: 0.7rem;
+            color: var(--primary-gold);
+            text-transform: uppercase;
+            margin-bottom: 8px;
+            display: block;
+        }
 
-.card, .dashboard-card, .project-text {
-background: var(--card-bg);
-padding: 25px;
-border-radius: 12px;
-border: 1px solid var(--border-dim);
-transition: all 0.3s ease;
-backdrop-filter: blur(12px);
-color: #fff;
-text-decoration: none;
-display: flex;
-flex-direction: column;
-height: 100%;
-}
+        .card h2 {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+        }
 
-.card:hover, .dashboard-card:hover {
-transform: translateY(-5px);
-border-color: var(--primary-blue);
-background: rgba(255, 255, 255, 0.1);
-}
+        .card p {
+            font-size: 0.9rem;
+            color: #ccc;
+            margin-bottom: 15px;
+        }
 
-.card h3, .dashboard-card h2 {
-margin: 10px 0 8px 0;
-color: #fff;
-font-size: 1.4rem;
-}
+        .footer-link {
+            font-size: 0.85rem;
+            color: var(--primary-blue);
+            font-weight: bold;
+            margin-top: auto;
+        }
 
-.tag, .tag-gold {
-font-size: 0.75em;
-text-transform: uppercase;
-letter-spacing: 1px;
-font-weight: bold;
-margin-bottom: 10px;
-}
+        footer {
+            text-align: center;
+            padding: 40px;
+            margin-top: 40px;
+            background: rgba(0,0,0,0.6);
+            border-top: 1px solid var(--border-dim);
+        }
 
-.tag { color: var(--primary-blue); }
-.tag-gold { color: var(--primary-gold); }
-
-.card-footer-link {
-margin-top: auto;
-padding-top: 20px;
-font-weight: 600;
-color: var(--primary-gold);
-}
-
-.foreword-snippet {
-font-size: 0.85rem;
-color: rgba(255,255,255,0.7);
-font-style: italic;
-margin-top: 10px;
-line-height: 1.4;
-}
-
-footer {
-text-align: center;
-padding: 60px 20px;
-color: #fff;
-background: rgba(0,0,0,0.5);
-backdrop-filter: blur(10px);
-border-top: 1px solid var(--border-dim);
-margin-top: 60px;
-}
-</style>
+        /* Mobiele aanpassing */
+        @media (max-width: 850px) {
+            .grid { grid-template-columns: repeat(2, 1fr); }
+        }
+        @media (max-width: 550px) {
+            .grid { grid-template-columns: 1fr; }
+        }
+    </style>
 </head>
 <body>
+
 <header>
-<h1>AI en het Genie</h1>
-<p class="subtitle">Synergie tussen menselijke creativiteit en
-algoritmische intelligentie</p>
-<div class="opening-detail"> <strong>Haagse Kunstkring · Opening
-7 maart 2026 door Max von Kreyfelt om 16:00 uur</strong> </div>
+    <h1>AI en het Genie</h1>
+    <div class="opening-detail">
+        Haagse Kunstkring · 7 maart 2026 · 16:00 uur
+    </div>
 </header>
+
 <div class="container">
-<div class="section-title">Scrolling presentaties &amp; essays</div>
-<div class="grid"> <a href="echo.html" class="dashboard-card"> <span
-class="tag-gold">Beamer Presentatie</span>
-<h2>De Echo in de Leegte</h2>
-<p>Over Virginia Woolf, het Oudgrieks en de statistische aard
-van LLM's.</p>
-<div class="card-footer-link">Start presentatie →</div>
-</a> <a
-href="https://www.academia.edu/143710828/The_paradox_of_authenticity"
-class="dashboard-card" target="_blank"> <span
-class="tag-gold">Essay</span>
-<h2>The Paradox of Authenticity</h2>
-<p>Door Martin Sjardijn</p>
-<div class="foreword-snippet"> "There is one text that has
-haunted me for years: Camiel van Winkel’s 'The Myth of
-Artistic Practice'..." </div>
-<div class="card-footer-link">Lees op Academia.edu →</div>
-</a> <a href="gaze.html" class="dashboard-card" target="_blank">
-<span class="tag-gold">Essay</span>
-<h2>Man- and Female Gaze</h2>
-<p>Een essay door Martin Sjardijn,sopported door AI</p>
-<div class="foreword-snippet"> Het project AI en het Genie
-dwingt ons om opnieuw te definiëren wat we onder
-creativiteit verstaan. Alleen door de technologie in te
-zetten als een instrument voor de female gaze, kan AI
-werkelijk een nieuwe vorm van genie worden—een die
-inclusiever en menselijker is dan de canon die eraan
-voorafging. </div>
-<div class="card-footer-link">Start presentatie →</div>
-</a><a href="de-digitale-vroedvrouw.html" class="dashboard-card">
-<span class="tag-gold">Beamer Presentatie</span>
-<h2>De Digitale Vroedvrouw</h2>
-<p>Hoe AI op klassieke wijze gebruiken.</p>
-<div class="card-footer-link">Start presentatie →</div>
-</a> <a
-href="https://www.academia.edu/143710828/The_paradox_of_authenticity"
-class="dashboard-card" target="_blank"> <span
-class="tag-gold">Essay</span>
-<h2>The Paradox of Authenticity</h2>
-<p>Door Martin Sjardijn</p>
-<div class="foreword-snippet"> "There is one text that has
-haunted me for years: Camiel van Winkel’s 'The Myth of
-Artistic Practice'..." </div>
-<div class="card-footer-link">Lees op Academia.edu →</div>
-</a> <a href="gaze.html" class="dashboard-card" target="_blank">
-<span class="tag-gold">Essay</span> </a><a
-href="https://www.academia.edu/143710828/The_paradox_of_authenticity"
-class="dashboard-card" target="_blank"> <span
-class="tag-gold">Essay</span>
-<h2>The Paradox of Authenticity</h2>
-<p>Door Martin Sjardijn</p>
-<div class="foreword-snippet"> "There is one text that has
-haunted me for years: Camiel van Winkel’s 'The Myth of
-Artistic Practice'..." </div>
-<div class="card-footer-link">Lees op Academia.edu →</div>
-</a>
-<div class="section-title">Teksten in Ontwikkeling</div>
-<div class="grid">
-<div class="card"> <span class="tag">Looping Scroll</span>
-<h3>Een kwantum-benadering van kennis</h3>
-<p>Over Alfred North Whitehead en de verschuiving van
-substantie naar proces.</p>
+    <div class="grid">
+        <a href="echo.html" class="card">
+            <div><span class="tag">Presentatie</span><h2>De Echo in de Leegte</h2><p>Over Virginia Woolf en de statistische aard van LLM's.</p></div>
+            <div class="footer-link">Bekijk →</div>
+        </a>
+        <a href="https://www.academia.edu/143710828/" class="card" target="_blank">
+            <div><span class="tag">Essay</span><h2>The Paradox of Authenticity</h2><p>Door Martin Sjardijn op Academia.edu.</p></div>
+            <div class="footer-link">Lees essay →</div>
+        </a>
+        <a href="gaze.html" class="card">
+            <div><span class="tag">Essay</span><h2>Man- and Female Gaze</h2><p>Herdefiniëren van creativiteit via de lens van AI.</p></div>
+            <div class="footer-link">Bekijk →</div>
+        </a>
+
+        <a href="de-digitale-vroedvrouw.html" class="card">
+            <div><span class="tag">Presentatie</span><h2>De Digitale Vroedvrouw</h2><p>AI als instrument voor de klassieke kunstenaar.</p></div>
+            <div class="footer-link">Bekijk →</div>
+        </a>
+        <div class="card">
+            <div><span class="tag">In ontwikkeling</span><h2>Kwantum-benadering</h2><p>Procesfilosofie en de verschuiving naar proces.</p></div>
+            <div class="footer-link">Binnenkort...</div>
+        </div>
+        <div class="card">
+            <div><span class="tag">Document</span><h2>Alfred North Whitehead</h2><p>Transcriptie van de filosofische fundamenten.</p></div>
+            <div class="footer-link">Openen →</div>
+        </div>
+
+        <div class="card">
+            <div><span class="tag">Theorie</span><h2>Metafysica van het Organisme</h2><p>Vervanging van de machine door levende systemen.</p></div>
+            <div class="footer-link">Lees meer →</div>
+        </div>
+        <div class="card">
+            <div><span class="tag">Project</span><h2>Actuele Gelegenheid</h2><p>De actuele status van AI in het kunstcircuit.</p></div>
+            <div class="footer-link">Details →</div>
+        </div>
+        <div class="card">
+            <div><span class="tag">Media</span><h2>Algoritmische Flow</h2><p>Visualisaties van mens-machine interactie.</p></div>
+            <div class="footer-link">Start video →</div>
+        </div>
+
+        <div class="card">
+            <div><span class="tag">Archief</span><h2>De Canon van Morgen</h2><p>Toekomstige kunstgeschiedenis en algoritmes.</p></div>
+            <div class="footer-link">Info →</div>
+        </div>
+        <div class="card">
+            <div><span class="tag">Dialoog</span><h2>Mens & Machine</h2><p>Een interviewreeks over artistieke autonomie.</p></div>
+            <div class="footer-link">Lees →</div>
+        </div>
+        <div class="card">
+            <div><span class="tag">Colofon</span><h2>Over de Makers</h2><p>Informatie over Martin Sjardijn en AI Research.</p></div>
+            <div class="footer-link">Bekijk →</div>
+        </div>
+    </div>
 </div>
-<div class="grid"> <span class="tag">Tekstbestand</span>
-<h3>Alfred North Whitehead</h3>
-<p>Transcriptie van de filosofische fundamenten van de
-tentoonstelling.</p>
-</div>
-<div class="grid"> <span class="tag">Interactieve Tekst</span>
-<h3>De Metafysica van het Organisme</h3>
-<p>Uitleg over de vervanging van de 'machine' door het
-'levende systeem'.</p>
-</div>
-</div>
-<div class="section-title">Projectomschrijving</div>
-<div class="project-text">
-<p>Het project <strong>"AI en het Genie"</strong> onderzoekt
-de grenzen van de menselijke geest in het tijdperk van
-kunstmatige intelligentie. Geïnspireerd door de
-procesfilosofie van Alfred North Whitehead, wordt AI niet
-gezien als een dode machine, maar als een nieuwe vorm van
-'actuele gelegenheid'.</p>
-</div>
-</div>
-<footer> © 2026 Martin Sjardijn · AI Supported Research &amp;
-Presentation<br>
-<span style="color: var(--primary-gold);">Haagse Kunstkring —
-opening 7 maart 2026, 16:00 uur</span>
+
+<footer>
+    <p>© 2026 Martin Sjardijn · AI Supported Research</p>
 </footer>
-</div>
+
 </body>
 </html>
-
