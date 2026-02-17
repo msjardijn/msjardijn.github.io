@@ -1,0 +1,522 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+  <head>
+
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,
+      initial-scale=1.0">
+    <title>De Blik van het Algoritme - Presentatie</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            background-color: #000;
+            color: #fff;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            overflow: hidden;
+            height: 100vh;
+            line-height: 1.6;
+        }
+        
+        #presentation-container {
+            height: 100vh;
+            overflow-y: scroll;
+            scroll-behavior: smooth;
+            padding: 20px;
+        }
+        
+        .slide {
+            min-height: 100vh;
+            padding: 40px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        h1 {
+            font-size: 3.5rem;
+            margin-bottom: 30px;
+            color: #fff;
+            line-height: 1.2;
+        }
+        
+        h2 {
+            font-size: 2.5rem;
+            margin-bottom: 25px;
+            color: #f0f0f0;
+            border-bottom: 2px solid #444;
+            padding-bottom: 10px;
+        }
+        
+        h3 {
+            font-size: 2rem;
+            margin: 25px 0 15px 0;
+            color: #e0e0e0;
+        }
+        
+        p {
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+        }
+        
+        ul, ol {
+            margin-left: 40px;
+            margin-bottom: 25px;
+        }
+        
+        li {
+            font-size: 1.4rem;
+            margin-bottom: 10px;
+        }
+        
+        .quote {
+            font-style: italic;
+            font-size: 1.6rem;
+            border-left: 4px solid #666;
+            padding-left: 20px;
+            margin: 30px 0;
+            color: #ddd;
+        }
+        
+        .highlight {
+            color: #fff;
+            background-color: #333;
+            padding: 2px 6px;
+            border-radius: 3px;
+        }
+        
+        .page-number {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            font-size: 1.2rem;
+            color: #666;
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 5px 10px;
+            border-radius: 5px;
+        }
+        
+        .controls {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            display: flex;
+            gap: 10px;
+        }
+        
+        .control-btn {
+            background-color: #333;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+        
+        .control-btn:hover {
+            background-color: #444;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 25px 0;
+        }
+        
+        th, td {
+            border: 1px solid #555;
+            padding: 15px;
+            text-align: left;
+            vertical-align: top;
+        }
+        
+        th {
+            background-color: #222;
+            font-size: 1.3rem;
+        }
+        
+        td {
+            font-size: 1.2rem;
+        }
+        
+        .manifest-section {
+            background-color: #111;
+            padding: 25px;
+            border-radius: 10px;
+            margin: 20px 0;
+        }
+        
+        /* Progress bar */
+        #progress-bar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background-color: #000;
+        }
+        
+        #progress {
+            height: 100%;
+            background-color: #666;
+            width: 0%;
+            transition: width 0.3s ease;
+        }
+        
+        @media (max-width: 768px) {
+            h1 { font-size: 2.5rem; }
+            h2 { font-size: 2rem; }
+            h3 { font-size: 1.7rem; }
+            p, li { font-size: 1.3rem; }
+            .slide { padding: 20px; }
+        }
+    </style>
+  </head>
+  <body>
+    <div class="controls"> <button class="control-btn"
+        onclick="scrollToPrev()">← Vorige</button> <button
+        class="control-btn" onclick="scrollToNext()">Volgende →</button>
+    </div>
+    <div id="presentation-container">
+      <!-- Slide 1 -->
+      <div class="slide" id="slide1">
+        <h1>De Blik van het Algoritme:<br>
+          De Male Gaze, de Female Gaze en AI</h1>
+        <p>In de kunstgeschiedenis is de 'blik' nooit neutraal. Sinds
+          filmtheoreticus Laura Mulvey in 1975 de term male gaze
+          introduceerde, zijn we ons pijnlijk bewust van hoe visuele
+          cultuur de wereld (en de vrouw) vaak weergeeft vanuit een
+          mannelijk, heteroseksueel perspectief: de vrouw als object, de
+          man als subject.</p>
+        <p>Nu we aan de vooravond staan van een technologische revolutie
+          met projecten zoals AI en het Genie, rijst de vraag: wiens
+          blik hanteert de machine?</p>
+        <div class="page-number">1</div>
+      </div>
+      <!-- Slide 2 -->
+      <div class="slide" id="slide2">
+        <h2>De Male Gaze als Blauwdruk</h2>
+        <p>De male gaze is meer dan alleen een manier van kijken; het is
+          een machtsstructuur. Het reduceert de autonomie van het
+          geobserveerde subject tot een passieve rol. Wanneer we kijken
+          naar de training van AI-modellen, zien we dat deze systemen
+          worden gevoed met de 'canon' van onze cultuur. Deze canon is
+          eeuwenlang gedomineerd door mannelijke makers.</p>
+        <p>Het resultaat? Een AI die de neiging heeft om
+          genderstereotypen te reproduceren. Als een algoritme duizenden
+          schilderijen van 'schoonheid' analyseert die vanuit de male
+          gaze zijn vervaardigd, zal de door AI gegenereerde output
+          diezelfde objectivering reflecteren.</p>
+        <div class="quote">"Het 'genie' van de AI is in dat geval niet
+          meer dan een hyper-efficiënte spiegel van onze eigen
+          historische vooroordelen."</div>
+        <div class="page-number">2</div>
+      </div>
+      <!-- Slide 3 -->
+      <div class="slide" id="slide3">
+        <h2>De Female Gaze: De Kracht van de Subjectiviteit</h2>
+        <p>Tegenover de male gaze staat de female gaze. Dit is niet
+          simpelweg het omdraaien van de rollen (de man als object),
+          maar een fundamenteel andere benadering. De female gaze richt
+          zich op:</p>
+        <ul>
+          <li><span class="highlight">Intersubjectiviteit</span>: De
+            verbinding tussen maker en subject.</li>
+          <li><span class="highlight">Emotionele resonantie</span>: Hoe
+            voelt het om in dit lichaam te zitten, in plaats van hoe
+            ziet dit lichaam eruit voor een ander?</li>
+          <li><span class="highlight">Kwetsbaarheid</span>: Het opheffen
+            van de afstandelijke, controlerende blik.</li>
+        </ul>
+        <p>In het project AI en het Genie ligt hier de grote uitdaging.
+          Kan een machine, die fundamenteel gebaseerd is op data en
+          patronen (kijken), ooit de essentie van de female gaze (voelen
+          en ervaren) vatten?</p>
+        <div class="page-number">3</div>
+      </div>
+      <!-- Slide 4 -->
+      <div class="slide" id="slide4">
+        <h2>Het Genie: Van Romantiek naar Algoritme</h2>
+        <p>Het begrip 'genie' is historisch gezien vaak geclaimd door de
+          mannelijke kunstenaar—de eenzame held die vanuit het niets
+          creëert. AI doorbreekt dit idee van individueel genie, omdat
+          het een collectieve creatie is, gebaseerd op de input van
+          miljoenen mensen.</p>
+        <p>Echter, als we de AI beschouwen als het nieuwe 'genie',
+          moeten we kritisch kijken naar de curatie van de data. Een AI
+          die enkel leert van de male gaze, blijft steken in een
+          herhaling van het verleden.</p>
+        <div class="quote">"De machine heeft geen geslacht, maar de data
+          die haar voedt is doordrenkt van gender."</div>
+        <div class="page-number">4</div>
+      </div>
+      <!-- Slide 5 -->
+      <div class="slide" id="slide5">
+        <h2>Conclusie</h2>
+        <p>Het project AI en het Genie dwingt ons om opnieuw te
+          definiëren wat we onder creativiteit verstaan. Als we AI de
+          ruimte geven om enkel de male gaze te perfectioneren, creëren
+          we een steriele, geobjectiveerde toekomst.</p>
+        <p>De uitdaging is om de technologie in te zetten als een
+          instrument voor de female gaze: een tool die niet alleen
+          observeert, maar die verbinding zoekt en de subjectieve
+          ervaring viert. Alleen dan kan AI werkelijk een nieuwe vorm
+          van genie worden—een die inclusiever en menselijker is dan de
+          canon die eraan voorafging.</p>
+        <div class="page-number">5</div>
+      </div>
+      <!-- Slide 6 -->
+      <div class="slide" id="slide6">
+        <h2>Kunstenaars integreren de Female Gaze in AI</h2>
+        <p>Het is fascinerend om te zien dat kunstenaars niet langer
+          genoegen nemen met de "standaardinstellingen" van AI. In
+          plaats van de machine simpelweg opdrachten te geven, breken ze
+          de 'black box' open om de onderliggende vooroordelen te
+          corrigeren.</p>
+        <h3>1. Stephanie Dinkins: "Small Data" en de Zorgzame AI</h3>
+        <p>Waar de male gaze vaak streeft naar universaliteit en
+          dominantie, focust de Amerikaanse kunstenaar Stephanie Dinkins
+          op wat zij "small data" noemt.</p>
+        <ul>
+          <li><span class="highlight">De aanpak</span>: Traint modellen
+            op intieme, specifieke data van zwarte vrouwen en hun
+            familiegeschiedenissen.</li>
+          <li><span class="highlight">De link met de female gaze</span>:
+            Verschuift de blik van de "anonieme vrouw als object" naar
+            de "vrouw als drager van generatie-overschrijdende
+            wijsheid".</li>
+        </ul>
+        <div class="page-number">6</div>
+      </div>
+      <!-- Slide 7 -->
+      <div class="slide" id="slide7">
+        <h3>2. Souqwen Chung: Belichaamde Samenwerking</h3>
+        <p>De Chinees-Canadese kunstenaar Souqwen Chung werkt met robots
+          die haar eigen penseelstreken in real-time nabootsen via AI.</p>
+        <ul>
+          <li><span class="highlight">De aanpak</span>: Zij ziet de AI
+            niet als een slaafse tool die een resultaat moet genereren,
+            maar als een danspartner.</li>
+          <li><span class="highlight">De link met de female gaze</span>:
+            Legt nadruk op de fysieke handeling en de imperfectie van de
+            gedeelde beweging, terug naar de subjectieve beleving.</li>
+        </ul>
+        <h3>3. Linda Dounia: Algoritmisch Verzet tegen de Canon</h3>
+        <p>De Senegalese kunstenaar Linda Dounia Rebeiz onderzoekt hoe
+          AI vaak de "westerse male gaze" reproduceert.</p>
+        <ul>
+          <li><span class="highlight">De aanpak</span>: Cureert eigen
+            datasets gericht op West-Afrikaanse kunst en flora. Gebruikt
+            "adversarial" technieken.</li>
+          <li><span class="highlight">De link met de female gaze</span>:
+            Een daad van herovering. Dwingt de machine om schoonheid te
+            zien in authenticiteit en lokale context.</li>
+        </ul>
+        <div class="page-number">7</div>
+      </div>
+      <!-- Slide 8 -->
+      <div class="slide" id="slide8">
+        <h2>De "Gecureerde Blik"</h2>
+        <p>Wat deze kunstenaars gemeen hebben, is dat zij het
+          curatorschap als de hoogste vorm van genie zien. Ze begrijpen
+          dat de female gaze in AI niet ontstaat door de machine te
+          vragen om "vrouwelijker" te zijn, maar door:</p>
+        <ol>
+          <li><span class="highlight">De broncode te diversifiëren</span>:
+            Weg van de grote commerciële datasets.</li>
+          <li><span class="highlight">Kwetsbaarheid toe te laten</span>:
+            De machine mag twijfelen en abstract zijn.</li>
+          <li><span class="highlight">Relaties op te bouwen</span>: De
+            AI wordt een verlengstuk van de maker, geen vervanging
+            ervan.</li>
+        </ol>
+        <div class="quote">"Het genie in de 21e eeuw is niet degene die
+          de AI het hardst laat werken, maar degene die de AI leert om
+          met empathie en nuance te kijken."</div>
+        <div class="page-number">8</div>
+      </div>
+      <!-- Slide 9 -->
+      <div class="slide" id="slide9">
+        <h2>Het Curator-Manifest: De Blik Hervoeren op de Machine</h2>
+        <p>De AI is getraind op de geschiedenis van de overwinnaar en de
+          kijker. Om de female gaze te waarborgen, moeten we de machine
+          dwingen om af te leren wat zij als "normaal" beschouwt.</p>
+        <div class="manifest-section">
+          <h3>1. De Grondregels van de Curator</h3>
+          <ul>
+            <li><span class="highlight">Vervang Perfectie door Presentie</span>:
+              De female gaze zoekt naar de 'ruis': de imperfectie, de
+              textuur van een geleefd leven.</li>
+            <li><span class="highlight">Context boven Constructie</span>:
+              Vraag niet aan de AI wat er te zien is, maar hoe het voelt
+              om daar te zijn.</li>
+            <li><span class="highlight">De-erotiseer de Lens</span>:
+              Gebruik woorden die autonomie beschrijven ("intent",
+              "unobserved", "internal world").</li>
+          </ul>
+        </div>
+        <div class="page-number">9</div>
+      </div>
+      <!-- Slide 10 -->
+      <div class="slide" id="slide10">
+        <h3>2. De Prompt-Transformatie (Van Male naar Female Gaze)</h3>
+        <table>
+          <thead> <tr>
+              <th>Onderwerp</th>
+              <th>De Male Gaze Prompt (Wat we vermijden)</th>
+              <th>De Female Gaze Prompt (Wat we nastreven)</th>
+            </tr>
+          </thead> <tbody>
+            <tr>
+              <td>Het Portret</td>
+              <td>"Prachtige vrouw, kijkt in de camera, hoge definitie,
+                glamoureus."</td>
+              <td>"Vrouw in een moment van diepe introspectie, zich
+                onbespied wanend, focus op de textuur van de huid en
+                expressie van autonomie."</td>
+            </tr>
+            <tr>
+              <td>Het Lichaam</td>
+              <td>"Atletisch lichaam, heroïsche pose, benadrukte
+                vormen."</td>
+              <td>"Het lichaam als drager van ervaring; de zwaarte van
+                rust, de tactiele ervaring van stof tegen huid, geen
+                focus op de toeschouwer."</td>
+            </tr>
+            <tr>
+              <td>Schoonheid</td>
+              <td>"Perfect gezicht, symmetrisch, onberispelijke
+                make-up."</td>
+              <td>"De schoonheid van verval en karakter; rimpels als
+                landkaarten van een leven, asymmetrie, emotionele
+                eerlijkheid."</td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="page-number">10</div>
+      </div>
+      <!-- Slide 11 -->
+      <div class="slide" id="slide11">
+        <h3>3. Praktische Oefeningen voor het "Genie"</h3>
+        <div class="quote">"De curator creëert niet de verf, maar
+          bepaalt welke kleuren de kamer mogen vullen."</div>
+        <ol>
+          <li><span class="highlight">De 'Unobserved' Techniek</span>:
+            Voeg aan je prompts toe dat het subject niet weet dat er
+            gekeken wordt. Dit breekt de performatieve aard van de male
+            gaze.</li>
+          <li><span class="highlight">Zintuiglijke Inversie</span>:
+            Beschrijf geur, temperatuur of geluid in je beeldprompts
+            (bijv. "de geur van regen op warm asfalt").</li>
+          <li><span class="highlight">Adversarial Curating</span>:
+            Gebruik negatieve prompts om de machine te dwingen buiten
+            haar comfortzone te treden.</li>
+        </ol>
+        <h3>Het Doel</h3>
+        <p>Het doel is niet om 'mooie' plaatjes te maken. Het doel is om
+          beelden te genereren die een ziel hebben, een subjectiviteit
+          die niet te koop is en die niet louter bestaat voor het
+          plezier van de kijker.</p>
+        <div class="quote">"Het genie van de 21e eeuw is degene die de
+          machine leert om de menselijkheid in al haar complexe,
+          ongepolijste glorie te herkennen."</div>
+        <div class="page-number">11</div>
+      </div>
+      <!-- Slide 12 -->
+      <div class="slide" id="slide12">
+        <h2>Een Nieuwe Definitie van het Genie</h2>
+        <p>Het genie is niet dood; het is getransformeerd. Het is niet
+          langer een individuele status, maar een collectief proces.
+          Door de male gaze van het verleden te herkennen in de
+          algoritmen van nu, kunnen we via bewust curatorschap een
+          ruimte creëren voor de female gaze.</p>
+        <p>Een ruimte waar de machine geen wapen van objectivering is,
+          maar een instrument voor diepere, subjectieve menselijkheid.</p>
+        <div class="quote" style="margin-top: 40px;">"Dit is geen
+          handleiding voor software; dit is een manifest voor een nieuwe
+          manier van zien."</div>
+        <div style="margin-top: 60px; font-size: 1.4rem; text-align:
+          center;">
+          <p>Dit is een essay geschreven vanuit het perspectief van de
+            maker—de kunstenaar die niet langer alleen met een penseel,
+            maar met een algoritme in de hand de wereld bevraagt.</p>
+        </div>
+        <div class="page-number">12</div>
+      </div>
+    </div>
+    <script>
+        const container = document.getElementById('presentation-container');
+        const slides = document.querySelectorAll('.slide');
+        const progress = document.getElementById('progress');
+        let currentSlide = 0;
+        
+        // Update progress bar
+        function updateProgress() {
+            const scrollTop = container.scrollTop;
+            const scrollHeight = container.scrollHeight - container.clientHeight;
+            const scrollPercentage = (scrollTop / scrollHeight) * 100;
+            progress.style.width = `${scrollPercentage}%`;
+            
+            // Update current slide based on scroll position
+            for (let i = 0; i < slides.length; i++) {
+                const slide = slides[i];
+                const rect = slide.getBoundingClientRect();
+                if (rect.top >= 0 && rect.top < window.innerHeight / 2) {
+                    currentSlide = i;
+                    break;
+                }
+            }
+        }
+        
+        // Scroll to next slide
+        function scrollToNext() {
+            currentSlide = Math.min(currentSlide + 1, slides.length - 1);
+            slides[currentSlide].scrollIntoView({ behavior: 'smooth' });
+        }
+        
+        // Scroll to previous slide
+        function scrollToPrev() {
+            currentSlide = Math.max(currentSlide - 1, 0);
+            slides[currentSlide].scrollIntoView({ behavior: 'smooth' });
+        }
+        
+        // Keyboard navigation
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'ArrowRight' || e.key === 'PageDown' || e.key === ' ') {
+                scrollToNext();
+                e.preventDefault();
+            } else if (e.key === 'ArrowLeft' || e.key === 'PageUp') {
+                scrollToPrev();
+                e.preventDefault();
+            }
+        });
+        
+        // Mouse wheel navigation
+        let wheelTimeout;
+        container.addEventListener('wheel', (e) => {
+            clearTimeout(wheelTimeout);
+            wheelTimeout = setTimeout(() => {
+                if (e.deltaY > 0) {
+                    scrollToNext();
+                } else if (e.deltaY < 0) {
+                    scrollToPrev();
+                }
+            }, 100);
+        }, { passive: true });
+        
+        // Update progress on scroll
+        container.addEventListener('scroll', updateProgress);
+        
+        // Initialize progress bar
+        window.addEventListener('load', updateProgress);
+    </script>
+  </body>
+</html>
