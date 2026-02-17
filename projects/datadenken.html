@@ -1,0 +1,270 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+  <head>
+
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,
+      initial-scale=1.0">
+    <title>Loop: De Republiek &amp; Silicon Valley | M.S. Jardijn</title>
+    <style>
+        :root {
+            --bg-color: #000000;
+            --text-color: #ffffff;
+            --dim-text: #888888;
+            --max-width: 750px;
+            /* Pas hier de snelheid aan (hoger is langzamer) */
+            --scroll-speed: 120s; 
+        }
+
+        body, html {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            overflow: hidden; /* Verbergt de scrollbalk */
+            /* Monospaced font voor de 'gaze' esthetiek */
+            font-family: 'Courier New', Courier, monospace;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* De container die de uitsnede bepaalt */
+        .window {
+            height: 100vh;
+            width: 100%;
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* De laag die daadwerkelijk beweegt */
+        .scroller {
+            display: flex;
+            flex-direction: column;
+            will-change: transform;
+            animation: moveUp var(--scroll-speed) linear infinite;
+        }
+
+        /* Pauzeer de animatie als je met de muis over de tekst gaat */
+        .window:hover .scroller {
+            animation-play-state: paused;
+        }
+
+        @keyframes moveUp {
+            0% { transform: translateY(0); }
+            100% { transform: translateY(-50%); }
+        }
+
+        /* Typografische opbouw per sectie */
+        .article-block {
+            padding: 10vh 0; /* Ruimte tussen de loops */
+            width: 100%;
+        }
+
+        .content {
+            max-width: var(--max-width);
+            margin: 0 auto;
+            padding: 0 2rem;
+            line-height: 1.6;
+            text-align: justify;
+        }
+
+        header {
+            text-align: left;
+            margin-bottom: 4rem;
+            border-left: 2px solid var(--text-color);
+            padding-left: 20px;
+        }
+
+        .meta {
+            font-size: 0.8rem;
+            color: var(--dim-text);
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+        }
+
+        h1 {
+            font-size: 1.8rem;
+            font-weight: normal;
+            margin: 0;
+            line-height: 1.2;
+            text-transform: uppercase;
+        }
+
+        h2 {
+            font-size: 1.2rem;
+            font-weight: bold;
+            margin-top: 3rem;
+            text-transform: uppercase;
+            border-bottom: 1px solid #333;
+            padding-bottom: 5px;
+        }
+
+        h3 {
+            font-size: 1rem;
+            color: var(--dim-text);
+            margin-top: 2rem;
+        }
+
+        p {
+            margin-bottom: 1.5rem;
+            font-size: 1rem;
+        }
+
+        blockquote {
+            margin: 3rem 0;
+            padding: 1rem 2rem;
+            border: 1px solid #333;
+            font-style: italic;
+            background: #0a0a0a;
+            color: #ccc;
+        }
+
+        em {
+            color: var(--dim-text);
+        }
+
+        strong {
+            color: #fff;
+            background: #222;
+            padding: 0 4px;
+        }
+
+        .hint {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            font-size: 0.7rem;
+            color: var(--dim-text);
+            letter-spacing: 1px;
+            z-index: 10;
+            text-transform: uppercase;
+        }
+
+        hr {
+            border: 0;
+            border-top: 1px solid #333;
+            margin: 4rem 0;
+        }
+    </style>
+  </head>
+  <body>
+    <div class="hint">// HOVER TO PAUSE</div>
+    <div class="window">
+      <div class="scroller">
+        <section class="article-block">
+          <div class="content">
+            <header>
+              <div class="meta">Analysis / Intellect / Networks</div>
+              <h1>Van de Republiek der Letteren<br>
+                tot Silicon Valley</h1>
+            </header>
+            <p><em>In de krochten van de 17e eeuw, te midden van
+                godsdienstoorlogen en absolutistische monarchieën,
+                ontstond een stille revolutie. Geleerden, filosofen en
+                natuuronderzoekers begonnen een netwerk te smeden dat
+                zich niets aantrok van politieke grenzen of religieuze
+                dogma's.</em></p>
+            <h2>Inleiding</h2>
+            <p>Zij noemden zich de <strong>Respublica literaria</strong>,
+              de Republiek der Letteren: een virtuele gemeenschap waar
+              het woord, niet het zwaard, heerste. Drie eeuwen later, in
+              de nasleep van de Koude Oorlog, ontstond een nieuwe utopie
+              in de zonnige valleien van Californië. Een netwerk van
+              programmeurs, engineers en visionairs bouwde aan een
+              parallelle wereld, gedreven door de belofte van
+              informatievrijheid en disruptie.</p>
+            <p>Dit essay onderzoekt de opmerkelijke parallel tussen deze
+              twee netwerken. Door de structuur, ideologie en
+              machtsdynamiek van de 17e-eeuwse Republiek der Letteren te
+              vergelijken met die van het hedendaagse Silicon Valley,
+              wordt zichtbaar hoe beide functioneren als supranationale
+              elites.</p>
+            <h2>1. Het Netwerk als Machtsinstrument</h2>
+            <p>De macht van de Republiek der Letteren school niet in
+              instituties, maar in de snelheid en het bereik van haar
+              communicatie. Het postnetwerk van de 17e eeuw was haar
+              internet. Een filosoof als René Descartes bleef via een
+              uitgebreide correspondentie verbonden met denkers als
+              Marin Mersenne in Parijs. Dit netwerk fungeerde als een
+              peer-review-systeem en een versnellingskamer voor ideeën.</p>
+            <p>De structuur van Silicon Valley is een directe
+              afstammeling van dit model. Waar Mersenne's cel brieven
+              verzamelde en verspreidde, fungeren incubators als <strong>Y
+                Combinator</strong> en venture capital-fondsen als de
+              knooppunten van het hedendaagse intellectuele en
+              financiële netwerk.</p>
+            <h2>2. Rationalisme vs. Algoritmes</h2>
+            <p>De Republiek der Letteren was gedrenkt in het
+              Cartesianisme. De beroemde uitspraak <em>"Cogito, ergo
+                sum"</em> vestigde het individu als een autonome,
+              rationele eenheid. Waarheid was universeel en kon worden
+              gevonden door deductie en observatie.</p>
+            <blockquote> "Silicon Valley spreekt ogenschijnlijk een
+              vergelijkbare taal van rede, maar heeft het subject
+              radicaal getransformeerd. De 'waarheid' wordt niet langer
+              gezocht in de rede, maar in data. Het algoritme, niet de
+              filosoof, is de ultieme arbiter." </blockquote>
+            <p>Dit epistemologische verschil wordt uitvergroot door de
+              invloed van René Girard. Zijn theorie van de <strong>mimetische
+                begeerte</strong> stelt dat mensen niet autonoom
+              verlangen. We verlangen naar wat anderen verlangen; ons
+              verlangen is een imitatie van het verlangen van een model.
+              Facebook is de ultieme mimetische machine.</p>
+            <h2>3. Meritocratie of Oligarchie?</h2>
+            <p>Zowel de Republiek der Letteren als Silicon Valley
+              presenteerden zichzelf als meritocratieën, vrij van de
+              verstarde hiërarchieën van geboorte en stand. Maar beide
+              vrijplaatsen bleken een gesloten elite te herbergen. De
+              'Philosopher Kings' van vandaag – de Thiels, Musks en
+              Andreessens – bezitten een culturele en politieke invloed
+              die die van menig soeverein overstijgt.</p>
+            <h2>Conclusie</h2>
+            <p>In plaats van erfgenamen van de Verlichting, vertonen de
+              tech-visionairs meer kenmerken van een nieuwe klasse <strong>techno-feodale
+                heren</strong>. De Republiek der Letteren opende de deur
+              naar een wereld waarin de rede de autoriteit kon uitdagen.
+              Silicon Valley dreigt die deur te sluiten en ons op te
+              sluiten in een wereld waarin het algoritme de nieuwe
+              autoriteit is.</p>
+            <hr> </div>
+        </section>
+        <section class="article-block" aria-hidden="true">
+          <div class="content">
+            <header>
+              <div class="meta">Analysis / Intellect / Networks</div>
+              <h1>Van de Republiek der Letteren<br>
+                tot Silicon Valley</h1>
+            </header>
+            <p><em>In de krochten van de 17e eeuw, te midden van
+                godsdienstoorlogen en absolutistische monarchieën,
+                ontstond een stille revolutie...</em></p>
+            <h2>Inleiding</h2>
+            <p>Zij noemden zich de <strong>Respublica literaria</strong>,
+              de Republiek der Letteren: een virtuele gemeenschap waar
+              het woord, niet het zwaard, heerste...</p>
+            <h2>1. Het Netwerk als Machtsinstrument</h2>
+            <p>De macht van de Republiek der Letteren school niet in
+              instituties, maar in de snelheid en het bereik van haar
+              communicatie. Het postnetwerk van de 17e eeuw was haar
+              internet...</p>
+            <h2>2. Rationalisme vs. Algoritmes</h2>
+            <p>De Republiek der Letteren was gedrenkt in het
+              Cartesianisme. De beroemde uitspraak <em>"Cogito, ergo
+                sum"</em> vestigde het individu als een autonome,
+              rationele eenheid...</p>
+            <h2>3. Meritocratie of Oligarchie?</h2>
+            <p>Zowel de Republiek der Letteren als Silicon Valley
+              presenteerden zichzelf als meritocratieën, vrij van de
+              verstarde hiërarchieën van geboorte en stand...</p>
+            <h2>Conclusie</h2>
+            <p>In plaats van erfgenamen van de Verlichting, vertonen de
+              tech-visionairs meer kenmerken van een nieuwe klasse <strong>techno-feodale
+                heren</strong>...</p>
+            <hr> </div>
+        </section>
+      </div>
+    </div>
+  </body>
+</html>
