@@ -1,4 +1,4 @@
-felt <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="nl">
 <head>
     <meta charset="UTF-8">
@@ -8,9 +8,7 @@ felt <!DOCTYPE html>
         :root {
             --primary-blue: #00d4ff;
             --primary-gold: #ffcc00;
-            /* Basis transparantie (0.4 is 40% zichtbaar) */
             --card-bg: rgba(0, 0, 0, 0.4); 
-            /* Hover transparantie (0.7 is 70% zichtbaar) */
             --card-hover-bg: rgba(0, 0, 0, 0.7);
             --border-dim: rgba(255, 255, 255, 0.15);
         }
@@ -22,7 +20,6 @@ felt <!DOCTYPE html>
         }
 
         body {
-            /* De foto blijft behouden op de achtergrond */
             background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), 
                         url('foto1.jpg') no-repeat center center fixed;
             background-size: cover;
@@ -63,11 +60,10 @@ felt <!DOCTYPE html>
             padding: 0 20px;
         }
 
-        /* Grid met 12 blokjes in rijen van drie */
         .grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
-            gap: 15px; /* Kleine afstand tussen de blokken */
+            gap: 20px;
         }
 
         .card {
@@ -75,16 +71,15 @@ felt <!DOCTYPE html>
             padding: 25px;
             border-radius: 12px;
             border: 1px solid var(--border-dim);
-            backdrop-filter: blur(12px); /* Maakt foto erachter wazig voor leesbaarheid */
+            backdrop-filter: blur(12px);
             text-decoration: none;
             color: #fff;
             display: flex;
             flex-direction: column;
-            transition: all 0.3s ease; /* Zorgt voor vloeiende overgang bij hover */
+            transition: all 0.3s ease;
             height: 100%;
         }
 
-        /* Hover effect: minder transparant en blauwe rand */
         .card:hover {
             background: var(--card-hover-bg);
             transform: translateY(-5px);
@@ -125,7 +120,6 @@ felt <!DOCTYPE html>
             border-top: 1px solid var(--border-dim);
         }
 
-        /* Mobiele aanpassingen */
         @media (max-width: 900px) {
             .grid { grid-template-columns: repeat(2, 1fr); }
         }
@@ -175,26 +169,19 @@ felt <!DOCTYPE html>
             <div class="card-footer">Start presentatie →</div>
         </a>
 
-         <a href="whitehead-scroll.html" class="card">
+        <a href="whitehead-scroll.html" class="card">
             <span class="tag">Looping Scroll</span>
             <h2>Kwantum-benadering van kennis</h2>
             <p>Alfred North Whitehead: de verschuiving van substantie naar proces.</p>
             <div class="card-footer">In ontwikkeling...</div>
-        </div>
-     </a>
-             <a href="whitehead-scroll.html" class="card">
-            <span class="tag">Looping Scroll</span>
-            <h2>Kwantum-benadering van kennis</h2>
-            <p>Alfred North Whitehead: de verschuiving van substantie naar proces.</p>
-            <div class="card-footer">In ontwikkeling...</div>
-        </div>
-     </a>
+        </a>
 
-        <div class="card">
+        <a href="#" class="card">
             <span class="tag">Tekstbestand</span>
             <h2>Alfred North Whitehead</h2>
             <p>Transcriptie van de filosofische fundamenten van dit project.</p>
             <div class="card-footer">Bekijk tekst →</div>
+        </a>
 
         <div class="card">
             <span class="tag">Interactieve Tekst</span>
@@ -210,12 +197,12 @@ felt <!DOCTYPE html>
             <div class="card-footer">Details →</div>
         </div>
 
-         <a href="datadenken.html" class="card">
+        <a href="datadenken.html" class="card">
             <span class="tag">Media</span>
-            <h2>Datadenken en de maatschappij de Letteren </h2>
-            <p>Zij noemden zich de Respublica literaria, de Republiek der Letteren: een virtuele gemeenschap waar het woord, niet het zwaard, heerste. Drie eeuwen later, in de nasleep van de Koude Oorlog, ontstond een nieuwe utopie in de zonnige valleien van Californië..</p>
+            <h2>Datadenken en de Letteren</h2>
+            <p>Over de virtuele gemeenschap van de Respublica literaria en de moderne digitale utopie.</p>
             <div class="card-footer">Bekijk video →</div>
-        </div>
+        </a>
 
         <div class="card">
             <span class="tag">Archief</span>
