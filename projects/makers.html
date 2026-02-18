@@ -1,1 +1,159 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>De Makers & De Filosofie - AI en het Genie</title>
+    <style>
+        body {
+            background-color: #000000;
+            color: #d1d1d1;
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+        }
 
+        header {
+            padding: 100px 10% 40px 10%;
+            border-bottom: 1px solid #1a1a1a;
+        }
+
+        h1 {
+            font-size: 2.8rem;
+            font-weight: 200;
+            text-transform: uppercase;
+            letter-spacing: 12px;
+            margin: 0;
+            color: #ffffff;
+        }
+
+        /* Highlight Secties voor de Hoofdtheoretici */
+        .spotlight {
+            padding: 60px 10%;
+            border-bottom: 1px solid #1a1a1a;
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 40px;
+        }
+
+        .spotlight.lonneke { background-color: #080808; }
+        .spotlight.wim { background-color: #040404; }
+
+        .spotlight-title h2 {
+            font-size: 1.8rem;
+            color: #c5a059;
+            margin-top: 0;
+            letter-spacing: 2px;
+        }
+
+        .spotlight-title span {
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            color: #666;
+        }
+
+        .spotlight-content p {
+            font-size: 1.1rem;
+            color: #ffffff;
+            margin-bottom: 20px;
+        }
+
+        .key-concept {
+            font-style: italic;
+            border-left: 2px solid #c5a059;
+            padding-left: 20px;
+            margin: 20px 0;
+            color: #aaa;
+        }
+
+        /* Overige Makers Grid */
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            padding: 60px 0;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        .maker-card {
+            border: 1px solid #151515;
+            padding: 30px;
+            background: #030303;
+        }
+
+        .maker-card h2 { font-size: 1.3rem; color: #ffffff; margin-top: 0; font-weight: 400; }
+        .role { font-size: 0.75rem; text-transform: uppercase; color: #c5a059; margin-bottom: 15px; display: block; letter-spacing: 2px; }
+        .bio { font-size: 0.95rem; color: #888; }
+
+        footer { padding: 40px 10%; text-align: center; font-size: 0.8rem; color: #333; }
+        .nav-back { color: #555; text-decoration: none; text-transform: uppercase; letter-spacing: 3px; font-size: 0.7rem; display: block; margin-bottom: 20px;}
+    </style>
+</head>
+<body>
+
+<header>
+    <a href="index.html" class="nav-back">← Projecten</a>
+    <h1>De Makers</h1>
+</header>
+
+<section class="spotlight lonneke">
+    <div class="spotlight-title">
+        <span>Kunsthistorica</span>
+        <h2>Lonneke de La Mar</h2>
+    </div>
+    <div class="spotlight-content">
+        <p>Lonneke deconstructeert de klassieke genie-cultus. Zij onderzoekt de <strong>Male Gaze</strong> die in AI-datasets is ingebakken en pleit voor een 'Algoritmische Female Gaze' die subjectiviteit en kwetsbaarheid herintroduceert in de machinecode.</p>
+    </div>
+</section>
+
+<section class="spotlight wim">
+    <div class="spotlight-title">
+        <span>Filosoof</span>
+        <h2>Wim Nijenhuis</h2>
+    </div>
+    <div class="spotlight-content">
+        <p>Vanuit zijn essay <em>"De Diabolische Snelweg"</em> brengt Wim een dromologische analyse van AI. Hij ziet technologische versnelling als een 'diabolische' kracht die de traditionele ruimte en het menselijke subject uit elkaar trekt.</p>
+        <div class="key-concept">
+            "In de extatische snelheid van het algoritme verdwijnt de 'plaats' van het genie. De kunstenaar is niet langer een schepper, maar een passagier op een diabolische snelweg van pure data."
+        </div>
+        <p>In dit project bevraagt hij of er in de 'vloeibare versnelling' van AI nog wel ruimte is voor een authentieke menselijke stilstand of reflectie.</p>
+    </div>
+</section>
+
+
+
+<main class="container">
+    <div class="maker-card">
+        <span class="role">Geestelijke & Kunstenaar</span>
+        <h2>Peter Kattenberg</h2>
+        <p class="bio">Theoloog en criticus. Hij onderzoekt de morele en spirituele autoriteit van de 'Logos' binnen een wereld die wordt gedomineerd door berekende logica.</p>
+    </div>
+
+    <div class="maker-card">
+        <span class="role">Regisseur & Licht</span>
+        <h2>Max von Kreyfelt</h2>
+        <p class="bio">Mediamaker. Hij vertaalt de theoretische versnelling en de historische blik naar de fysieke enscenering van de installatie in het ArtLab.</p>
+    </div>
+
+    <div class="maker-card">
+        <span class="role">Performer & Expert</span>
+        <h2>Brigit Law</h2>
+        <p class="bio">Kunstenaar en performer. Zij geeft een gezicht aan de menselijke weerstand tegen de abstracte snelheid van de machine.</p>
+    </div>
+
+    <div class="maker-card">
+        <span class="role">Curator & Initiator</span>
+        <h2>Martin Sjardijn</h2>
+        <p class="bio">Beeldend kunstenaar. Als motor achter het ArtLab brengt hij de 'diabolische snelheid' van Wim en de 'kritische blik' van Lonneke samen in een esthetische ervaring.</p>
+    </div>
+</main>
+
+<footer>
+    <p>© 2026 AI en het Genie | Haagse Kunstkring ArtLab</p>
+</footer>
+
+</body>
+</html>
