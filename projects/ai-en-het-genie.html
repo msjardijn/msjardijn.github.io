@@ -10,7 +10,7 @@
             --primary-gold: #ffcc00;
             --card-bg: rgba(0, 0, 0, 0.4); 
             --card-hover-bg: rgba(0, 0, 0, 0.7);
-            --border-dim: rgba(255, 255, 255, 0.15);coming soon
+            --border-dim: rgba(255, 255, 255, 0.15);
         }
 
         * {
@@ -20,7 +20,7 @@
         }
 
         body {
-            background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), 
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), 
                         url('foto1.jpg') no-repeat center center fixed;
             background-size: cover;
             color: #ffffff;
@@ -86,6 +86,12 @@
             border-color: var(--primary-blue);
         }
 
+        /* Stijl voor kaarten die nog niet klikbaar zijn */
+        div.card {
+            cursor: default;
+            opacity: 0.8;
+        }
+
         .tag {
             font-size: 0.75em;
             color: var(--primary-gold);
@@ -116,7 +122,7 @@
             text-align: center;
             padding: 50px 20px;
             margin-top: 50px;
-            background: rgba(0,0,0,0.6);
+            background: rgba(0,0,0,0.8);
             border-top: 1px solid var(--border-dim);
         }
 
@@ -173,10 +179,10 @@
             <span class="tag">Looping Scroll</span>
             <h2>Kwantum-benadering van kennis</h2>
             <p>Alfred North Whitehead: de verschuiving van substantie naar proces.</p>
-            <div class="card-footer">Essay supported by AI</div>
+            <div class="card-footer">Essay supported by AI →</div>
         </a>
 
-        <a href="https://www.haegschetijd.nl/martin-sjardijn-tijd-bestaat-niet/" class="card">
+        <a href="https://www.haegschetijd.nl/martin-sjardijn-tijd-bestaat-niet/" class="card" target="_blank">
             <span class="tag">Martin Sjardijn</span>
             <h2>Tijd Bestaat Niet</h2>
             <p>Geplaatst in Time, Timeless Movement door Peter van Baarle.</p>
@@ -185,45 +191,45 @@
 
         <div class="card">
             <span class="tag">Interactieve Tekst</span>
-            <h2>De Metafysica van het Organisme coming soon</h2>
+            <h2>De Metafysica van het Organisme</h2>
             <p>Uitleg over de vervanging van de 'machine' door het 'levende systeem'.</p>
-            <div class="card-footer">Lees meer →</div>
+            <div class="card-footer">Coming soon...</div>
         </div>
 
         <div class="card">
             <span class="tag">Projectomschrijving</span>
-            <h2>AI als 'Actuele Gelegenheid' coming soon</h2>
+            <h2>AI als 'Actuele Gelegenheid'</h2>
             <p>De actuele status van AI binnen de moderne kunstpraktijk.</p>
-            <div class="card-footer">Details →</div>        <a href="https://www.haegschetijd.nl/martin-sjardijn-tijd-bestaat-niet/" class="card">        <a href="https://www.haegschetijd.nl/martin-sjardijn-tijd-bestaat-niet/" class="card">
+            <div class="card-footer">Coming soon...</div>
         </div>
 
         <a href="datadenken.html" class="card">
             <span class="tag">Media</span>
             <h2>Datadenken en de Letteren</h2>
-            <p>Over de virtuele gemeenschap van de Respublica literaria en de moderne digitale utopie.</p>        <a href="https://www.haegschetijd.nl/martin-sjardijn-tijd-bestaat-niet/" class="card">        <a href="https://www.haegschetijd.nl/martin-sjardijn-tijd-bestaat-niet/" class="card">
+            <p>Over de virtuele gemeenschap van de Respublica literaria en de moderne digitale utopie.</p>
             <div class="card-footer">Bekijk video →</div>
         </a>
 
         <div class="card">
             <span class="tag">Archief</span>
-            <h2>De Canon van Morgen coming soon</h2>
+            <h2>De Canon van Morgen</h2>
             <p>Hoe algoritmes de kunstgeschiedenis van de toekomst vormen.</p>
-            <div class="card-footer">Naar archief →</div>
+            <div class="card-footer">Coming soon...</div>
         </div>
 
         <div class="card">
             <span class="tag">Dialoog</span>
-            <h2>Mens & Machine coming soon</h2>
+            <h2>Mens & Machine</h2>
             <p>Interviews en reflecties over artistieke autonomie en AI.</p>
-            <div class="card-footer">Lees gesprekken →</div>
+            <div class="card-footer">Coming soon...</div>
         </div>
 
-              <a href="makers.html" class="card">
-            <span class="tag">Colofon</span>        <a href="https://www.haegschetijd.nl/martin-sjardijn-tijd-bestaat-niet/" class="card">
-            <h2>Over de Makers coming soon</h2>
-            <p>Achtergrondinformatie over Martin Sjardijn en de Haagse Kunstkring.</p>
+        <a href="makers.html" class="card">
+            <span class="tag">Colofon</span>   
+            <h2>Over de Makers</h2>
+            <p>Achtergrondinformatie over de betrokkenen en de Haagse Kunstkring.</p>
             <div class="card-footer">Info →</div>
-        </div>
+        </a>
 
     </div>
 </div>
