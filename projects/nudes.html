@@ -1,1 +1,133 @@
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,
+initial-scale=1.0">
+<title>Beeldcarrousel · AI en het Genie</title>
+<style>
+:root {
+--primary-blue: #00d4ff;
+--primary-gold: #ffcc00;
+--bg-dark: #0a0a0a;
+--scroll-speed: 40s; /* Pas hier de snelheid aan */
+}
+
+body {
+background-color: var(--bg-dark);
+color: #ffffff;
+font-family: 'Segoe UI', Roboto, sans-serif;
+margin: 0;
+overflow-x: hidden;
+display: flex;
+flex-direction: column;
+justify-content: center;
+min-height: 100vh;
+}
+
+h1 {
+text-align: center;
+color: var(--primary-blue);
+text-transform: uppercase;
+letter-spacing: 4px;
+font-size: 1.5rem;
+margin-bottom: 50px;
+text-shadow: 0 0 15px rgba(0, 212, 255, 0.5);
+}
+
+/* Container voor de marquee */
+.marquee-container {
+width: 100%;
+overflow: hidden;
+background: rgba(255, 255, 255, 0.03);
+border-top: 1px solid rgba(255, 255, 255, 0.1);
+border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+padding: 40px 0;
+backdrop-filter: blur(5px);
+}
+
+.marquee-content {
+display: flex;
+width: calc(300px * 40); /* Gebaseerd op 20 afbeeldingen + 20 kopieën voor naadloze loop */
+animation: scroll var(--scroll-speed) linear infinite;
+}
+
+/* Pauze bij mouse-over */
+.marquee-container:hover .marquee-content {
+animation-play-state: paused;
+}
+
+.marquee-content img {
+width: 300px;
+height: 400px;
+object-fit: cover;
+margin: 0 15px;
+border-radius: 8px;
+border: 1px solid rgba(255, 255, 255, 0.2);
+filter: grayscale(60%) brightness(70%);
+transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+cursor: pointer;
+}
+
+/* Oplichten bij mouse-over */
+.marquee-content img:hover {
+filter: grayscale(0%) brightness(110%);
+border-color: var(--primary-gold);
+transform: scale(1.05);
+box-shadow: 0 0 30px rgba(255, 204, 0, 0.4);
+z-index: 10;
+}
+
+/* De Animatie */
+@keyframes scroll {
+0% { transform: translateX(0); }
+100% { transform: translateX(calc(-330px * 20)); } /* Breedte afbeelding + margin * aantal */
+}
+
+footer {
+text-align: center;
+margin-top: 50px;
+color: var(--primary-gold);
+font-size: 0.9rem;
+opacity: 0.7;
+}
+</style>
+</head>
+<body>
+<h1>AI-Generaties: De Digitale Dialoog</h1>
+<div class="marquee-container">
+<div class="marquee-content"> <img src="img1.jpg" alt="AI Gen 1">
+<img src="img2.jpg" alt="AI Gen 2"> <img src="img3.jpg" alt="AI
+Gen 3"> <img src="img4.jpg" alt="AI Gen 4"> <img
+src="img5.jpg" alt="AI Gen 5"> <img src="img6.jpg" alt="AI
+Gen 6"> <img src="img7.jpg" alt="AI Gen 7"> <img
+src="img8.jpg" alt="AI Gen 8"> <img src="img9.jpg" alt="AI
+Gen 9"> <img src="img10.jpg" alt="AI Gen 10"> <img
+src="img11.jpg" alt="AI Gen 11"> <img src="img12.jpg" alt="AI
+Gen 12"> <img src="img13.jpg" alt="AI Gen 13"> <img
+src="img14.jpg" alt="AI Gen 14"> <img src="img15.jpg" alt="AI
+Gen 15"> <img src="img16.jpg" alt="AI Gen 16"> <img
+src="img17.jpg" alt="AI Gen 17"> <img src="img18.jpg" alt="AI
+Gen 18"> <img src="img19.jpg" alt="AI Gen 19"> <img
+src="img20.jpg" alt="AI Gen 20"> <img src="img1.jpg" alt="AI
+Gen 1"> <img src="img2.jpg" alt="AI Gen 2"> <img
+src="img3.jpg" alt="AI Gen 3"> <img src="img4.jpg" alt="AI
+Gen 4"> <img src="img5.jpg" alt="AI Gen 5"> <img
+src="img6.jpg" alt="AI Gen 6"> <img src="img7.jpg" alt="AI
+Gen 7"> <img src="img8.jpg" alt="AI Gen 8"> <img
+src="img9.jpg" alt="AI Gen 9"> <img src="img10.jpg" alt="AI
+Gen 10"> <img src="img11.jpg" alt="AI Gen 11"> <img
+src="img12.jpg" alt="AI Gen 12"> <img src="img13.jpg" alt="AI
+Gen 13"> <img src="img14.jpg" alt="AI Gen 14"> <img
+src="img15.jpg" alt="AI Gen 15"> <img src="img16.jpg" alt="AI
+Gen 16"> <img src="img17.jpg" alt="AI Gen 17"> <img
+src="img18.jpg" alt="AI Gen 18"> <img src="img19.jpg" alt="AI
+Gen 19"> <img src="img20.jpg" alt="AI Gen 20"> </div>
+</div>
+<footer>
+<p>Martin Sjardijn · ArtLab Den Haag 2026</p>
+</footer>
+</body>
+</html>
+
 
