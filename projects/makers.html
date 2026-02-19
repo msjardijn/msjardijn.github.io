@@ -28,76 +28,106 @@
             color: #ffffff;
         }
 
-        section.hierarchy-label {
-            padding: 40px 10% 0 10%;
-            font-size: 0.7rem;
-            text-transform: uppercase;
-            letter-spacing: 5px;
-            color: #444;
-        }
-
-        /* Spotlight Secties voor de Grondleggers */
-        .spotlight {
-            padding: 60px 10%;
-            border-bottom: 1px solid #1a1a1a;
-            display: grid;
-            grid-template-columns: 1fr 2fr;
-            gap: 40px;
-        }
-
-        .spotlight.wim { background-color: #040404; }
-        .spotlight.lonneke { background-color: #080808; }
-
-        .spotlight-title h2 {
-            font-size: 1.8rem;
-            color: #c5a059;
-            margin-top: 0;
-            letter-spacing: 2px;
-        }
-
-        .spotlight-title span {
+        .hierarchy-label {
+            padding: 60px 10% 20px 10%;
             font-size: 0.8rem;
             text-transform: uppercase;
-            letter-spacing: 4px;
-            color: #666;
+            letter-spacing: 5px;
+            color: #c5a059;
         }
 
-        .spotlight-content p {
-            font-size: 1.1rem;
-            color: #ffffff;
-            margin-bottom: 20px;
+        /* Algemene Grid instellingen */
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            padding-bottom: 60px;
+        }
+
+        /* Specifieke grid voor grondleggers (2 kolommen voor balans) */
+        .founders-grid {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        .maker-card {
+            border: 1px solid #1a1a1a;
+            padding: 35px;
+            background: #030303;
+            transition: all 0.3s ease;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .maker-card:hover {
+            border-color: #c5a059;
+            background: #050505;
+        }
+
+        /* Accent voor grondleggers */
+        .founder-card {
+            border-color: #333;
+            background: #080808;
+        }
+
+        .maker-card h2 { 
+            font-size: 1.4rem; 
+            color: #ffffff; 
+            margin: 0 0 15px 0; 
+            font-weight: 400; 
+        }
+
+        .role { 
+            font-size: 0.75rem; 
+            text-transform: uppercase; 
+            color: #c5a059; 
+            margin-bottom: 10px; 
+            display: block; 
+            letter-spacing: 2px; 
+        }
+
+        .bio { 
+            font-size: 0.95rem; 
+            color: #888; 
+            margin: 0; 
         }
 
         .key-concept {
             font-style: italic;
             border-left: 2px solid #c5a059;
-            padding-left: 20px;
-            margin: 20px 0;
+            padding-left: 15px;
+            margin-top: 20px;
             color: #aaa;
+            font-size: 0.9rem;
         }
 
-        /* Overige Makers Grid */
-        .container {
-            width: 80%;
-            margin: 0 auto;
-            padding: 60px 0;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 30px;
+        footer { 
+            padding: 60px 10%; 
+            text-align: center; 
+            font-size: 0.8rem; 
+            color: #333; 
+            border-top: 1px solid #1a1a1a;
         }
 
-        .maker-card {
-            border: 1px solid #151515;
-            padding: 30px;
-            background: #030303;
+        .nav-back { 
+            color: #555; 
+            text-decoration: none; 
+            text-transform: uppercase; 
+            letter-spacing: 3px; 
+            font-size: 0.7rem; 
+            display: block; 
+            margin-bottom: 20px;
         }
 
-        .maker-card h2 { font-size: 1.3rem; color: #ffffff; margin-top: 0; font-weight: 400; }
-        .role { font-size: 0.75rem; text-transform: uppercase; color: #c5a059; margin-bottom: 15px; display: block; letter-spacing: 2px; }
-        .bio { font-size: 0.95rem; color: #888; }
+        /* Mobiele optimalisatie */
+        @media (max-width: 1024px) {
+            .container, .founders-grid { grid-template-columns: repeat(2, 1fr); }
+        }
 
-        footer { padding: 40px 10%; text-align: center; font-size: 0.8rem; color: #333; }
-        .nav-back { color: #555; text-decoration: none; text-transform: uppercase; letter-spacing: 3px; font-size: 0.7rem; display: block; margin-bottom: 20px;}
+        @media (max-width: 700px) {
+            .container, .founders-grid { grid-template-columns: 1fr; }
+        }
     </style>
 </head>
 <body>
@@ -107,68 +137,62 @@
     <h1>De Makers</h1>
 </header>
 
-<section class="hierarchy-label">Theoretisch Fundament</section>
+<div class="hierarchy-label">Theoretisch Fundament</div>
 
-<section class="spotlight wim">
-    <div class="spotlight-title">
-        <span>Filosoof</span>
+<section class="container founders-grid">
+    <div class="maker-card founder-card">
+        <span class="role">Filosoof</span>
         <h2>Wim Nijenhuis</h2>
-    </div>
-    <div class="spotlight-content">
-        <p>Vanuit zijn essay <em>"De Diabolische Snelweg"</em> brengt Wim een dromologische analyse van AI. Hij ziet technologische versnelling als een kracht die het menselijke subject uit elkaar trekt.</p>
+        <p class="bio">Brengt een dromologische analyse van AI vanuit zijn essay <em>"De Diabolische Snelweg"</em>. Hij onderzoekt de technologische versnelling die het menselijke subject uit elkaar trekt.</p>
         <div class="key-concept">
             "De kunstenaar is niet langer een schepper, maar een passagier op een diabolische snelweg van pure data."
         </div>
     </div>
-</section>
 
-<section class="spotlight lonneke">
-    <div class="spotlight-title">
-        <span>Kunsthistorica</span>
+    <div class="maker-card founder-card">
+        <span class="role">Kunsthistorica</span>
         <h2>Lonneke de La Mar</h2>
-    </div>
-    <div class="spotlight-content">
-        <p>Lonneke deconstructeert de klassieke genie-cultus en onderzoekt de <strong>Male Gaze</strong> in AI-datasets. Zij pleit voor een 'Algoritmische Female Gaze'.</p>
+        <p class="bio">Deconstructeert de klassieke genie-cultus en de <strong>Male Gaze</strong> in AI-datasets. Zij pleit voor een 'Algoritmische Female Gaze' die subjectiviteit en kwetsbaarheid herintroduceert.</p>
     </div>
 </section>
 
-<section class="hierarchy-label">Artistieke Leiding & Uitvoering</section>
+<div class="hierarchy-label">Artistieke Leiding, Uitvoering & Techniek</div>
 
 <main class="container">
     <div class="maker-card">
         <span class="role">Geestelijke & Kunstenaar</span>
         <h2>Peter Kattenberg</h2>
-        <p class="bio">Theoloog en criticus. Onderzoekt de morele en spirituele autoriteit van de 'Logos' tegenover berekende logica.</p>
+        <p class="bio">Theoloog en criticus. Hij onderzoekt de morele en spirituele autoriteit van de 'Logos' tegenover de kille, berekende logica van algoritmes.</p>
     </div>
 
     <div class="maker-card">
         <span class="role">Curator & Initiator</span>
         <h2>Martin Sjardijn</h2>
-        <p class="bio">Beeldend kunstenaar en motor achter het ArtLab. Brengt theorie en esthetische ervaring samen.</p>
+        <p class="bio">Beeldend kunstenaar en motor achter het ArtLab. Hij smeedt de theoretische diepgang en esthetische ervaring om tot een coherente fysieke installatie.</p>
     </div>
 
     <div class="maker-card">
         <span class="role">Regisseur & Licht</span>
         <h2>Max von Kreyfelt</h2>
-        <p class="bio">Mediamaker. Vertaalt de theoretische versnelling naar de fysieke enscenering in het ArtLab.</p>
+        <p class="bio">Mediamaker. Hij vertaalt de theoretische concepten naar de fysieke enscenering, ruimtelijke opstelling en de lichtregie in het ArtLab.</p>
     </div>
 
-    <div class="maker-card"> 
-        <span class="role">Performer & Expert</span>
+    <div class="maker-card">
+         <span class="role">Performer & Expert</span>
         <h2>Brigit Law</h2>
-        <p class="bio">Geeft een gezicht aan de menselijke weerstand tegen de abstracte snelheid van de machine.</p>
+        <p class="bio">Kunstenaar en performer. Zij geeft een fysiek gezicht en emotionele stem aan de menselijke weerstand tegen de abstracte snelheid van de machine.</p>
     </div>
 
     <div class="maker-card">
         <span class="role">Videotechniek & Editing</span>
         <h2>Bram Bokken</h2>
-        <p class="bio">videorealistatie</p> 
+        <p class="bio">Verantwoordelijk voor de visuele montage en de volledige videorealisatie die de kern van de installatie vormt.</p> 
     </div>
 
     <div class="maker-card">
         <span class="role">Geluidstechnicus</span>
-        <h2>Mike de Laat </h2>
-        <p class="bio">Studio 2Takes</p>
+        <h2>Mike de Laat</h2>
+        <p class="bio">Studio 2Takes. Vormgever van de sonische omgeving en verantwoordelijk voor de auditieve beleving en ruimtelijkheid van het geluid.</p>
     </div>
 </main>
 
