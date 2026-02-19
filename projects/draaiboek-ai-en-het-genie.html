@@ -1,0 +1,101 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,
+      initial-scale=1.0">
+    <title>Draaiboek · AI en het Genie</title>
+    <style>
+        :root {
+            --primary-blue: #00d4ff;
+            --primary-gold: #ffcc00;
+            --card-bg: rgba(0, 0, 0, 0.6); 
+            --border-dim: rgba(255, 255, 255, 0.15);
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), 
+                        url('foto1.jpg') no-repeat center center fixed;
+            background-size: cover;
+            color: #ffffff;
+            font-family: 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+        }
+        .container { max-width: 900px; margin: 60px auto; padding: 20px; }
+        .schedule-box {
+            background: var(--card-bg);
+            padding: 40px;
+            border-radius: 15px;
+            border: 1px solid var(--border-dim);
+            backdrop-filter: blur(15px);
+        }
+        h1 { color: var(--primary-blue); text-transform: uppercase; margin-bottom: 30px; text-align: center; }
+        
+        .day-entry {
+            border-bottom: 1px solid var(--border-dim);
+            padding: 20px 0;
+            display: grid;
+            grid-template-columns: 180px 1fr;
+        }
+        .day-entry:last-child { border-bottom: none; }
+        .date { color: var(--primary-gold); font-weight: bold; text-transform: uppercase; }
+        .task { color: #e0e0e0; }
+        .highlight { color: var(--primary-blue); font-weight: bold; }
+        
+        .back-link { display: block; text-align: center; margin-bottom: 20px; color: var(--primary-blue); text-decoration: none; }
+    </style>
+  </head>
+  <body>
+    <div class="container"> <a href="projects.html" class="back-link">←
+        Terug naar Project</a>
+      <div class="schedule-box">
+        <h1>Draaiboek Realisatie</h1>
+        <div class="day-entry">
+          <div class="date">Vrijdag 27 feb</div>
+          <div class="task"><span class="highlight">Techniek &amp;
+              Logistiek:</span> Martin verkent beamertechniek in de
+            Kunstkring en brengt het meubilair (tafel, stoelen, servies)
+            voor de performance.</div>
+        </div>
+        <div class="day-entry">
+          <div class="date">Maandag 2 mrt</div>
+          <div class="task"><span class="highlight">Inrichting:</span>
+            Opbouw tafelopstelling. AI-werken en teksten aan de wand.
+            Installatie en finetuning van de beamer met <span
+              style="font-style: italic;">scrolling teksten</span>.</div>
+        </div>
+        <div class="day-entry">
+          <div class="date">Dinsdag 3 mrt</div>
+          <div class="task"> <span class="highlight">De Performance:</span><br>
+            11:00: Setup (Max, Mike, Bram).<br>
+            11:30: Test lunch (Wim, Peter, Brigit, Lonneke).<br>
+            13:00: <span class="highlight">Opnames Lunch</span>
+            sprekend over AI en Kunst. </div>
+        </div>
+        <div class="day-entry">
+          <div class="date">Woensdag 4 mrt</div>
+          <div class="task"><span class="highlight">Montage:</span> Bram
+            Bokken verwerkt video/geluid. Martin cureert fotofragmenten
+            voor de beeldschermpresentatie.</div>
+        </div>
+        <div class="day-entry">
+          <div class="date">Vrijdag 6 mrt</div>
+          <div class="task"><span class="highlight">Finalisering:</span>
+            Implementatie video op de schermen. Positionering van de
+            tafel als <span style="font-style: italic;">fysiek artefact</span>
+            in het Artlab.</div>
+        </div>
+        <div class="day-entry" style="border: 2px solid
+          var(--primary-gold); padding: 20px; border-radius: 10px;
+          margin-top: 10px;">
+          <div class="date" style="color: var(--primary-gold);">Zaterdag
+            7 mrt</div>
+          <div class="task"><span class="highlight" style="font-size:
+              1.2rem;">Opening:</span> Max von Kreyfelt opent de
+            expositie om 16:00 uur.</div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
