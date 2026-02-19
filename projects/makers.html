@@ -1,170 +1,229 @@
-<!DOCTYPE html>
-<html lang="nl">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>De Makers - AI en het Genie</title>
-    <style>
-        body {
-            background-color: #000000;
-            color: #d1d1d1;
-            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-            line-height: 1.6;
-            margin: 0;
-            padding: 0;
-        }
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="nl"
+version="XHTML+RDFa 1.0" dir="ltr"
+xmlns:content="http://purl.org/rss/1.0/modules/content/"
+xmlns:dc="http://purl.org/dc/terms/"
+xmlns:foaf="http://xmlns.com/foaf/0.1/" xmlns:og="http://ogp.me/ns#"
+xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+xmlns:sioc="http://rdfs.org/sioc/ns#"
+xmlns:sioct="http://rdfs.org/sioc/types#"
+xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+xmlns:xsd="http://www.w3.org/2001/XMLSchema#">
+<head profile="http://www.w3.org/1999/xhtml/vocab">
 
-        header {
-            padding: 100px 10% 40px 10%;
-            border-bottom: 1px solid #1a1a1a;
-        }
-
-        h1 {
-            font-size: 2.8rem;
-            font-weight: 200;
-            text-transform: uppercase;
-            letter-spacing: 12px;
-            margin: 0;
-            color: #ffffff;
-        }
-
-        /* Gelijkwaardig Grid voor alle makers */
-        .container {
-            width: 80%;
-            margin: 0 auto;
-            padding: 60px 0;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-        }
-
-        .maker-card {
-            border: 1px solid #151515;
-            padding: 40px;
-            background: #050505;
-            display: flex;
-            flex-direction: column;
-            transition: border 0.3s ease;
-        }
-
-        .maker-card:hover {
-            border-color: #c5a059;
-        }
-
-        .maker-card h2 { 
-            font-size: 1.5rem; 
-            color: #ffffff; 
-            margin-top: 0; 
-            font-weight: 400; 
-            letter-spacing: 1px;
-        }
-
-        .role { 
-            font-size: 0.75rem; 
-            text-transform: uppercase; 
-            color: #c5a059; 
-            margin-bottom: 15px; 
-            display: block; 
-            letter-spacing: 2px; 
-        }
-
-        .bio { 
-            font-size: 1rem; 
-            color: #aaa; 
-        }
-
-        .key-concept {
-            font-style: italic;
-            border-left: 2px solid #c5a059;
-            padding-left: 15px;
-            margin-top: 20px;
-            font-size: 0.9rem;
-            color: #888;
-        }
-
-        footer { 
-            padding: 60px 10%; 
-            text-align: center; 
-            font-size: 0.8rem; 
-            color: #333; 
-            border-top: 1px solid #1a1a1a;
-        }
-
-        .nav-back { 
-            color: #555; 
-            text-decoration: none; 
-            text-transform: uppercase; 
-            letter-spacing: 3px; 
-            font-size: 0.7rem; 
-            display: block; 
-            margin-bottom: 20px;
-        }
-    </style>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,
+initial-scale=1.0">
+<title>AI en het Genie · Haagse Kunstkring</title>
+<style>
+:root {
+--primary-blue: #00d4ff;
+--primary-gold: #ffcc00;
+--card-bg: rgba(0, 0, 0, 0.4);
+--card-hover-bg: rgba(0, 0, 0, 0.7);
+--border-dim: rgba(255, 255, 255, 0.15);
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+url('foto1.jpg') no-repeat center center fixed;
+background-size: cover;
+color: #ffffff;
+font-family: 'Segoe UI', Roboto, sans-serif;
+line-height: 1.6;
+min-height: 100vh;
+}
+header {
+padding: 60px 20px;
+text-align: center;
+backdrop-filter: blur(8px);
+border-bottom: 1px solid var(--border-dim);
+}
+h1 {
+font-size: 3em;
+color: var(--primary-blue);
+letter-spacing: 2px;
+text-transform: uppercase;
+text-shadow: 2px 2px 10px rgba(0,0,0,0.8);
+}
+/* Stijl voor de nieuwe link bovenin de body */
+.statement-link {
+display: block;
+margin: 20px auto 0 auto;
+color: var(--primary-gold);
+text-decoration: none;
+font-weight: bold;
+font-size: 1.1rem;
+max-width: 800px;
+transition: color 0.3s ease;
+}
+.statement-link:hover {
+color: var(--primary-blue);
+text-decoration: underline;
+}
+.opening-detail {
+display: inline-block;
+margin-top: 20px;
+padding: 10px 25px;
+border: 1px solid var(--primary-gold);
+border-radius: 40px;
+background: rgba(0, 0, 0, 0.5);
+font-weight: bold;
+}
+.container {
+max-width: 1200px;
+margin: 40px auto;
+padding: 0 20px;
+}
+.grid {
+display: grid;
+grid-template-columns: repeat(3, 1fr);
+gap: 20px;
+}
+.card {
+background: var(--card-bg);
+padding: 25px;
+border-radius: 12px;
+border: 1px solid var(--border-dim);
+backdrop-filter: blur(12px);
+text-decoration: none;
+color: #fff;
+display: flex;
+flex-direction: column;
+transition: all 0.3s ease;
+height: 100%;
+}
+.card:hover {
+background: var(--card-hover-bg);
+transform: translateY(-5px);
+border-color: var(--primary-blue);
+}
+div.card { cursor: default; opacity: 0.8; }
+.tag {
+font-size: 0.75em;
+color: var(--primary-gold);
+text-transform: uppercase;
+font-weight: bold;
+margin-bottom: 10px;
+}
+.card h2 {
+font-size: 1.4rem;
+margin-bottom: 10px;
+text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+}
+.card p {
+font-size: 0.95rem;
+color: #d0d0d0;
+margin-bottom: 15px;
+}
+.card-footer {
+margin-top: auto;
+font-weight: bold;
+color: var(--primary-blue);
+}
+footer {
+text-align: center;
+padding: 50px 20px;
+margin-top: 50px;
+background: rgba(0,0,0,0.8);
+border-top: 1px solid var(--border-dim);
+}
+@media (max-width: 900px) { .grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 600px) { .grid { grid-template-columns: 1fr; } }
+</style>
 </head>
 <body>
-
 <header>
-    <a href="index.html" class="nav-back">← Projecten</a>
-    <h1>De Makers</h1>
+<h1>AI en het Genie</h1>
+<p style="font-style: italic;">Synergie tussen menselijke
+creativiteit en algoritmische intelligentie</p>
+<a
+href="https://msjardijn.github.io/projects/ai-en-het-genie.html"
+class="statement-link"> Artist Statement: AI en het Genie. De
+Kunst van de Verwondering in het ArtLab </a>
+<div class="opening-detail"> Haagse Kunstkring · Opening 7 maart
+2026 door Max von Kreyfelt om 16:00 uur </div>
 </header>
-
-<main class="container">
-    <div class="maker-card">
-        <span class="role">Kunsthistorica</span>
-        <h2>Lonneke de La Mar</h2>
-        <p class="bio">Lonneke deconstructeert de klassieke genie-cultus. Zij onderzoekt de <strong>Male Gaze</strong> die in AI-datasets is ingebakken en pleit voor een 'Algoritmische Female Gaze'.</p>
-    </div>
-
-    <div class="maker-card">
-        <span class="role">Filosoof</span>
-        <h2>Wim Nijenhuis</h2>
-        <p class="bio">Brengt een dromologische analyse van AI gebaseerd op zijn essay <em>"De Diabolische Snelweg"</em>. Hij bevraagt de ruimte voor reflectie in de 'vloeibare versnelling' van data.</p>
-        <div class="key-concept">"De kunstenaar is niet langer een schepper, maar een passagier op een diabolische snelweg."</div>
-    </div>
-
-    <div class="maker-card">
-        <span class="role">Geestelijke & Kunstenaar</span>
-        <h2>Peter Kattenberg</h2>
-        <p class="bio">Theoloog en criticus. Hij onderzoekt de morele en spirituele autoriteit van de 'Logos' binnen een wereld die wordt gedomineerd door berekende logica.</p>
-    </div>
-
-    <div class="maker-card">
-        <span class="role">Regisseur & Licht</span>
-        <h2>Max von Kreyfelt</h2>
-        <p class="bio">Mediamaker. Hij vertaalt de theoretische versnelling en de historische blik naar de fysieke enscenering van de installatie in het ArtLab.</p>
-    </div>
-
-    <div class="maker-card">
-        <span class="role">Performer & Expert</span>
-        <h2>Brigit Law</h2>
-        <p class="bio">Kunstenaar en performer. Zij geeft een gezicht aan de menselijke weerstand tegen de abstracte snelheid van de machine.</p>
-    </div>
-
-    <div class="maker-card">
-        <span class="role">Curator & Initiator</span>
-        <h2>Martin Sjardijn</h2>
-        <p class="bio">Beeldend kunstenaar en motor achter het ArtLab. Hij brengt de diabolische snelheid en de kritische blik samen in een esthetische ervaring.</p>
-    </div>
-      <div class="maker-card">
-        <span class="role">Geluidstechniek</span>
-        <h2>Mike de Laat</h2>
-        <p class="bio">about...</p>
-    </div>
-    <div class="maker-card">
-        <span class="role">Camera en Montage</span>
-        <h2>Bram Bokken</h2>
-        <p class="bio">about...</p>
-    </div>
-        <div class="maker-card">
-        <span class="role">Openingsspeech</span>
-        <h2>Max von Kreyfelt</h2>
-        <p class="bio">Max von Kreyfelt is een kunstenaar, publicist, onafhankelijke denker en contentmaker met een sterke focus op maatschappelijke vraagstukken, historische duiding en systeemkritiek. In zijn werk stelt hij dominante narratieven ter discussie en zoekt hij naar onderbelichte perspectieven, altijd met aandacht voor bronnen, context en impact op gewone mensen. Zijn drijfveer is het blootleggen van mechanismen van macht, beeldvorming en verantwoordelijkheid, en het stimuleren van kritisch denken.</p>
-    </div>
-</main>
-
+<div class="container">
+<div class="grid"> <a href="echo.html" class="card"> <span
+class="tag">Beamer Presentatie</span>
+<h2>De Echo in de Leegte</h2>
+<p>Over Virginia Woolf, het Oudgrieks en de statistische aard
+van LLM's.</p>
+<div class="card-footer">Start presentatie →</div>
+</a> <a href="https://www.academia.edu/143710828/" class="card"
+target="_blank"> <span class="tag">Essay</span>
+<h2>The Paradox of Authenticity</h2>
+<p>Door Martin Sjardijn. Reflectie op "The Myth of Artistic
+Practice".</p>
+<div class="card-footer">Lees op Academia.edu →</div>
+</a> <a href="gaze.html" class="card"> <span class="tag">Essay</span>
+<h2>Man- and Female Gaze</h2>
+<p>Herdefiniëren van creativiteit als instrument voor
+inclusiviteit.</p>
+<div class="card-footer">Open essay →</div>
+</a> <a href="de-digitale-vroedvrouw.html" class="card"> <span
+class="tag">Beamer Presentatie</span>
+<h2>De Digitale Vroedvrouw</h2>
+<p>Hoe AI op klassieke wijze te gebruiken als creatieve
+katalysator.</p>
+<div class="card-footer">Start presentatie →</div>
+</a> <a href="whitehead-scroll.html" class="card"> <span
+class="tag">Looping Scroll</span>
+<h2>Kwantum-benadering van kennis</h2>
+<p>Alfred North Whitehead: de verschuiving van substantie naar
+proces.</p>
+<div class="card-footer">Essay supported by AI →</div>
+</a> <a
+href="https://www.haegschetijd.nl/martin-sjardijn-tijd-bestaat-niet/"
+class="card" target="_blank"> <span class="tag">Martin
+Sjardijn</span>
+<h2>Tijd Bestaat Niet</h2>
+<p>Geplaatst in Time, Timeless Movement door Peter van Baarle.</p>
+<div class="card-footer">Bekijk tekst →</div>
+</a>
+<div class="card"> <span class="tag">Interactieve Tekst</span>
+<h2>De Metafysica van het Organisme</h2>
+<p>Uitleg over de vervanging van de 'machine' door het
+'levende systeem'.</p>
+<div class="card-footer">Coming soon...</div>
+</div>
+<div class="card"> <span class="tag">Projectomschrijving</span>
+<h2>AI als 'Actuele Gelegenheid'</h2>
+<p>De actuele status van AI binnen de moderne kunstpraktijk.</p>
+<div class="card-footer">Coming soon...</div>
+</div>
+<a href="datadenken.html" class="card"> <span class="tag">Media</span>
+<h2>Datadenken en de Letteren</h2>
+<p>Over de virtuele gemeenschap van de Respublica literaria en
+de moderne digitale utopie.</p>
+<div class="card-footer">Bekijk video →</div>
+</a>
+<div class="card"> <span class="tag">Archief</span>
+<h2>De Canon van Morgen</h2>
+<p>Hoe algoritmes de kunstgeschiedenis van de toekomst vormen.</p>
+<div class="card-footer">Coming soon...</div>
+</div>
+<div class="card"> <span class="tag">Dialoog</span>
+<h2>Mens &amp; Machine</h2>
+<p>Interviews en reflecties over artistieke autonomie en AI.</p>
+<div class="card-footer">Coming soon...</div>
+</div>
+<a href="makers.html" class="card"> <span class="tag">Colofon</span>
+<h2>Over de Makers</h2>
+<p>Achtergrondinformatie over de betrokkenen en de Haagse
+Kunstkring.</p>
+<div class="card-footer">Info →</div>
+</a> </div>
+</div>
 <footer>
-    <p>© 2026 AI en het Genie | Haagse Kunstkring ArtLab</p>
+<p>© 2026 Martin Sjardijn · AI Supported Research &amp;
+Presentation</p>
+<p style="color: var(--primary-gold); margin-top: 10px; font-size:
+0.9em;">Haagse Kunstkring — Opening 7 maart 2026</p>
 </footer>
+</body>
+</html>
 
 </body>
 </html>
