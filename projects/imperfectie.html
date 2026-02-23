@@ -1,0 +1,302 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width,
+      initial-scale=1.0">
+    <title>De Bezielde Barst - Martin Sjardijn</title>
+    <style>
+        :root {
+            --primary-blue: #00d4ff;
+            --primary-gold: #c5a059;
+            --text-main: #d1d1d1;
+            --bg-dark: #050505;
+            --glass: rgba(255, 255, 255, 0.03);
+        }
+
+        body {
+            background-color: var(--bg-dark);
+            color: var(--text-main);
+            font-family: 'Times New Roman', serif;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        /* Container voor het scroll-effect */
+        .scroll-container {
+            width: 85%;
+            max-width: 900px;
+            height: 100vh;
+            overflow: hidden;
+            position: relative;
+        }
+
+        /* De eigenlijke tekst met animatie */
+        .scroll-content {
+            position: absolute;
+            width: 100%;
+            top: 0;
+            left: 0;
+            padding-top: 50vh; /* Start direct in het midden van het beeld */
+            animation: scroll-loop 400s linear infinite; /* Tempo aangepast aan de lengte */
+            text-align: center;
+        }
+
+        /* Typografie */
+        h1 { 
+            font-size: 3.2rem; 
+            color: #ffffff; 
+            margin-bottom: 20px; 
+            text-transform: uppercase; 
+            letter-spacing: 5px;
+            line-height: 1.2;
+        }
+
+        .author { 
+            font-size: 1.4rem; 
+            color: var(--primary-gold); 
+            margin-bottom: 120px; 
+            font-style: italic;
+            letter-spacing: 2px;
+        }
+
+        .abstract-box {
+            background: var(--glass);
+            padding: 40px;
+            border-radius: 12px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            margin-bottom: 150px;
+            text-align: justify;
+            text-align-last: center;
+            font-style: italic;
+            line-height: 1.6;
+        }
+
+        h2 { 
+            font-size: 2rem; 
+            color: var(--primary-blue); 
+            margin-top: 100px; 
+            margin-bottom: 40px;
+            border-bottom: 1px solid #333;
+            display: inline-block;
+            padding-bottom: 10px;
+        }
+
+        h3 { 
+            font-size: 1.6rem; 
+            color: #ffffff; 
+            margin-top: 60px; 
+            margin-bottom: 30px;
+        }
+
+        p { 
+            font-size: 1.5rem; 
+            line-height: 1.8; 
+            margin-bottom: 40px; 
+            text-align: justify; 
+            text-align-last: center; 
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+            margin-bottom: 60px;
+        }
+
+        li {
+            font-size: 1.4rem;
+            margin-bottom: 20px;
+            color: #eee;
+        }
+
+        li strong {
+            color: var(--primary-gold);
+        }
+
+        blockquote {
+            font-size: 2.2rem;
+            color: var(--primary-gold);
+            margin: 120px 0;
+            padding: 40px 0;
+            border-top: 1px solid var(--primary-gold);
+            border-bottom: 1px solid var(--primary-gold);
+            font-style: italic;
+        }
+
+        /* Tabel Styling */
+        .table-container {
+            margin: 80px 0;
+            background: var(--glass);
+            padding: 20px;
+            border-radius: 10px;
+            border: 1px solid rgba(255,255,255,0.05);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 1.1rem;
+        }
+
+        th, td {
+            border: 1px solid #444;
+            padding: 15px;
+            text-align: left;
+        }
+
+        th {
+            background: rgba(0, 212, 255, 0.1);
+            color: var(--primary-blue);
+        }
+
+        /* Animatie */
+        @keyframes scroll-loop {
+            0% { transform: translateY(0); }
+            100% { transform: translateY(-100%); }
+        }
+
+        .end-note {
+            margin-top: 250px;
+            opacity: 0.3;
+            font-size: 1rem;
+            letter-spacing: 2px;
+        }
+    </style>
+  </head>
+  <body>
+    <div class="scroll-container">
+      <div class="scroll-content">
+        <h1>De Bezielde Barst</h1>
+        <p class="author">Martin Sjardijn 2026</p>
+        <div class="abstract-box"> <strong>Abstract:</strong> Een
+          verkenning van de menselijke "fout" als ons laatste bastion
+          van authenticiteit in een tijdperk van digitale perfectie. In
+          een wereld die in rap tempo wordt gedigitaliseerd, verschuift
+          de definitie van artistieke waarde. Waar de machine streeft
+          naar een steriel eindpunt, viert de kunstenaar de
+          kwetsbaarheid van het proces. De unieke imperfectie is niet
+          langer een gebrek, maar een noodzakelijke daad van verzet. </div>
+        <h2>De Schoonheid van de Schram</h2>
+        <p>In de hedendaagse beeldende kunst voltrekt zich een stille
+          revolutie. Terwijl de technologische wereld, aangevoerd door
+          Artificial Intelligence, streeft naar een wiskundige
+          benadering van schoonheid—vrij van ruis, perfect symmetrisch
+          en technisch onberispelijk—groeit de waardering voor het
+          tegenovergestelde: de imperfectie.</p>
+        <h3>De Steriele Belofte van AI</h3>
+        <p>AI-algoritmen zijn getraind op de som van menselijke
+          creativiteit, maar hun output streeft vaak naar een gemiddelde
+          dat we als "perfectie" ervaren. De techniek elimineert de
+          aarzeling. Er is geen trillende hand, geen vlek die per
+          ongeluk ontstond, en geen fysieke weerstand van het materiaal.
+          Deze digitale perfectie mist wat de Japanners <em>Wabi-sabi</em>
+          noemen—de schoonheid van het vergankelijke en het onvoltooide.</p>
+        <h3>De Tactiele Weerstand</h3>
+        <p>In de imperfectie schuilt de narratief van het proces:</p>
+        <ul>
+          <li><strong>De Penseelstreek:</strong> Een dikke klodder verf
+            vertelt ons over de emotie van de maker.</li>
+          <li><strong>De Beitelmoed:</strong> Ruwe oppervlakken
+            herinneren aan de strijd tussen mens en steen.</li>
+          <li><strong>De Textuur:</strong> Een gescheurd canvas dwingt
+            ons te kijken naar de kwetsbaarheid van het object.</li>
+        </ul>
+        <blockquote> "There is a crack, a crack in everything. That's
+          how the light gets in." <br>
+          — Leonard Cohen </blockquote>
+        <h2>De Filosofie van de Breuk</h2>
+        <p>Om te begrijpen waarom de perfectie van AI ons koud laat,
+          moeten we kijken naar hoe kunstenaars de "fout" hebben
+          verheven tot spirituele waarheid.</p>
+        <h3>1. Kintsugi: De Gouden Littekens</h3>
+        <p>De Japanse kunstvorm Kintsugi ("gouden verbinding") is de
+          tegenhanger van de digitale 'undo'-knop. De breuk wordt niet
+          verborgen, maar gevierd met goudlak. Het object wordt unieker
+          juist omdat het kapot is gegaan. Waar AI streeft naar naadloze
+          afwerking, eert Kintsugi de littekens van het bestaan.</p>
+        <h3>2. Het Impressionisme</h3>
+        <p>De uitvinding van de fotografie zorgde voor een crisis:
+          waarom nog schilderen als een camera alles perfect vastlegt?
+          De Impressionisten stopten met streven naar precisie. De
+          "slordige" toets was een bewuste keuze om de details los te
+          laten ten gunste van het gevoel.</p>
+        <div class="table-container">
+          <table>
+            <thead> <tr>
+                <th>Aspect</th>
+                <th>AI / Digitale Perfectie</th>
+                <th>Kintsugi / Impressionisme</th>
+              </tr>
+            </thead> <tbody>
+              <tr>
+                <td>Doel</td>
+                <td>Eliminatie van ruis en fouten.</td>
+                <td>Acceptatie en accentuering van ruis.</td>
+              </tr>
+              <tr>
+                <td>Tijd</td>
+                <td>Direct, tijdloos, statisch.</td>
+                <td>Verankerd in moment en geschiedenis.</td>
+              </tr>
+              <tr>
+                <td>Waarde</td>
+                <td>Efficiëntie en herhaalbaarheid.</td>
+                <td>Authenticiteit en uniciteit.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <h2>Van Rechte Lijnen naar Chaos</h2>
+        <p>Antoni Gaudí zei ooit: "De rechte lijn behoort aan de mens,
+          de gebogen lijn aan God." In zijn werk zie je nergens de
+          steriele perfectie van een kantoorpand. Zijn vormen ademen,
+          omdat ze gebaseerd zijn op de natuurlijke imperfectie van
+          bomen en grotten.</p>
+        <h3>Glitch Art: De Fout als Esthetiek</h3>
+        <p>Glitch-artiesten forceren de machine om te "stotteren". Het
+          is Digitale Kintsugi: we tonen de gebroken pixels om ons eraan
+          te herinneren dat ook technologie kwetsbaar is. AI herstelt de
+          fout; de kunstenaar viert de crash.</p>
+        <div class="table-container">
+          <table>
+            <thead> <tr>
+                <th>Architectuur / Kunst</th>
+                <th>Het "AI" Karakter</th>
+                <th>Menselijke Imperfectie</th>
+              </tr>
+            </thead> <tbody>
+              <tr>
+                <td>Stedenbouw</td>
+                <td>Staal en rechte lijnen.</td>
+                <td>Organische structuren (Gaudí).</td>
+              </tr>
+              <tr>
+                <td>Weergave</td>
+                <td>Geen ruis, glad.</td>
+                <td>Glitch Art, opzettelijke degradatie.</td>
+              </tr>
+              <tr>
+                <td>Ervaring</td>
+                <td>Voorspelbaar, zielloos.</td>
+                <td>Levendig en resonerend.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <h2>Conclusie</h2>
+        <p>De perfectie van de machine is een eindpunt: het is "af". De
+          imperfectie van de mens is een beginpunt: het nodigt uit tot
+          invulling, tot aanraken en tot verwondering. De kunst van de
+          toekomst zal draaien om wie durft te falen op een manier die
+          een machine nooit zou bedenken. Imperfectie is de handtekening
+          van het leven zelf.</p>
+        <p class="end-note">HAAGSE KUNSTKRING · AI EN HET GENIE · 2026</p>
+      </div>
+    </div>
+  </body>
+</html>
