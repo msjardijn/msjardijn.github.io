@@ -1,0 +1,214 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,
+      initial-scale=1.0">
+    <title>Manet &amp; Het Algoritme | Lonneke de la Mar</title>
+    <link
+href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&amp;family=Inter:wght@300;400;600&amp;display=swap"
+      rel="stylesheet">
+    <style>
+        :root {
+            --bg: #0d0d0f;
+            --text: #e8e8e8;
+            --accent: #d4af37;
+            --glass: rgba(255, 255, 255, 0.03);
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body {
+            background-color: var(--bg);
+            color: var(--text);
+            font-family: 'Inter', sans-serif;
+            line-height: 1.7;
+        }
+
+        .hero {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            background: linear-gradient(rgba(13,13,15,0.8), rgba(13,13,15,0.8)),
+                        url('https://upload.wikimedia.org/wikipedia/commons/b/b7/Edouard_Manet_-_Le_D%C3%A9jeuner_sur_l%27herbe.jpg') no-repeat center/cover;
+            background-attachment: fixed;
+        }
+
+        .hero-title h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(2.5rem, 6vw, 5rem);
+            margin-bottom: 0.5rem;
+        }
+
+        .author-tag {
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            color: var(--accent);
+            font-weight: 600;
+        }
+
+        .content-wrap { max-width: 850px; margin: 0 auto; padding: 100px 20px; }
+
+        section { margin-bottom: 150px; opacity: 0; transform: translateY(40px); transition: 1.2s ease-out; }
+        section.visible { opacity: 1; transform: translateY(0); }
+
+        h2 { font-family: 'Playfair Display', serif; font-size: 2.5rem; margin-bottom: 1.5rem; color: var(--accent); }
+
+        .art-container {
+            margin: 40px 0;
+            border: 1px solid var(--glass);
+            padding: 15px;
+            background: var(--glass);
+        }
+
+        .art-container img {
+            width: 100%;
+            height: auto;
+            display: block;
+            filter: grayscale(20%) sepia(10%);
+            transition: 0.5s;
+        }
+
+        .art-container img:hover { filter: grayscale(0%) sepia(0%); }
+
+        .caption {
+            font-size: 0.85rem;
+            color: #888;
+            margin-top: 10px;
+            text-align: center;
+            font-style: italic;
+        }
+
+        .gaze-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            margin: 40px 0;
+        }
+
+        .gaze-card {
+            background: var(--glass);
+            padding: 2rem;
+            border-top: 2px solid var(--accent);
+        }
+
+        .ai-viz {
+            border: 1px dashed var(--accent);
+            padding: 40px;
+            text-align: center;
+            background: radial-gradient(circle at center, #1a1a2e, #0d0d0f);
+        }
+
+        blockquote {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.6rem;
+            border-left: 3px solid var(--accent);
+            padding-left: 30px;
+            margin: 40px 0;
+            font-style: italic;
+        }
+
+        footer { padding: 60px; text-align: center; border-top: 1px solid var(--glass); color: #555; }
+    </style>
+  </head>
+  <body>
+    <header class="hero">
+      <div class="hero-title">
+        <p class="author-tag">Lonneke de la Mar</p>
+        <h1>Manet &amp; De Gecodeerde Blik</h1>
+        <p>Van de Salon naar het Algoritme</p>
+      </div>
+    </header>
+    <div class="content-wrap">
+      <section>
+        <p>In de kunstgeschiedenis is het verschil tussen de mannelijke
+          en vrouwelijke blik op het naakt een centraal thema, dat
+          definitief op scherp werd gesteld bij de receptie van Édouard
+          Manets <strong>Le Déjeuner sur l'herbe</strong> in 1863.</p>
+        <div class="art-container"> <img src="dejeuner.jpg" alt="Le
+            Déjeuner sur l'herbe">
+          <p class="caption">Édouard Manet, Le Déjeuner sur l'herbe
+            (1863) - Musee d'Orsay</p>
+        </div>
+        <p>Hoewel dit werk vaak wordt gezien als het startpunt van het
+          modernisme, vertelt het in de context van 2026 ook een verhaal
+          over macht, autonomie en de strijd tegen de 'gecodeerde' blik.</p>
+      </section>
+      <section>
+        <h2>De Breuk: Victorine Meurent als Subject</h2>
+        <p>Het naaktmodel op dit schilderij is Victorine Meurent. Zij
+          was Manets favoriete model en staat ook afgebeeld op zijn
+          andere bekende werk uit datzelfde jaar, <strong>Olympia</strong>.</p>
+        <div class="art-container"> <img src="olympia.jpg"
+            alt="Olympia">
+          <p class="caption">Édouard Manet, Olympia (1863) - De
+            confrontatie met de toeschouwer.</p>
+        </div>
+        <blockquote>"Zij 'kijkt terug' en maakt de toeschouwer bewust
+          van zijn eigen voyeurisme."</blockquote>
+        <p>Het schilderij veroorzaakte een schandaal omdat het een
+          alledaagse vrouw toonde. Meurent was echter zelf een
+          getalenteerd schilderes; haar blik is die van een
+          professionele collega die de wetten van de kunstwereld kende.</p>
+      </section>
+      <section>
+        <h2>De Mannelijke vs. de Vrouwelijke Blik</h2>
+        <div class="gaze-grid">
+          <div class="gaze-card">
+            <h3>Male Gaze</h3>
+            <p>Passief object van begeerte. De vrouw als 'beeld' voor
+              visueel plezier.</p>
+          </div>
+          <div class="gaze-card">
+            <h3>Female Gaze</h3>
+            <p>Autonome individuen. Focus op psychologische
+              introspectie.</p>
+          </div>
+        </div>
+        <div class="art-container"> <img src="cradle.jpg" alt="The
+            Cradle">
+          <p class="caption">Berthe Morisot, De Wieg (1872) - Een
+            toonbeeld van de Female Gaze.</p>
+        </div>
+      </section>
+      <section>
+        <h2>De Nieuwe Uitdaging: AI &amp; Het Genie</h2>
+        <p>AI-modellen worden getraind op miljarden beelden uit het
+          verleden, die vaak doordrenkt zijn van de traditionele Male
+          Gaze. Zonder menselijke correctie genereert AI vaak
+          'geïdealiseerde', passieve lichamen.</p>
+        <div class="ai-viz">
+          <p class="caption">Visualisatie van algoritmische bias: De
+            herhaling van voyeuristische patronen.</p>
+        </div>
+        <p>In 2026 verschuift de macht naar de 'prompter'. Als een
+          algoritme het beeld genereert op basis van bevooroordeelde
+          data, vervalt dan de menselijke autonomie of wordt het juist
+          een nieuw veld van verzet?</p>
+      </section>
+      <section>
+        <h2>Conclusie: Hack de Traditie</h2>
+        <p>De radicale breuk die Manet en Meurent forceerden, is
+          actueler dan ooit. We vechten nu tegen de onzichtbare kaders
+          van algoritmes. De ware <strong>Female Gaze</strong> in het
+          tijdperk van AI ligt in het terugclaimen van menselijke
+          imperfectie in een wereld van perfecte pixels.</p>
+      </section>
+    </div>
+    <footer>
+      <p>© 2026 AI en het Genie | Essay door Lonneke de la Mar</p>
+    </footer>
+    <script>
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) entry.target.classList.add('visible');
+        });
+    }, { threshold: 0.15 });
+
+    document.querySelectorAll('section').forEach(section => observer.observe(section));
+</script>
+  </body>
+</html>
