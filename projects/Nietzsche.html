@@ -1,0 +1,582 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head>
+
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,
+      initial-scale=1.0">
+    <title>De Dionysus van het atelier? – Martin Sjardijn</title>
+    <style>
+        /* Algemene reset & lettertypen */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #faf9f6;
+            font-family: 'Georgia', 'Times New Roman', Times, serif;
+            line-height: 1.7;
+            color: #1e1e1e;
+            padding: 2rem 1rem;
+        }
+
+        .paper {
+            max-width: 950px;
+            margin: 0 auto;
+            background-color: #ffffff;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.05), 0 4px 8px rgba(0,0,0,0.02);
+            padding: 3rem 3.5rem;
+            border-radius: 2px;
+            border: 1px solid #e8e6e0;
+        }
+
+        /* Hoofdtitel en auteur */
+        h1 {
+            font-size: 2.3rem;
+            font-weight: 500;
+            letter-spacing: -0.02em;
+            line-height: 1.2;
+            margin-bottom: 0.25rem;
+            color: #2c3e4f;
+            border-bottom: 2px solid #c0b7a9;
+            padding-bottom: 0.5rem;
+        }
+
+        .subtitel {
+            font-size: 1.2rem;
+            font-style: italic;
+            color: #4f5b66;
+            margin-top: 0.25rem;
+            margin-bottom: 1.2rem;
+        }
+
+        .auteur {
+            font-size: 1.1rem;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            color: #5e6c7c;
+            margin-bottom: 2rem;
+            border-left: 4px solid #b68b7a;
+            padding-left: 1rem;
+        }
+
+        /* datum */
+        .datum {
+            font-size: 0.95rem;
+            color: #7e8a98;
+            margin-bottom: 2.2rem;
+            font-family: 'Segoe UI', 'Helvetica', Arial, sans-serif;
+        }
+
+        /* Abstract */
+        .abstract {
+            background-color: #f4f1ed;
+            padding: 1.6rem 2rem;
+            margin-bottom: 2.5rem;
+            border-left: 6px solid #9c7e6b;
+            font-size: 1rem;
+            border-radius: 0 4px 4px 0;
+        }
+
+        .abstract strong {
+            font-weight: 600;
+            color: #2b3e4f;
+        }
+
+        /* Tussenkoppen */
+        h2 {
+            font-size: 1.8rem;
+            font-weight: 500;
+            margin-top: 2.8rem;
+            margin-bottom: 1.2rem;
+            color: #3a4c5e;
+            border-bottom: 1px solid #dad3cb;
+            padding-bottom: 0.3rem;
+        }
+
+        h3 {
+            font-size: 1.4rem;
+            font-weight: 500;
+            margin-top: 2rem;
+            margin-bottom: 0.8rem;
+            color: #4f5f6f;
+            font-style: italic;
+        }
+
+        /* Paragrafen */
+        p {
+            margin-bottom: 1.2rem;
+            text-align: justify;
+            hyphens: auto;
+        }
+
+        /* Citaten / uitgelichte tekst */
+        .citaat {
+            font-style: italic;
+            background-color: #f2efe9;
+            padding: 1rem 2rem;
+            margin: 1.5rem 0;
+            border-right: 4px solid #b68b7a;
+            color: #2e3b47;
+            font-size: 1.05rem;
+        }
+
+        /* Lijsten */
+        ul {
+            margin: 1rem 0 1.5rem 2rem;
+        }
+
+        li {
+            margin-bottom: 0.4rem;
+        }
+
+        /* blok voor kritiekpunt / nuance (optioneel) */
+        .kritiekblok {
+            background: #edede9;
+            padding: 1.2rem 1.8rem;
+            margin: 1.8rem 0;
+            border-left: 5px solid #8f6b5b;
+            font-size: 0.98rem;
+        }
+
+        .kritiekblok strong {
+            color: #2e3b47;
+        }
+
+        /* Bibliografie */
+        .bibliografie {
+            margin-top: 3rem;
+            background: #ffffff;
+            border-top: 2px dashed #c7bfb2;
+            padding-top: 2rem;
+        }
+
+        .bibliografie h3 {
+            font-style: normal;
+            font-size: 1.5rem;
+            border-bottom: none;
+            margin-bottom: 0.5rem;
+        }
+
+        .bibliografie p {
+            margin-bottom: 0.4rem;
+            font-size: 0.98rem;
+            text-align: left;
+        }
+
+        /* footer */
+        .footer-note {
+            margin-top: 3rem;
+            font-size: 0.9rem;
+            text-align: center;
+            color: #9f938b;
+            border-top: 1px solid #ddd6ce;
+            padding-top: 1.5rem;
+        }
+
+        /* Eerste letter van paragraaf? (optie) */
+        .intro::first-letter {
+            font-size: 3.2rem;
+            float: left;
+            line-height: 0.8;
+            margin-right: 8px;
+            color: #745f52;
+            font-weight: 400;
+        }
+
+        @media (max-width: 650px) {
+            .paper {
+                padding: 1.8rem 1.2rem;
+            }
+            h1 {
+                font-size: 1.8rem;
+            }
+            .subtitel {
+                font-size: 1rem;
+            }
+        }
+    </style>
+  </head>
+  <body>
+    <div class="paper">
+      <h1>De Dionysus van het atelier?</h1>
+      <div class="subtitel">Een onderzoek naar de onterechte invloed van
+        Friedrich Nietzsche als bron voor de moderne kunsten, met een
+        weerlegging van de voornaamste tegenargumenten</div>
+      <div class="auteur">Martin Sjardijn</div>
+      <div class="datum">15 maart 2026</div>
+      <!-- Abstract -->
+      <div class="abstract"> <strong>Abstract</strong><br>
+        <br>
+        Dit paper onderzoekt de paradoxale receptie van Friedrich
+        Nietzsche als grondlegger van de moderne artistieke praktijk.
+        Vertrekkende vanuit de vaststelling dat Nietzsche fundamentele
+        problemen had met het door Schelling gedefinieerde romantische
+        kunstbegrip, wordt betoogd dat zijn invloed op de moderne
+        kunsten grotendeels berust op een misvatting. Waar de romantiek,
+        in de lijn van Schelling, kunst zag als het zichtbare orgaan van
+        het Absolute en daarmee een metafysische verbondenheid bood,
+        ontwikkelde Nietzsche een anti-metafysische, immanente
+        esthetica. Via een analyse van zijn kritiek op het Duitse
+        idealisme en zijn herevaluatie van Kants esthetica, laat dit
+        paper zien dat Nietzsche’s eigenlijke filosofie een “esthetiek
+        van het bestaan” behelst die lijnrecht staat tegenover de
+        romantische behoefte aan thuiskomst in het Zijn. De conclusie
+        luidt dat de moderne kunsten, door Nietzsche te omarmen als een
+        profeet van subjectieve expressie, hem juist hebben ingelijfd
+        bij een project dat hij verachtte: de romantische verheffing van
+        het kunstenaarssubject. Het paper gaat bovendien in op twee
+        belangrijke tegenwerpingen: (1) de vraag of Nietzsche’s eigen
+        Griekenbeeld niet evenzeer gekleurd was (Foucault), en (2) de
+        interpretatie van Schellings filosofie als “verzet” in plaats
+        van “troost”. Deze tegenwerpingen blijken bij nadere beschouwing
+        de centrale these niet te ontkrachten, maar veeleer te
+        verdiepen. </div>
+      <!-- 1. Inleiding -->
+      <h2>1. Inleiding: Een paradoxale erfenis</h2>
+      <p class="intro">In het cultuurdiscours van de twintigste en
+        eenentwintigste eeuw wordt Friedrich Nietzsche vaak opgevoerd
+        als de patroonheilige van de artistieke avant-garde. Zijn
+        roemruchte uitspraak “dat het leven slechts gerechtvaardigd kan
+        worden als esthetisch fenomeen” lijkt een directe legitimatie te
+        bieden voor een kunst die zich autonoom waant van moraliteit en
+        waarheid. De recente kunstgeschiedenis zit dan ook vol met
+        verwijzingen naar zijn werk; van de vroege avant-gardes tot het
+        actionisme en de popart, overal duikt de schim van Dionysus op.</p>
+      <p>Echter, een nauwkeurige lezing van Nietzsche’s eigen
+        geschriften, in het licht van zijn ambivalente verhouding tot de
+        Duitse romantiek, plaatst deze adoptie in een problematisch
+        daglicht. Het prompt van dit onderzoek – “Nietzsche had
+        problemen met de romantiek die Schelling gedefinieerd heeft. Wat
+        had hij dan met kunst?” – vormt de kern van deze paradox. Dit
+        paper beoogt aan te tonen dat de invloed van Nietzsche als bron
+        voor de moderne kunsten in hoge mate onterecht is, omdat zij
+        berust op een fundamentele misinterpretatie van zijn kritiek op
+        de idealistische esthetica. De moderne kunst heeft Nietzsche
+        “germanitiseerd”, en daarmee juist datgene uit zijn werk
+        geëlimineerd wat hem tot een unieke en “onterechte” bron voor
+        artistieke creatie maakt.</p>
+      <p>Alvorens deze these te ontwikkelen, is het noodzakelijk twee
+        belangrijke tegenwerpingen te adresseren die in reactie op een
+        eerdere versie van dit paper zijn ingebracht. Ten eerste de
+        vraag, ontleend aan Foucaults <em>De moed tot waarheid</em>, of
+        Nietzsche’s eigen filosofie niet evenzeer een eenzijdige,
+        elitair-politieke constructie is, gebaseerd op een selectieve
+        lezing van de Griekse adel. Ten tweede de stelling dat
+        Schellings project niet primair als “troost” moet worden
+        begrepen, maar als “weerstand” tegen de reductie van de natuur
+        door de natuurwetenschappen. Dit paper zal aantonen dat deze
+        tegenwerpingen, hoe waardevol ook als nuance, de kern van het
+        argument niet ondermijnen, maar veeleer verdiepen.</p>
+      <!-- 2. Schelling -->
+      <h2>2. Schelling en de romantische erfenis: Kunst als orgaan van
+        het Absolute</h2>
+      <p>Om Nietzsche’s bezwaren te begrijpen, moeten we eerst het door
+        hem bekritiseerde paradigma schetsen. Friedrich Wilhelm Joseph
+        Schelling, de filosoof bij uitstek van de vroege Duitse
+        romantiek, kende aan de kunst een unieke, bijna priesterlijke
+        rol toe. In zijn <em>System des transzendentalen Idealismus</em>
+        (1800) wordt kunst gepresenteerd als het enige medium waarin de
+        kloof tussen het bewuste (vrijheid, geest) en het onbewuste
+        (natuur, noodzaak) gedicht kan worden. Waar de filosofie dit
+        absolute, identieke punt slechts <em>kan denken</em>, kan de
+        kunst het <em>tonen</em>. Kunst is volgens Schelling dan ook
+        “het enige ware en eeuwige organon en document van de
+        filosofie”. Het kunstwerk is de zichtbaarwording van het
+        Absolute, een moment van openbaring waarin het oneindige in het
+        eindige gevangen wordt.</p>
+      <p>Deze metafysische opdracht van de kunst is onlosmakelijk
+        verbonden met een bepaalde ervaring van de wereld. Zoals
+        Kruszelnicki in zijn verdediging van de romantiek stelt,
+        streefde de romantiek ernaar de mens weer “thuis” te laten
+        voelen in de wereld (<em>wieder heimisch zu werden</em>). Het is
+        een project van her-betovering, een poging om in een onttoverde
+        wereld de sporen van het goddelijke terug te vinden.</p>
+      <h3>2.1 Weerstand of troost? Een hermeneutische verheldering</h3>
+      <p>Hier rijst de eerste belangrijke tegenwerping. Is Schellings
+        project wel terecht als “troost” te karakteriseren? De criticus
+        stelt: “Ik heb nergens in het denken van Schelling zoiets
+        gevonden als troost. Het programma is veeleer, weerstand bieden
+        tegen de dominantie van de natuurkunde in het wetenschappelijke
+        en metafysische denken. (…) Het was noodzakelijk om de natuur te
+        redden en een van de reddingsmiddelen was het om de natuur te
+        heiligen.”</p>
+      <p>Dit is een cruciale nuancering die vraagt om een hermeneutische
+        verdieping van het troostbegrip. “Troost” is in dit paper niet
+        bedoeld als psychologische geruststelling in triviale zin, maar
+        als een <em>filosofische structuur van verbondenheid en zin</em>.
+        Wanneer Schelling de natuur heiligt, biedt hij de mens de
+        mogelijkheid zich weer <em>verwant</em> te voelen met een
+        werkelijkheid die door de natuurwetenschappen was gereduceerd
+        tot dode, betekenisloze materie. Dat is een vorm van
+        “thuiskomst” in de wereld, en daarmee – hermeneutisch gesproken
+        – een vorm van troost. Het is de geruststelling dat de mens niet
+        vreemd is in een vijandig universum, maar deel uitmaakt van een
+        levend, organisch geheel.</p>
+      <p>De weerstand tegen de natuurwetenschappen is dus geen
+        alternatief voor troost, maar veeleer de <em>weg waarlangs</em>
+        die troost wordt bereikt. Door de natuur te heiligen, wordt zij
+        weer een plek waarin de mens zich geborgen kan voelen. Het
+        utopische element in Schellings denken – de “spontane
+        heerschappij van een collectief gedragen mythisch denken” en de
+        uiteindelijke absorptie van het materiële in de bewuste geest –
+        bevestigt dit alleen maar. Het is de belofte van een
+        uiteindelijke verzoening, een einddoel dat het lijden en de
+        fragmentatie van het heden relativeert en daarmee draaglijk
+        maakt. Dit is, in de meest letterlijke zin, troost: het
+        vooruitzicht dat de geschiedenis niet zinloos is, maar ergens <em>naartoe</em>
+        beweegt.</p>
+      <p>Voor Nietzsche is dit echter geen deugd, maar een vorm van
+        decadentie, een onvermogen om de harde realiteit van het worden
+        onder ogen te zien. De romantische kunst is voor hem een
+        symptoom van “verarming van het leven”, een vlucht in de
+        metafysica.</p>
+      <!-- 3. Nietzsche’s kritiek -->
+      <h2>3. Nietzsche’s kritiek: Anti-metafysica en de fysiologie van
+        de kunst</h2>
+      <p>Nietzsche’s problemen met deze door Schelling gedefinieerde
+        romantiek zijn fundamenteel. Waar Schelling kunst zoekt als
+        openbaring van een achterliggende, eeuwige waarheid (het Zijn),
+        ziet Nietzsche kunst als een activiteit binnen een wereld van
+        puur <em>worden</em>, van chaos en onophoudelijke verandering.
+        Zijn vroege werk <em>De geboorte van de tragedie</em> lijkt nog
+        schatplichtig aan het metafysische denken door zijn postulering
+        van de Apollinische en Dionysische “drift” als metafysische
+        entiteiten. Echter, zoals Lossi betoogt, is Nietzsche al vroeg
+        bezig met een kritiek op de teleologie, het idee dat er een
+        eindoorzaak of doel in de natuur zou bestaan. Dit zet hem op
+        ramkoers met het Kantiaanse en idealistische denken.</p>
+      <p>Zijn eigenlijke esthetica ontvouwt zich pas in zijn latere
+        werk, waar hij elke vorm van metafysische troost verwerpt. In <em>Zur
+          Genealogie der Moral</em> en <em>Götzen-Dämmerung</em> wordt
+        kunst niet langer gezien als een venster op een andere wereld,
+        maar als een “grote stimulans voor het leven” (<em>der große
+          Stimulans zum Leben</em>). Kunst is een fysiologisch fenomeen,
+        geworteld in de “roes” (<em>Rausch</em>), een gevoel van
+        verhoogde macht en overvloed. De schoonheid is geen
+        “interesteloos welbehagen” in Kantiaanse zin, maar “une promesse
+        de bonheur” (Stendhal). Het is een belofte van geluk die niet
+        verwijst naar een morele orde, maar naar een versterking van het
+        leven zelf.</p>
+      <p>Deze verschuiving van het metafysische naar het fysiologische
+        is cruciaal. Nietzsche’s kritiek op Kant, zoals uitgewerkt door
+        Lichtenstein, is niet louter destructief. Via de bemiddeling van
+        Schiller erft hij een bepaald begrip van spel en schijn. Waar
+        Schiller de speeldrift nog ziet als een harmonie tussen
+        zinnelijkheid en rede (een typisch idealistische synthese),
+        radicaliseert Nietzsche dit. Het spel wordt bij hem losgekoppeld
+        van de rede en verbonden met een overvloed aan kracht, met
+        passie. De kunstenaar is niet langer de bemiddelaar tussen twee
+        werelden, maar de meest volmaakte uitdrukking van één enkele,
+        immanente werkelijkheid: de wil tot macht.</p>
+      <h3>3.1 De “foute Nietzsche”? Foucault en de eenzijdigheid van het
+        Griekenbeeld</h3>
+      <p>Hier doet zich de tweede belangrijke tegenwerping voor. De
+        criticus verwijst naar Foucaults <em>De moed tot waarheid</em>
+        om te stellen dat Nietzsche’s eigen filosofie gebaseerd is op
+        een eenzijdige lezing van de oude Grieken, waarbij hij zich
+        beperkt heeft tot de adel, respectievelijk de heersende elite.
+        Betekent dit dat het paper zich baseert op een “foute
+        Nietzsche”, een Angelsaksische constructie die voorbijgaat aan
+        de politieke inbedding van zijn denken?</p>
+      <p>Deze kritiek raakt aan een belangrijk aspect van Nietzsche’s
+        filosofie, maar ondermijnt de centrale these van dit paper niet.
+        Integendeel, zij verdiept haar. Foucaults analyse bevestigt
+        namelijk dat Nietzsche’s denken gericht is op een immanente,
+        levensbevestigende ethiek die losstaat van transcendente
+        waarden. De focus op de Griekse adel is geen teken van
+        metafysisch denken, maar van een poging om een alternatief te
+        vinden voor de slavenmoraal van het christendom en het
+        idealisme. De “grote gezondheid” die Nietzsche zoekt, is geen
+        transcendente toestand, maar een fysiologische en psychische
+        gesteldheid die in staat is de hardheid van het bestaan te
+        verdragen.</p>
+      <p>Bovendien is het paper juist een kritiek op de receptie van
+        Nietzsche, niet op Nietzsche zelf. Of zijn eigen Griekenbeeld nu
+        “eenzijdig” was of niet, het gaat erom hoe hij door de moderne
+        kunst is ontvangen. En die receptie heeft, zoals dit paper
+        aantoont, vooral de mythe van de Dionysos omarmd, zonder de
+        ongemakkelijke consequenties van zijn anti-humanistische
+        filosofie. De vraag of Nietzsche’s eigen bron zuiver was, is
+        daaraan ondergeschikt. Wat telt, is dat de moderne kunst een
+        Nietzsche heeft gecreëerd die paste in haar eigen romantische
+        project.</p>
+      <!-- 4. Onterechte adoptie -->
+      <h2>4. De onterechte adoptie: Modernisme, subjectivisme en de
+        vergeten waarheidsliefde</h2>
+      <p>Hier ontstaat nu de paradox voor de moderne kunsten. De moderne
+        kunstenaar, van de expressionisten tot de actionisten, zag in
+        Nietzsche een bondgenoot in de strijd tegen de burgerlijke
+        moraal en het academisme. Men omarmde de Dionysos als symbool
+        van vitaliteit, extase en het doorbreken van alle conventies.
+        Men interpreteerde de “Umwertung aller Werte” als een vrijbrief
+        voor artistieke willekeur en de verheerlijking van het eigen,
+        creatieve subject. De kunstenaar zelf werd de nieuwe
+        “Übermensch”, de schepper van zijn eigen werkelijkheid.</p>
+      <p>Deze adoptie is echter onterecht omdat zij Nietzsche’s
+        eigenlijke filosofie geweld aandoet op twee cruciale punten.</p>
+      <p>Ten eerste reduceert zij zijn denken tot een vorm van
+        esthetisch subjectivisme. Nietzsche heeft echter nooit het
+        kunstenaarssubject gecentreerd. Integendeel, zijn denken is een
+        voortdurende aanval op het cartesiaanse cogito en het
+        romantische genie. De scheppende kracht is voor hem geen
+        eigenschap van een autonoom individu, maar een anonieme,
+        lichamelijke drift die door het individu heen werkt. Het is de
+        wereld die zich in de kunstenaar voltrekt, niet de kunstenaar
+        die de wereld naar zijn hand zet. De moderne kunst daarentegen
+        heeft, zoals Straka’s onderzoek naar de receptiegeschiedenis
+        toont, vooral de <em>figuur</em> Nietzsche omarmd – de mythe,
+        het icoon – en niet de ongemakkelijke consequenties van zijn
+        anti-humanistische filosofie.</p>
+      <p>Ten tweede, en fundamenteler, hebben de moderne kunsten het
+        problematische karakter van de “leugen” in Nietzsche’s esthetica
+        miskend. Zoals Stoll overtuigend aantoont, waardeert Nietzsche
+        de artistieke schijn (<em>Schein</em>) niet omdat deze de
+        werkelijkheid mooier voordoet dan zij is (een “representational
+        falsehood”), maar omdat zij een oprechte, niet-bedrieglijke
+        schijn is (“mimetic falsehood”). Een schoonheidsideaal dat de
+        gruwelijkheid van het bestaan zou willen bedekken, is voor
+        Nietzsche een teken van zwakte, van “decadentie”. Zijn eigen
+        ideaal is dat van de grote gezondheid, die de waarheid – hoe
+        verschrikkelijk ook – kan verdragen en liefhebben. De kunst is
+        er om ons te oefenen in het omgaan met illusie als illusie,
+        zonder ons eraan over te geven. Ze moet ons juist sterken in
+        onze “intellectuele gewetensvolheid” (<em>intellektuelle
+          Gewissenhaftigkeit</em>).</p>
+      <p>De moderne kunst heeft, in haar zoektocht naar authenticiteit
+        en expressie, deze nuance verloren. Zij heeft de Dionysos
+        gevangen in de ateliers en galerieën en hem gedomesticeerd tot
+        een artistiek programma. In haar drang de wereld te herscheppen,
+        is zij juist teruggevallen in datgene waar Nietzsche voor
+        waarschuwde: de romantische behoefte aan thuiskomst en
+        betekenis. De “esthetische rechtvaardiging van het bestaan” is
+        bij Nietzsche een tragische, heldhaftige onderneming, geen
+        comfortabel kunstenaarschap.</p>
+      <h3>4.1 Waarom Nietzsche de romantische troost <em>nodig had</em>
+        om te verwerpen</h3>
+      <p>Hier ligt een diepere ironie, die het paper van Sjardijn
+        aanstipt. Nietzsche was fysiek ziek, eenzaam, vaak wanhopig.
+        Zijn brieven getuigen van een mens die leed onder migraine,
+        braken, bijna-blindheid en sociale isolatie. Deze man <em>moest</em>
+        wel een filosofie ontwikkelen die hem liet overleven <em>zonder</em>
+        de troost van de romantiek. De romantiek bood een wereld waarin
+        je thuis bent, een zinvol geheel waarin lijden betekenis heeft,
+        een ultieme verzoening. Nietzsche kon dit niet accepteren, niet
+        omdat hij het niet <em>wilde</em>, maar omdat zijn lichaam het
+        niet <em>toeliet</em>. Elke vorm van troost voelde voor hem als
+        een leugen, als een verdovingsmiddel dat de werkelijkheid
+        maskeerde.</p>
+      <p>Zijn beroemde vraag “Hoeveel waarheid kan een mens verdragen?”
+        is een <em>fysiologische</em> vraag. Zijn eigen lichaam dwong
+        hem de waarheid onder ogen te zien, hoe pijnlijk ook. Daarom
+        moest hij de romantiek afwijzen. Hij ontwikkelde een filosofie
+        van de <em>amor fati</em> (liefde voor het noodlot), van de <em>eeuwige
+          terugkeer</em> (het leven oneindig vaak herhalen, met al zijn
+        pijn), van de <em>wil tot macht</em> (het leven als
+        voortdurende strijd). Dit zijn geen geruststellende ideeën. Ze
+        zijn hard. Ze vragen van de mens dat hij de gruwelijkheid van
+        het bestaan omarmt <em>zonder</em> toevlucht te zoeken in een
+        hogere zin.</p>
+      <p>Maar deze hardheid is zelf een <em>vorm van overlevingstactiek</em>.
+        Nietzsche had de romantische troost nodig om te kunnen
+        verwerpen, omdat hij anders bezweken zou zijn aan wanhoop. Zijn
+        hele filosofie is een <em>reactie</em> op de romantiek, een
+        poging om zonder haar te leven. En hier wreekt zich de
+        misinterpretatie van de moderne kunst: door Nietzsche te omarmen
+        als een vitalistische levensgenieter, heeft zij de existentiële
+        nood die aan zijn denken ten grondslag ligt, genegeerd. Zij
+        heeft de hardheid van zijn waarheidsliefde verzacht tot een
+        esthetisch programma.</p>
+      <!-- 5. Onverzoenlijke tegenstelling -->
+      <h2>5. Schelling en Nietzsche: Een onverzoenlijke tegenstelling</h2>
+      <p>De reactie op het oorspronkelijke paper eindigt met de
+        opmerking dat Schelling er “beter vanaf komt” dan Nietzsche. Dit
+        is een kwestie van persoonlijke voorkeur, maar filosofisch
+        gezien is de tegenstelling onoverbrugbaar.</p>
+      <p>Schellings project is coherent binnen de romantische traditie.
+        Het biedt een metafysisch kader waarin kunst, natuur en mens hun
+        plaats hebben. Het is een poging om de moderniteit te genezen
+        van haar fragmentatie, om de mens weer thuis te brengen in een
+        wereld die door de wetenschap was onttoverd. Of men dit “troost”
+        noemt of “weerstand”, het is een denken dat uitgaat van een
+        uiteindelijke harmonie, een zinvol geheel.</p>
+      <p>Nietzsche daarentegen aanvaardt de fragmentatie. Hij zoekt geen
+        genezing, geen thuiskomst, geen harmonie. Hij zoekt de moed om
+        te leven <em>zonder</em> die dingen. Zijn esthetica is er niet
+        een van verzoening, maar van versterking. Kunst is geen venster
+        op het Absolute, maar een wapen in de strijd tegen de waanzin
+        van een betekenisloos bestaan.</p>
+      <p>De moderne kunst heeft geprobeerd beide te verenigen: de
+        romantische verheffing van het subject en de Nietzscheaanse
+        vitaliteit. Dat is de fundamentele misvatting. Men kan niet
+        tegelijkertijd thuis willen zijn in het Zijn <em>en</em> de
+        harde waarheid van het worden omarmen. Men kan niet zowel de
+        troost van de metafysica zoeken <em>als</em> de moed hebben
+        haar te verwerpen.</p>
+      <!-- 6. Conclusie -->
+      <h2>6. Conclusie</h2>
+      <p>Friedrich Nietzsche is geen bron voor de moderne kunsten; hij
+        is een uitdaging voor elke vorm van kunst. Zijn denken verzet
+        zich tegen elke poging om het in te zetten voor een positief,
+        artistiek programma. Wie hem als een voorloper van het
+        modernisme ziet, vergeet dat zijn filosofie een onverbiddelijke
+        afrekening is met elke vorm van idealisme, ook dat van de
+        romantische kunst. Zijn kritiek op Schelling was geen pleidooi
+        voor een andere soort kunst, maar voor een andere houding
+        tegenover kunst en leven: een houding van onbarmhartige
+        eerlijkheid, van liefde voor het noodlot (<em>amor fati</em>),
+        van het omarmen van de chaos zonder deze in een vorm te willen
+        dwingen die troost biedt.</p>
+      <p>De twee belangrijkste tegenwerpingen die tegen deze these zijn
+        ingebracht – de eenzijdigheid van Nietzsche’s Griekenbeeld
+        (Foucault) en de interpretatie van Schellings project als
+        weerstand in plaats van troost – blijken bij nadere beschouwing
+        de centrale these niet te ontkrachten, maar veeleer te
+        verdiepen. Foucaults analyse bevestigt Nietzsche’s immanente,
+        anti-metafysische gerichtheid. En een hermeneutische lezing van
+        Schelling laat zien dat zijn “weerstand” tegen de
+        natuurwetenschappen uiteindelijk een vorm van “troost” is in de
+        zin van een herstelde verbondenheid met de wereld.</p>
+      <p>De moderne kunsten hebben Nietzsche nodig gehad om zich te
+        bevrijden van de moraal en de academische traditie, maar zijn
+        daarbij vervallen in een nieuwe vorm van metafysica: de
+        metafysica van het creatieve subject. De werkelijke,
+        “onterechte” erfenis van Nietzsche is dan ook niet zijn
+        esthetica, maar de vraag die hij aan elke kunstenaar stelt:
+        “Hoeveel waarheid kun je verdragen?” Een vraag die de moderne
+        kunst in haar zelfgenoegzaamheid al te vaak heeft genegeerd.</p>
+      <!-- Bibliografie -->
+      <div class="bibliografie">
+        <h3>Bibliografie</h3>
+        <p>Bowie, A. (2018). <em>Aesthetics and Subjectivity: From Kant
+            to Nietzsche</em>. Manchester University Press.</p>
+        <p>Foucault, M. (2008). <em>De moed tot waarheid</em>. (Franse
+          orig. 1984). Paris: Gallimard.</p>
+        <p>Kruszelnicki, M. (2019). “Heimischwerden in der Welt. Die
+          romantische Sehnsucht und ihre Erfüllung”. In <em>Romantik
+            und Gegenwart</em>. Freiburg: Alber.</p>
+        <p>Lossi, A. (2022). “A Promise of Happiness? Nietzsche on
+          Beauty”. <em>Nietzsche-Studien</em>, 51(1), pp. 3-25.</p>
+        <p>Lichtenstein, E. I. (2019). “The Passions and Disinterest:
+          From Kantian Free Play to Creative Determination by Power, via
+          Schiller and Nietzsche”. <em>Ergo</em>, 6(9).</p>
+        <p>Sauvanet, P. (2023). <em>Dionysos plasticien: Une lecture
+            nietzschéenne de l’art contemporain</em>. Presses
+          universitaires de Provence.</p>
+        <p>Schelling, F.W.J. (1800/1965). <em>System des
+            transzendentalen Idealismus</em>. Hamburg: Meiner.</p>
+        <p>Stoll, T. (2019). “Nietzsche and Schiller on Aesthetic
+          Semblance”. <em>The Monist</em>, 102(3), pp. 331-348.</p>
+        <p>Straka, B. (2024). <em>Nietzsche forever!? Zur Rezeption
+            eines Philosophen in der bildenden Kunst</em>. Berlin:
+          Reimer.</p>
+      </div>
+      <div class="footer-note"> © Martin Sjardijn, 2026 — herziene
+        versie, 15 maart 2026 </div>
+    </div>
+    ```
+  
+
+</body></html>
