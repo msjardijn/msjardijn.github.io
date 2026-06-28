@@ -1,7 +1,7 @@
 ---
 layout: default
 ---
-<img src="/images/liefde.jpg" alt="Anne" style="display: block; width: 100%; max-width: 600px; height: auto; margin: 2rem auto;">
+<img src="/images/liefde.jpg" alt="Liefde" style="display: block; width: 100% !important; max-width: 800px !important; height: auto !important; margin: 2rem auto;">
 
 # Liefde en Geweld
 
