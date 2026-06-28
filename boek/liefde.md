@@ -1,8 +1,9 @@
 ---
 layout: default
 ---
-<img src="{{ site.baseurl }}/images/liefde.jpg" alt="Liefde" style="width: 100%; max-width: 800px; display: block; margin: 2rem auto;">
-
+<div style="text-align: center; margin: 20px 0;">
+  <img src="/images/liefde.jpg" alt="Liefde" style="width: 100% !important; max-width: 800px !important; height: auto !important; display: inline-block !important;">
+</div>
 # Liefde en Geweld
 
 ## Proloog
