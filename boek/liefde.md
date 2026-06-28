@@ -1,7 +1,7 @@
 ---
 layout: default
 ---
-<img src="https://msjardijn.github.io/images/liefde.jpg" 
+<img src="https://msjardijn.github.io/images/anne.jpg" 
      alt="Liefde" 
      style="width: 100%; max-width: none !important; height: auto; display: block; margin: 2rem auto;">
 
