@@ -1,7 +1,9 @@
 ---
 layout: default
 ---
-<img src="/images/liefde.jpg" alt="Liefde" style="display: block; width: 100% !important; max-width: 800px !important; height: auto !important; margin: 2rem auto;">
+<div style="width: 100vw; position: relative; left: 50%; right: 50%; margin-left: -50vw; margin-right: -50vw;">
+  <img src="/images/liefde.jpg" style="width: 100%; height: auto; display: block;">
+</div>
 
 # Liefde en Geweld
 
