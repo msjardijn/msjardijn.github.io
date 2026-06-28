@@ -1,7 +1,10 @@
 ---
 layout: default
 ---
-<img src="https://msjardijn.github.io/images/liefde.jpg" alt="Liefde" style="width: 100%; max-width: 800px; display: block; margin: 2rem auto;">
+<img src="https://msjardijn.github.io/images/liefde.jpg" 
+     alt="Liefde" 
+     style="width: 100%; max-width: none !important; height: auto; display: block; margin: 2rem auto;">
+
 # Liefde en Geweld
 
 ## Proloog
