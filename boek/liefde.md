@@ -1,6 +1,7 @@
 ---
 layout: default
 ---
+![Een korte omschrijving van de afbeelding](/images/liefde.jpg)
 
 # Liefde en Geweld
 
