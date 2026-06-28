@@ -1,7 +1,7 @@
 ---
 layout: default
 ---
-![Een korte omschrijving van de afbeelding](/images/liefde.jpg)
+<img src="/images/liefde.jpg" alt="Beschrijving van de afbeelding" style="display: block; width: 100%; max-width: 600px; height: auto; margin: 2rem auto;">
 
 # Liefde en Geweld
 
