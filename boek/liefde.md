@@ -1,3 +1,10 @@
+---
+layout: default
+---
+
+# De titel van je verhaal
+Hier begint je tekst...
+
 # EEN LIEFDE
 
 ## Proloog
