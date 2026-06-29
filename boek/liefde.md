@@ -1,7 +1,6 @@
 ---
 layout: default
 ---
-<div style="font-size: 1.25rem; line-height: 1.6;">
 
 <img src="https://msjardijn.github.io/images/anne.jpg" 
      alt="Liefde" 
@@ -538,4 +537,3 @@ Derrida en Heidegger waren misschien te bang om het "Ding" echt in beweging te z
 Het enige wat ik kon doen was mijn werk oppakken en schilderen. Ik ontwikkelde met een leerling op mijn atelier een project dat ontstond na lange gesprekken met haar over de blik van de mannelijke schilder en de blik van de vrouw. Zij wilde graag naakt poseren voor mij en ik vroeg me af waar die wens vandaan kwam. Voor mezelf wist ik wel dat de schoonheid van de vrouw in haar kwetsbare naaktheid een belangrijke bron van inspiratie is, maar wat is daarbij het motief van de vrouw.
 
 Zo ontstond uiteindelijk een project dat we realiseerden in de Haagse Kunstkring onder de titel *AI en het Genie*.
-</div>
