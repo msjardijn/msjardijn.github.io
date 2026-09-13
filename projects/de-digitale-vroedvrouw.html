@@ -12,7 +12,7 @@
             font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
             margin: 0;
             padding: 0;
-            overflow: hidden; 
+        overflow-y: auto; /* Maakt verticaal scrollen met de muis mogelijk */
             display: flex;
             justify-content: center;
             height: 100vh;
@@ -47,11 +47,6 @@
             text-align: left;
         }
         th { background-color: #222; color: #fff; text-transform: uppercase; }
-
-        @keyframes scroll-loop {
-            0% { transform: translateY(0); }
-            100% { transform: translateY(calc(-100% - 50vh)); }
-        }
 
         .back-link {
             display: block;
